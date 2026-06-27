@@ -286,19 +286,17 @@
 
   /* ============================================================
      도식 · 다이어그램 팔레트 (원칙)
-     · 면: 살짝 채운 연한 톤(pf)  · 선: 2px 그레이(kl/ml)
-     · 강조: 빨강 면(rf) · 빨강 선(rl) · 강조 박스(re)
+     · 면: 연한 채움만(pf/re/rf) — 외곽선 없음
+     · 선: 1px 그레이(kl/ml) · 강조 선·화살표: 빨강(rl+rf)
      ============================================================ */
   svg .none{fill:none}
-  svg .pf{fill:var(--diag-fill)}
-  svg .kf{fill:var(--diag-fill)}
+  svg .pf,svg .kf,svg .wf,svg .rf,svg .re{stroke:none}
+  svg .pf,svg .kf{fill:var(--diag-fill)}
   svg .wf{fill:#faf9f7}
   svg .rf{fill:var(--accent)}
-  svg .kl{fill:none;stroke:var(--diag-line);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  svg .ml{fill:none;stroke:var(--diag-line);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  svg .rl{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  svg .re{fill:rgba(138,28,28,.09);stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-  svg rect.pf,svg circle.pf,svg .pf.kl,svg .wf.kl{stroke:var(--diag-line);stroke-width:2}
+  svg .re{fill:rgba(138,28,28,.12)}
+  svg .kl,svg .ml{fill:none;stroke:var(--diag-line);stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+  svg .rl{fill:none;stroke:var(--accent);stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
   svg .big{font-family:var(--display);font-weight:900;fill:var(--ink)}
   svg .big.rf{fill:var(--accent)}
   svg .lab{font-family:var(--serif);fill:var(--ink-soft)}
@@ -368,19 +366,19 @@
     <figure class="fig">
       <svg viewBox="0 0 620 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IEC 62366 사용성 공학 프로세스">
         <text x="16" y="22" font-size="11" class="labr">IEC 62366 사용성 공학 프로세스 · 위험 기반</text>
-        <rect x="16" y="42" width="96" height="52" rx="7" class="pf kl"/>
+        <rect x="16" y="42" width="96" height="52" rx="7" class="pf"/>
         <text x="64" y="66" text-anchor="middle" font-size="11" class="lab">사용 명세</text>
         <text x="64" y="82" text-anchor="middle" font-size="9" class="labm">use spec</text>
         <line x1="114" y1="68" x2="138" y2="68" class="rl"/><polygon points="140,68 130,63 130,73" class="rf"/>
-        <rect x="140" y="42" width="96" height="52" rx="7" class="pf kl"/>
+        <rect x="140" y="42" width="96" height="52" rx="7" class="pf"/>
         <text x="188" y="66" text-anchor="middle" font-size="11" class="lab">UI 설계</text>
         <text x="188" y="82" text-anchor="middle" font-size="9" class="labm">interface</text>
         <line x1="238" y1="68" x2="262" y2="68" class="rl"/><polygon points="264,68 254,63 254,73" class="rf"/>
-        <rect x="264" y="42" width="96" height="52" rx="7" class="pf kl"/>
+        <rect x="264" y="42" width="96" height="52" rx="7" class="pf"/>
         <text x="312" y="66" text-anchor="middle" font-size="11" class="lab">형성평가</text>
         <text x="312" y="82" text-anchor="middle" font-size="9" class="labm">formative</text>
         <line x1="362" y1="68" x2="386" y2="68" class="rl"/><polygon points="388,68 378,63 378,73" class="rf"/>
-        <rect x="388" y="42" width="96" height="52" rx="7" class="pf kl"/>
+        <rect x="388" y="42" width="96" height="52" rx="7" class="pf"/>
         <text x="436" y="66" text-anchor="middle" font-size="11" class="lab">총괄평가</text>
         <text x="436" y="82" text-anchor="middle" font-size="9" class="labm">HF 검증</text>
         <line x1="486" y1="68" x2="510" y2="68" class="rl"/><polygon points="512,68 502,63 502,73" class="rf"/>
@@ -403,8 +401,7 @@
       <h4>에이전트를 ‘감독’하는 설계로 — 2026 UX의 빈 칸은 ‘언제 멈추고 사람에게 넘길까’</h4>
       <figure class="fig">
         <svg viewBox="0 0 620 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자동조종에서 코파일럿으로의 전환 다이어그램">
-          <circle cx="120" cy="64" r="42" class="pf kl"/>
-          <circle cx="120" cy="64" r="42" class="ml" stroke-dasharray="4 5"/>
+          <circle cx="120" cy="64" r="42" class="pf"/>
           <text x="120" y="60" text-anchor="middle" font-size="14" class="labm">AI</text>
           <text x="120" y="78" text-anchor="middle" font-size="11" class="labm">자동조종</text>
           <line x1="92" y1="36" x2="148" y2="92" class="rl"/>
@@ -412,7 +409,7 @@
           <line x1="186" y1="64" x2="300" y2="64" class="rl"/>
           <polygon points="300,64 288,58 288,70" class="rf"/>
           <text x="243" y="50" text-anchor="middle" font-size="11" class="labr">SHIFT</text>
-          <circle cx="392" cy="64" r="40" class="pf kl"/>
+          <circle cx="392" cy="64" r="40" class="pf"/>
           <circle cx="452" cy="64" r="40" class="re"/>
           <text x="368" y="68" text-anchor="middle" font-size="11" class="lab">사람</text>
           <text x="476" y="68" text-anchor="middle" font-size="11" class="labr">AI</text>
@@ -593,7 +590,7 @@
             <circle cx="452" cy="56" r="6" class="pf"/><text x="452" y="80" font-size="10" class="labm">ChatGPT &lt;50%</text>
             <circle cx="556" cy="56" r="6" class="rf"/><text x="556" y="80" font-size="10" class="labm">SpaceX IPO</text>
           </g>
-          <rect x="112" y="108" width="120" height="30" rx="6" class="pf kl"/>
+          <rect x="112" y="108" width="120" height="30" rx="6" class="pf"/>
           <text x="172" y="128" text-anchor="middle" font-size="12" class="lab">모델 (Model)</text>
           <line x1="244" y1="123" x2="360" y2="123" class="rl"/>
           <polygon points="360,123 348,117 348,129" class="rf"/>
@@ -633,7 +630,7 @@
     <div class="sec-head"><h3>디자인 원칙 · 인간공학 · 심리</h3><span class="meta"><b>4</b> 건 · 사설</span></div>
     <figure class="fig">
       <svg viewBox="0 0 620 165" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="높은 인지 부하와 낮은 인지 부하 인터페이스 비교">
-        <rect x="40" y="24" width="190" height="115" rx="8" class="pf kl"/>
+        <rect x="40" y="24" width="190" height="115" rx="8" class="pf"/>
         <g class="kl tl">
           <line x1="58" y1="44" x2="210" y2="44"/><line x1="58" y1="56" x2="190" y2="56"/>
           <line x1="58" y1="68" x2="212" y2="68"/><line x1="58" y1="80" x2="170" y2="80"/>
@@ -644,11 +641,11 @@
         <line x1="252" y1="82" x2="352" y2="82" class="rl"/>
         <polygon points="352,82 340,76 340,88" class="rf"/>
         <text x="302" y="68" text-anchor="middle" font-size="11" class="labr">청킹 · 정돈</text>
-        <rect x="372" y="24" width="190" height="115" rx="8" class="pf kl"/>
+        <rect x="372" y="24" width="190" height="115" rx="8" class="pf"/>
         <rect x="390" y="44" width="120" height="12" rx="3" class="rf"/>
         <line x1="390" y1="74" x2="500" y2="74" class="kl tl"/>
         <line x1="390" y1="92" x2="468" y2="92" class="kl tl"/>
-        <rect x="390" y="110" width="62" height="16" rx="4" class="pf kl"/>
+        <rect x="390" y="110" width="62" height="16" rx="4" class="pf"/>
         <text x="467" y="158" text-anchor="middle" font-size="12" class="labr">낮은 인지 부하</text>
       </svg>
       <figcaption><b>그림 6.</b> 같은 정보라도 청크와 여백으로 정돈하면 처리 비용이 내려간다. <span class="credit">— 도표 CLAUDE</span></figcaption>
@@ -668,15 +665,15 @@
     <figure class="fig">
       <svg viewBox="0 0 620 168" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="미국 §101 특허 적격성 Alice/Mayo 2단계 흐름">
         <text x="10" y="22" font-size="11" class="labr">미국 §101 특허 적격성 · Alice/Mayo 2단계</text>
-        <rect x="10" y="54" width="92" height="48" rx="7" class="pf kl"/>
+        <rect x="10" y="54" width="92" height="48" rx="7" class="pf"/>
         <text x="56" y="82" text-anchor="middle" font-size="11" class="lab">청구항</text>
         <line x1="104" y1="78" x2="126" y2="78" class="rl"/><polygon points="128,78 118,73 118,83" class="rf"/>
-        <rect x="128" y="54" width="168" height="48" rx="7" class="pf kl"/>
+        <rect x="128" y="54" width="168" height="48" rx="7" class="pf"/>
         <text x="212" y="76" text-anchor="middle" font-size="11" class="lab">STEP 2A</text>
         <text x="212" y="92" text-anchor="middle" font-size="9.5" class="labm">추상적 아이디어인가?</text>
         <text x="309" y="70" text-anchor="middle" font-size="8.5" class="labr">예</text>
         <line x1="298" y1="78" x2="320" y2="78" class="rl"/><polygon points="322,78 312,73 312,83" class="rf"/>
-        <rect x="322" y="54" width="168" height="48" rx="7" class="pf kl"/>
+        <rect x="322" y="54" width="168" height="48" rx="7" class="pf"/>
         <text x="406" y="76" text-anchor="middle" font-size="11" class="lab">STEP 2B</text>
         <text x="406" y="92" text-anchor="middle" font-size="9.5" class="labm">‘의미 있는 추가요소’?</text>
         <text x="503" y="70" text-anchor="middle" font-size="8.5" class="labr">예</text>
