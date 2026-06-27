@@ -103,7 +103,7 @@
 
   /* ---------- Lead / editorial ---------- */
   .lead{
-    border:1px solid var(--rule-strong); background:var(--paper-2);
+    border:0; background:transparent;
     padding:18px 22px; margin:20px 0 8px;
     display:grid; grid-template-columns:1fr; gap:4px;
   }
@@ -174,13 +174,13 @@
   .ear{ border-bottom:none; }
   .dateline{ border:none; border-top:1px solid var(--rule); padding:9px 0 0; }
 
-  /* 섹션을 '면'으로 구분 — 배경 패널 + 흰 여백, 선 없음 */
+  /* 섹션 구분: 여백만, 배경색 없음 */
   section{
-    background:var(--paper-2); border:0;
+    background:transparent; border:0;
     padding:24px 24px 12px; margin:18px 0 0;
   }
   .lead{
-    border:0; background:var(--paper-2);
+    border:0; background:transparent;
     padding:22px 24px; margin:18px 0 0;
   }
   /* 섹션 헤더: 위 괘선 제거 */
@@ -318,31 +318,8 @@
     </div>
   </div>
 
-  <!-- ===== EDITORIAL / 오늘의 원칙 ===== -->
-  <div class="lead">
-    <span class="kick">오늘의 원칙 · Editorial</span>
-    <h2>Miller's Law — 작업기억은 7±2개</h2>
-    <p>사람이 한 번에 머릿속에 담는 정보는 약 7±2개에 불과하다. 선택지·단계·메뉴를 의미 있는 덩어리(chunk)로 묶고 불필요한 옵션을 덜어내면 인지 부하가 내려간다. 2026년 한 연구는 AI 적응형 인터페이스가 정보 밀도가 높은 상황에서 의사결정 시간과 체감 작업량을 정적 인터페이스보다 유의미하게 줄였다고 보고한다 — 결국 좋은 설계란, 화면이 아니라 사람의 인지 한계에서 출발한다.</p>
-    <figure class="fig">
-      <svg viewBox="0 0 620 118" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="작업기억 7±2 청크 다이어그램">
-        <g>
-          <rect x="82" y="26" width="40" height="40" rx="6" class="ml" fill="none" stroke-dasharray="4 5"/>
-          <rect x="134" y="26" width="40" height="40" rx="6" class="kf"/>
-          <rect x="186" y="26" width="40" height="40" rx="6" class="kf"/>
-          <rect x="238" y="26" width="40" height="40" rx="6" class="kf"/>
-          <rect x="290" y="26" width="40" height="40" rx="6" class="rf"/>
-          <rect x="342" y="26" width="40" height="40" rx="6" class="kf"/>
-          <rect x="394" y="26" width="40" height="40" rx="6" class="kf"/>
-          <rect x="446" y="26" width="40" height="40" rx="6" class="kf"/>
-          <rect x="498" y="26" width="40" height="40" rx="6" class="ml" fill="none" stroke-dasharray="4 5"/>
-        </g>
-        <path d="M134,80 v6 h352 v-6" class="ml"/>
-        <line x1="310" y1="86" x2="310" y2="94" class="ml"/>
-        <text x="310" y="110" text-anchor="middle" font-size="13" class="lab">작업기억 용량 · 7 ± 2 청크</text>
-      </svg>
-      <figcaption><b>그림 1.</b> 핵심 7개(±2)만 또렷이 남고 그 바깥은 흐려진다 — 옵션·단계를 청크로 묶어 부하를 분산. <span class="credit">— 도표 CLAUDE</span></figcaption>
-    </figure>
-  </div>
+  <!-- ===== EDITORIAL / 오늘의 원칙 (매일 순환) ===== -->
+  <div class="lead" id="principle"><!-- JS --></div>
 
   <!-- ===== 사용성 공학 · 의료기기 인간공학 ===== -->
   <section id="creds" class="creds">
@@ -373,26 +350,7 @@
       </svg>
       <figcaption><b>그림 7.</b> IEC 62366은 임상 과업 → UI 설계 → 형성·총괄평가로 잔여 사용위험의 수용가능성을 입증하는 위험 기반 프로세스. <span class="credit">— 도표 CLAUDE</span></figcaption>
     </figure>
-    <div class="cols">
-      <article>
-        <span class="tag">표준 · IEC 62366-1</span>
-        <h4>사용성 공학, 위험 기반으로</h4>
-        <p>IEC 62366-1은 의료기기에 사용성 공학을 적용하는 국제표준이다. 사용자가 실제 수행하는 임상 과업을 중심으로 인터페이스를 설계하고, <b>잔여 사용 관련 위험이 수용 가능함</b>을 증거로 입증한다. FDA도 ANSI/AAMI/IEC 62366-1:2015+AMD1:2020을 합의표준으로 인정한다.</p>
-        <p class="src"><a href="https://www.jamasoftware.com/requirements-management-guide/medical-devices/iec-62366/" target="_blank" rel="noopener">Jama · IEC 62366</a></p>
-      </article>
-      <article>
-        <span class="tag">FDA ↔ IEC 용어</span>
-        <h4>같은 활동, 다른 이름</h4>
-        <p>두 체계는 같은 일을 다른 용어로 부른다. FDA의 <b>‘핵심 과업(critical tasks)’</b>은 IEC의 <b>‘위해 관련 사용 시나리오’</b>, FDA의 <b>‘HF 검증시험’</b>은 IEC의 <b>‘총괄평가(summative)’</b>에 해당한다. 단 FDA 검증은 미국 거주 참가자를 요구하고, IEC는 거주 요건은 없으나 현지 언어 시험이 필요할 수 있다.</p>
-        <p class="src"><a href="https://meddeviceguide.com/blog/human-factors-testing-medical-devices-guide" target="_blank" rel="noopener">MedDeviceGuide · HF Testing</a></p>
-      </article>
-      <article>
-        <span class="tag">2026 · QMSR</span>
-        <h4>ISO 13485와의 정합</h4>
-        <p>2026년 2월 2일 발효된 <b>QMSR</b>이 ISO 13485:2016을 21 CFR Part 820에 참조로 편입했다. 이로써 IEC 62366-1 적합성이 ISO 13485 7조를 통해 FDA의 인간공학 기대와 정렬된다 — SaMD·디지털헬스에서도 사용성과 사용 위험 관리가 핵심 축이 된다.</p>
-        <p class="src"><a href="https://mdxcro.com/fda-human-factors-guidance-2026/" target="_blank" rel="noopener">MDX · FDA HF Guidance 2026</a></p>
-      </article>
-    </div>
+    <div class="cols creds-cols" id="creds-articles"><!-- JS: 매일 3건 순환 --></div>
   </section>
 
   <!-- ===== UX ===== -->
@@ -654,32 +612,7 @@
       </svg>
       <figcaption><b>그림 6.</b> 같은 정보라도 청크와 여백으로 정돈하면 처리 비용이 내려간다. <span class="credit">— 도표 CLAUDE</span></figcaption>
     </figure>
-    <div class="cols">
-      <article>
-        <span class="tag">인지 부하</span>
-        <h4>청킹(Chunking)으로 부하 분산</h4>
-        <p>폼의 단계, 그룹화된 메뉴처럼 콘텐츠·과업을 덩어리로 나누면 스캔과 기억이 쉬워진다. 평이한 언어와 옵션 최소화가 핵심.</p>
-        <p class="src"><a href="https://www.andacademy.com/resources/blog/ui-ux-design/cognitive-load/" target="_blank" rel="noopener">AND Academy · Cognitive Load</a></p>
-      </article>
-      <article>
-        <span class="tag">멘탈 모델</span>
-        <h4>사용자의 사고에 정보 구조를 맞춰라</h4>
-        <p>인지심리학·인간공학 통찰로 멘탈 모델에 맞춰 정보를 구조화하면 처리·과업 완수가 쉬워지고, 다양한 능력을 포용하는 인터페이스가 된다.</p>
-        <p class="src"><a href="https://startup-house.com/blog/cognitive-psychology-ux-design" target="_blank" rel="noopener">Startup House</a></p>
-      </article>
-      <article>
-        <span class="tag">AI UX 원칙</span>
-        <h4>예측가능성·정정·통제권의 가드레일</h4>
-        <p>2026년 UX 원칙은 시스템 동작을 설명하고 사용자 통제권을 보존하는 방향으로 이동. AI는 예측·정정 가능성에 더 강한 가드레일이 필요하다.</p>
-        <p class="src"><a href="https://medium.com/design-bootcamp/psychology-in-ux-design-2026-25-examples-to-improve-ui-and-the-experience-2bea4a9ad84f" target="_blank" rel="noopener">Bootcamp · Psychology in UX</a></p>
-      </article>
-      <article>
-        <span class="tag">근거</span>
-        <h4>AI 적응형 인터페이스의 효과</h4>
-        <p>2026년 연구에 따르면 AI 적응형 인터페이스는 정보 밀도가 높은 상황에서 정적 인터페이스보다 의사결정 시간과 체감 작업량을 유의미하게 줄였다.</p>
-        <p class="src"><a href="https://ixdf.org/literature/topics/cognition" target="_blank" rel="noopener">IxDF · Cognition (2026)</a></p>
-      </article>
-    </div>
+    <div class="cols" id="mind-articles"><!-- JS: 매일 4건 순환 --></div>
   </section>
 
   <!-- ===== 오늘의 농담 (쉬어가기) ===== -->
@@ -714,26 +647,7 @@
       </svg>
       <figcaption><b>그림 8.</b> 미국은 Alice/Mayo 2단계로 적격성을 판단한다 — 추상적 아이디어라도 ‘의미 있는 추가요소(기술적 개선)’가 있으면 적격. <span class="credit">— 도표 CLAUDE</span></figcaption>
     </figure>
-    <div class="cols">
-      <article>
-        <span class="tag">개념 · IP의 종류</span>
-        <h4>특허·상표·디자인·저작권·영업비밀</h4>
-        <p>지식재산은 크게 <b>산업재산권</b>(특허·실용신안·상표·디자인)과 <b>저작권</b>, 그리고 <b>영업비밀</b>로 나뉜다. 특허는 ‘기술적 사상의 창작(발명)’, 실용신안은 물품의 구조·형상 고안, 상표는 식별표지, 디자인은 물품의 외관을 보호한다. 저작권은 창작과 동시에 발생(무방식주의)하고, 영업비밀은 공개하지 않고 비밀로 관리해 보호한다.</p>
-        <p class="src"><a href="https://www.wipo.int/en/web/about-ip" target="_blank" rel="noopener">WIPO · What is IP</a></p>
-      </article>
-      <article>
-        <span class="tag">개념 · 특허의 원리</span>
-        <h4>신규성·진보성, 그리고 청구항</h4>
-        <p>특허는 <b>신규성 · 진보성(비자명성) · 산업상 이용가능성</b>을 갖춰야 한다. 권리범위는 명세서가 아니라 <b>청구항(claims)</b>이 정한다. 대부분의 나라가 <b>선출원주의(first-to-file)</b>이며, 출원은 원칙적으로 출원일로부터 18개월 후 공개된다. 여러 나라 동시 보호는 <b>PCT</b> 국제출원으로 출발한다.</p>
-        <p class="src"><a href="https://www.wipo.int/en/web/patents" target="_blank" rel="noopener">WIPO · Patents</a></p>
-      </article>
-      <article>
-        <span class="tag">현행 · 미국 §101 (2025)</span>
-        <h4>SW·AI 발명의 적격성, 다시 열리다</h4>
-        <p>미국은 Alice/Mayo 2단계로 추상적 아이디어 여부를 본다. <b>2025년 8월 4일 USPTO 메모</b>는 심사관이 AI·SW 출원을 §101만으로 거절하지 않도록 방향을 틀었다 — 신경망 학습·실시간 데이터 분석은 ‘정신적 과정’이 아니며, 컴퓨팅 <b>성능·메모리·보안·아키텍처 개선</b>이면 적격 가능성이 높아진다. 다만 범용 ML을 통상적 인프라에 얹은 데이터분석·스케줄링은 여전히 추상적 아이디어로 거절될 수 있다. SaMD·디지털헬스 발명에 직접 영향.</p>
-        <p class="src"><a href="https://natlawreview.com/article/uspto-guidance-provides-new-practical-pathways-ai-and-software-eligibility" target="_blank" rel="noopener">Nat. Law Review · USPTO 2025</a> · <a href="https://www.afslaw.com/perspectives/alerts/uspto-aims-boost-patent-eligibility-ai-and-ml-inventions" target="_blank" rel="noopener">ArentFox Schiff</a></p>
-      </article>
-    </div>
+    <div class="cols" id="patent-articles"><!-- JS: 매일 3건 순환 --></div>
   </section>
 
   </div><!-- /#edition -->
@@ -761,6 +675,8 @@
 
   earBtn.textContent=fmtShort(now)+' ▾';
 
+  function nesc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
   // ----- 오늘의 큐레이션: 퍼블릭 도메인 원작 (매일 순환) -----
   const MET="https://images.metmuseum.org/CRDImages/";
   const POOL=[
@@ -781,6 +697,85 @@
     {a:"Winslow Homer", t:"High Tide (Every Saturday)", y:"1870", k:"일러스트", img:MET+"dp/web-large/DP218933.jpg"}
   ];
   const epochDay=Math.floor(now.getTime()/86400000);
+
+  // ----- 매일 순환 콘텐츠 (오늘의 원칙 · 지식 섹션) -----
+  function pickDaily(pool,n,offset){const L=pool.length,out=[];for(let i=0;i<n;i++)out.push(pool[(epochDay+offset+i)%L]);return out;}
+  function artHtml(a){return '<article><span class="tag">'+nesc(a.tag)+'</span><h4>'+nesc(a.h4)+'</h4><p>'+a.p+'</p>'+(a.src?'<p class="src"><a href="'+nesc(a.src.u)+'" target="_blank" rel="noopener">'+nesc(a.src.t)+'</a></p>':'')+'</article>';}
+
+  const PRINCIPLES=[
+    {h2:"Miller's Law — 작업기억은 7±2개",p:"사람이 한 번에 머릿속에 담는 정보는 약 7±2개에 불과하다. 선택지·단계·메뉴를 의미 있는 덩어리(chunk)로 묶고 불필요한 옵션을 덜어내면 인지 부하가 내려간다."},
+    {h2:"Hick's Law — 선택지가 많을수록 느려진다",p:"선택지 수가 늘면 결정 시간은 로그적으로 증가한다. 카테고리·단계·추천으로 분기를 줄이면 의사결정 속도와 만족도가 올라간다."},
+    {h2:"Fitts's Law — 목표는 크고 가깝게",p:"터치·클릭 목표는 크기를 키우고 이동 거리를 줄일수록 오류와 시간이 줄어든다. 임상 UI에서 핵심 조작은 엄지·손가락 도달 범위 안에 두는 것이 안전하다."},
+    {h2:"Jakob's Law — 익숙함을 존중하라",p:"사용자는 대부분의 시간을 다른 사이트·앱에서 보낸다. 익숙한 패턴(탭, 검색, 뒤로가기)을 따르면 학습 비용이 급격히 내려간다."},
+    {h2:"법칙 of Proximity — 가까우면 한 그룹",p:"가까이 배치된 요소는 관련 있다고 인식된다. 라벨·입력·도움말·오류 메시지를 시각적으로 묶으면 스캔과 이해가 빨라진다."},
+    {h2:"Von Restorff Effect — 눈에 띄는 하나",p:"주변과 다른 하나만 기억에 오래 남는다. 경고·CTA·핵심 수치는 색·크기·여백으로 분리하되, 남용하면 ‘모두 강조’가 되어 효과가 사라진다."},
+    {h2:"Peak-End Rule — 끝맛이 전체를 좌우",p:"경험은 전체 평균보다 절정 순간과 마무리에 좌우된다. 저장·완료·결과 확인 화면을 신중히 설계하면 전체 만족도가 크게 달라진다."},
+    {h2:"Serial Position Effect — 처음과 끝",p:"목록의 앞·뒤 항목이 가운데보다 잘 기억된다. 중요한 메뉴·옵션은 첫 화면이나 마지막 확인 단계에 배치하는 것이 유리하다."},
+    {h2:"Aesthetic-Usability Effect — 예쁘면 쓰기 쉬워 보인다",p:"미적으로 정돈된 UI는 실제 난이도와 무관하게 더 쓰기 쉽다고 평가받는다. 다만 겉만 꾸미고 과업 실패가 있으면 신뢰는 더 크게 깨진다."},
+    {h2:"Doherty Threshold — 400ms의 문턱",p:"시스템 응답이 약 400ms 안에 오면 흐름이 끊기지 않는다. 로딩·저장·분석 대기에는 즉각 피드백과 진행 표시로 ‘멈춤’ 체감을 줄여야 한다."},
+    {h2:"Tesler's Law — 복잡성은 옮길 뿐",p:"모든 시스템에는 복잡성이 존재한다. 설계자의 역할은 사용자에게서 엔지니어·시스템 쪽으로 옮기는 것이다. 마법사·자동화·기본값이 그 도구다."},
+    {h2:"Progressive Disclosure — 필요할 때만 펼치기",p:"초보자에게는 핵심만, 숙련자에게는 고급 옵션을 단계적으로 드러낸다. 의료 UI에서도 응급·일상·설정을 계층으로 나누면 오류를 줄인다."},
+    {h2:"Recognition over Recall — 기억 대신 인지",p:"사용자에게 기억을 요구하지 말고 화면에서 바로 고르게 하라. 최근값·템플릿·자동완성은 이 원칙의 실천이다."},
+    {h2:"Error Prevention — 실수를 막는 설계",p:"좋은 UI는 오류 메시지보다 오류 자체를 줄인다. 확인 단계·되돌리기·위험 조작 분리·입력 제약이 Nielsen의 핵심 휴리스틱이다."},
+    {h2:"Consistency — 같은 것은 같게",p:"동일한 기능·상태·용어는 화면과 플랫폼 전반에서 일관되어야 한다. 의료기기에서 용어·색·경고 체계의 불일치는 사용 위험으로 이어진다."},
+    {h2:"Goal-Gradient Effect — 다 왔다는 느낌",p:"목표에 가까울수록 추진력이 커진다. 진행률·단계 표시·완료까지 남은 항목 수는 이탈을 줄이고 과업 완수를 돕는다."},
+    {h2:"Banner Blindness — 광고처럼 보이면 무시",p:"배너·알림처럼 반복되는 패턴은 사용자가 학습해 무시한다. 중요한 안전 경고는 맥락 속 인라인 메시지로 전달해야 한다."},
+    {h2:"Gestalt · Closure — 머릿속으로 채운다",p:"불완전한 형태도 뇌가 완성한다. 카드·프레임·그룹 경계를 암시만 해도 구조가 읽히지만, 경계가 모호하면 잘못된 그룹화가 생긴다."},
+    {h2:"Cognitive Load · 내재 vs 외재",p:"내재 부하(과업 자체)는 줄이기 어렵고, 외재 부하(표현 방식)는 설계로 줄일 수 있다. 불필요한 장식·중복 설명·낮은 대비는 외재 부하를 키운다."},
+    {h2:"Human-in-the-Loop — AI는 감독 대상",p:"자동화가 늘수록 ‘언제 멈추고 사람에게 넘길지’가 UX의 핵심이 된다. 신뢰도·근거·되돌리기·에스컬레이션 경로를 미리 설계해야 한다."}
+  ];
+  const CREDS_POOL=[
+    {tag:"표준 · IEC 62366-1",h4:"사용성 공학, 위험 기반으로",p:"IEC 62366-1은 의료기기에 사용성 공학을 적용하는 국제표준이다. 임상 과업 중심 설계와 <b>잔여 사용 관련 위험의 수용</b> 입증이 핵심이다.",src:{t:"Jama · IEC 62366",u:"https://www.jamasoftware.com/requirements-management-guide/medical-devices/iec-62366/"}},
+    {tag:"FDA ↔ IEC 용어",h4:"같은 활동, 다른 이름",p:"FDA ‘핵심 과업’은 IEC ‘위해 관련 사용 시나리오’, FDA ‘HF 검증’은 IEC ‘총괄평가’에 해당한다.",src:{t:"MedDeviceGuide · HF Testing",u:"https://meddeviceguide.com/blog/human-factors-testing-medical-devices-guide"}},
+    {tag:"2026 · QMSR",h4:"ISO 13485와의 정합",p:"2026년 QMSR 발효로 IEC 62366-1 적합성이 FDA 인간공학 기대와 더 밀접히 정렬된다.",src:{t:"MDX · FDA HF Guidance 2026",u:"https://mdxcro.com/fda-human-factors-guidance-2026/"}},
+    {tag:"FDA · Applying HF",h4:"Human Factors Engineering 필수 요소",p:"FDA는 사용 관련 위험 분석, 형성·총괄평가, 라벨·교육까지 HF 프로세스 전반을 요구한다.",src:{t:"FDA · HFE Guidance",u:"https://www.fda.gov/medical-devices/human-factors-and-medical-devices/human-factors-engineering-medical-devices"}},
+    {tag:"Critical Tasks",h4:"핵심 과업을 먼저 정의",p:"치명적 오류로 이어질 수 있는 과업을 식별하고 UI·알람·워크플로를 그 과업 순서에 맞춘다.",src:{t:"FDA · Critical Tasks",u:"https://www.fda.gov/medical-devices/human-factors-and-medical-devices/human-factors-engineering-medical-devices"}},
+    {tag:"Formative Evaluation",h4:"형성평가로 조기 수정",p:"프로토타입 단계에서 반복 관찰·인터뷰로 사용 오류를 찾아 설계를 고친다. 총괄평가 전에 위험을 줄이는 핵심 단계다.",src:{t:"IEC 62366 · Formative",u:"https://www.iso.org/standard/63179.html"}},
+    {tag:"SaMD · HF",h4:"소프트웨어도 HF 대상",p:"SaMD·CDS도 사용자·환경·워크플로를 전제로 HF 검증이 요구될 수 있다. ‘클릭만 하면 된다’는 착시가 위험하다.",src:{t:"FDA · SaMD",u:"https://www.fda.gov/medical-devices/digital-health-center-excellence/software-medical-device-samd"}},
+    {tag:"Alarm Design",h4:"알람 피로를 줄여라",p:"과다·중복·낮은 특이도 알람은 무시(alarm fatigue)를 낳는다. 우선순위·묶음·맥락 표시가 HF 설계의 실무 핵심이다.",src:{t:"AAMI · Alarm Safety",u:"https://www.aami.org/"}},
+    {tag:"Use-Related Risk",h4:"사용 오류 = 위험",p:"의도 vs 결과의 괴리, slips·mistakes를 구분해 완화책을 둔다. FMEA·FTA와 HF 산출물을 연결한다.",src:{t:"IEC TR 62366-2",u:"https://www.iso.org/standard/63180.html"}},
+    {tag:"Labeling & Training",h4:"라벨·교육도 UI의 연장",p:"IFU·온보딩·툴팁이 실제 사용 행동을 바꾸지 못하면 라벨링만으로는 위험 완화가 입증되지 않는다.",src:{t:"FDA · Labeling",u:"https://www.fda.gov/medical-devices/device-advice-comprehensive-regulatory-assistance/labeling-medical-devices"}},
+    {tag:"Simulated Use",h4:"총괄평가는 실제에 가깝게",p:"대표 사용자·환경·시나리오로 시뮬레이션 사용 시험을 수행한다. ‘데모만 통과’하는 UI는 현장에서 무너진다.",src:{t:"FDA · Simulated Use",u:"https://www.fda.gov/medical-devices/human-factors-and-medical-devices/human-factors-engineering-medical-devices"}},
+    {tag:"Post-Market HF",h4:"시판 후에도 사용성 감시",p:"현장 피드백·민원·사용 오류 보고는 설계 변경·라벨 개정으로 이어져야 한다. QMSR 시대의 지속 개선 루프다.",src:{t:"ISO 13485 · CAPA",u:"https://www.iso.org/standard/59752.html"}}
+  ];
+  const MIND_POOL=[
+    {tag:"인지 부하",h4:"청킹(Chunking)으로 부하 분산",p:"폼 단계·그룹 메뉴처럼 덩어리로 나누면 스캔과 기억이 쉬워진다.",src:{t:"AND Academy · Cognitive Load",u:"https://www.andacademy.com/resources/blog/ui-ux-design/cognitive-load/"}},
+    {tag:"멘탈 모델",h4:"사용자의 사고에 정보 구조를 맞춰라",p:"멘탈 모델에 맞춘 IA는 처리·과업 완수를 돕고 포용적 UI가 된다.",src:{t:"Startup House",u:"https://startup-house.com/blog/cognitive-psychology-ux-design"}},
+    {tag:"AI UX 원칙",h4:"예측가능성·정정·통제권",p:"AI UI는 출력 근거·수정·거부 경로를 명시해야 신뢰가 유지된다.",src:{t:"Bootcamp · Psychology in UX",u:"https://medium.com/design-bootcamp/psychology-in-ux-design-2026-25-examples-to-improve-ui-and-the-experience-2bea4a9ad84f"}},
+    {tag:"근거",h4:"AI 적응형 인터페이스",p:"정보 밀도가 높을 때 적응형 UI가 정적 UI보다 의사결정 시간·체감 부하를 줄였다는 2026 연구.",src:{t:"IxDF · Cognition",u:"https://ixdf.org/literature/topics/cognition"}},
+    {tag:"Dual Coding",h4:"말+그림이 기억에 남는다",p:"텍스트와 시각을 함께 쓰면 이해·회상이 좋아진다. 경고·교육·온보딩에 유효하다.",src:{t:"IxDF · Dual Coding",u:"https://ixdf.org/literature/topics/dual-coding-theory"}},
+    {tag:"Working Memory",h4:"중간 저장 공간은 짧다",p:"사용자는 화면을 벗어나면 맥락을 잃는다. 단계 간 핵심 정보를 화면에 유지·요약하라.",src:{t:"Nielsen · Memory",u:"https://www.nngroup.com/articles/working-memory-external-memory/"}},
+    {tag:"Stress & UX",h4:"스트레스는 IQ를 깎는다",p:"응급·통증·불안 상태에서는 시야·주의가 좁아진다. 의료 UI는 ‘최악의 순간’을 기준으로 단순해야 한다.",src:{t:"NN/g · Stress",u:"https://www.nngroup.com/articles/stress-and-user-experience/"}},
+    {tag:"Decision Fatigue",h4:"결정도 연료가 닳는다",p:"하루·세션 동안 결정이 쌓이면 품질이 떨어진다. 기본값·추천·자동 저장으로 결정 횟수를 줄여라.",src:{t:"Behavioral Design",u:"https://www.nngroup.com/articles/decision-fatigue/"}},
+    {tag:"Social Proof",h4:"다른 사람이 했다면 안심",p:"동료·전문가·통계가 행동을 정당화한다. 다만 허위·과장 사회적 증거는 규제·윤리 리스크다.",src:{t:"Cialdini · Social Proof",u:"https://www.influenceatwork.com/"}},
+    {tag:"Loss Aversion",h4:"잃는 pain이 더 크다",p:"‘얻을 것’보다 ‘잃을 것’ 프레이밍이 행동을 더 바꾼다. 의료에서는 공포 조장보다 안전한 기본값이 낫다.",src:{t:"Kahneman · Prospect Theory",u:"https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/"}},
+    {tag:"Feedback Loops",h4:"행동 → 결과가 보여야",p:"입력 직후 상태 변화·저장·전송 확인이 없으면 불안과 재시도가 늘어난다.",src:{t:"Don Norman · Feedback",u:"https://jnd.org/"}},
+    {tag:"Affordance",h4:"누르게 생겼으면 눌려야",p:"버튼·링크·슬라이더는 형태·대비·커서로 조작 가능성을 드러내야 한다.",src:{t:"Norman · Affordance",u:"https://jnd.org/"}}
+  ];
+  const PATENT_POOL=[
+    {tag:"개념 · IP의 종류",h4:"특허·상표·디자인·저작권·영업비밀",p:"산업재산권·저작권·영업비밀로 나뉜다. 보호 대상·기간·등록 요건이 다르다.",src:{t:"WIPO · What is IP",u:"https://www.wipo.int/en/web/about-ip"}},
+    {tag:"개념 · 특허의 원리",h4:"신규성·진보성·청구항",p:"권리범위는 청구항이 정한다. 선출원·18개월 공개·PCT 국제출원이 기본 흐름이다.",src:{t:"WIPO · Patents",u:"https://www.wipo.int/en/web/patents"}},
+    {tag:"미국 §101 (2025)",h4:"SW·AI 적격성 완화",p:"USPTO 2025 메모는 성능·메모리·보안 개선이 있는 AI·SW 출원의 §101 거절을 완화한다.",src:{t:"Nat. Law Review · USPTO 2025",u:"https://natlawreview.com/article/uspto-guidance-provides-new-practical-pathways-ai-and-software-eligibility"}},
+    {tag:"한국 · 특허법",h4:"발명의 요건",p:"산업상 이용 가능·신규·진보성을 갖춘 기술적 사상. UI만으로는 디자인·저작권과 구분해야 한다.",src:{t:"KIPO · 특허",u:"https://www.kipo.go.kr/"}},
+    {tag:"디자인권",h4:"UI는 디자인으로",p:"아이콘·화면 레이아웃·제품 외관은 디자인등록으로 보호할 수 있다. 기능은 특허, 표현은 디자인.",src:{t:"WIPO · Designs",u:"https://www.wipo.int/designs/en/"}},
+    {tag:"저작권",h4:"코드·문서·UI 표현",p:"창작과 동시에 발생. OSS 라이선스·2차적 저작물·UI 스킨 복제 이슈에 주의.",src:{t:"WIPO · Copyright",u:"https://www.wipo.int/copyright/en/"}},
+    {tag:"영업비밀",h4:"공개하지 않고 지키기",p:"알고리즘·데이터·프롬프트를 비공개로 관리할 때. NDAs·접근통제·로그가 핵심.",src:{t:"WIPO · Trade Secrets",u:"https://www.wipo.int/tradesecrets/en/"}},
+    {tag:"PCT",h4:"한 번 출원, 다국가",p:"우선권 12개월 안에 PCT 국제출원 → 각국 국내단계. 글로벌 SaMD 출시 전략의 출발점.",src:{t:"WIPO · PCT",u:"https://www.wipo.int/pct/en/"}},
+    {tag:"Freedom to Operate",h4:"출시 전 FTO",p:"남의 특허를 침해하지 않는지 조사한다. ‘특허 없음’과 ‘FTO 확보’는 다르다.",src:{t:"WIPO · IP Strategy",u:"https://www.wipo.int/ip-strategy/en/"}},
+    {tag:"Alice/Mayo",h4:"추상적 아이디어 2단계",p:"2A 추상적 아이디어 여부 → 2B ‘의미 있는 추가요소’. SW·AI는 기술적 개선 서술이 관건.",src:{t:"USPTO · Subject Matter",u:"https://www.uspto.gov/patents/laws/examination-policy/subject-matter-eligibility"}},
+    {tag:"의료기기 특허",h4:"SaMD도 발명 가능",p:"진단·치료 알고리즘+구체적 기술 구현은 특허 대상이 될 수 있다. 임상 효과만으론 부족할 수 있다.",src:{t:"FDA · Patents",u:"https://www.fda.gov/medical-devices/device-advice-comprehensive-regulatory-assistance/patents-and-medical-devices"}},
+    {tag:"표준특허",h4:"FRAND와 라이선스",p:"필수 특허(SEP)는 표준 채택과 라이선스 의무가 엮인다. IoT·의료 연결 표준에서 이슈.",src:{t:"WIPO · Standards",u:"https://www.wipo.int/patents/en/topics/patents-and-standards.html"}}
+  ];
+
+  const pBox=document.getElementById('principle');
+  if(pBox){const p=PRINCIPLES[epochDay%PRINCIPLES.length];pBox.innerHTML='<span class="kick">오늘의 원칙 · Editorial</span><h2>'+nesc(p.h2)+'</h2><p>'+nesc(p.p)+'</p>';}
+  const cBox=document.getElementById('creds-articles');
+  if(cBox)cBox.innerHTML=pickDaily(CREDS_POOL,3,0).map(artHtml).join('');
+  const mBox=document.getElementById('mind-articles');
+  if(mBox)mBox.innerHTML=pickDaily(MIND_POOL,4,5).map(artHtml).join('');
+  const ptBox=document.getElementById('patent-articles');
+  if(ptBox)ptBox.innerHTML=pickDaily(PATENT_POOL,3,9).map(artHtml).join('');
+
   // 매일 5점: 사진 1 + 일러스트 1 + 회화·판화 3 (날짜별 순환)
   function pickDaily(e){
     const at=v=>POOL.filter(w=>w.k===v);
@@ -826,7 +821,6 @@
   buildSlides(pickDaily(epochDay));
 
   // ----- 뉴스: news.json이 있으면 4개 섹션을 최신 헤드라인으로 교체 -----
-  function nesc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
   function nsrc(src){return (Array.isArray(src)&&src.length)?'<p class="src">'+src.map(x=>'<a href="'+nesc(x.u)+'" target="_blank" rel="noopener">'+nesc(x.t)+'</a>').join(' · ')+'</p>':'';}
   function renderNews(data){
     if(!data) return;
