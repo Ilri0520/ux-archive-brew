@@ -31,6 +31,7 @@
     line-height:1.62;
     -webkit-font-smoothing:antialiased;
     padding:env(safe-area-inset-top) 0 56px;
+    overflow-x:hidden;
   }
   .sheet{max-width:var(--maxw); margin:0 auto; padding:0 22px}
 
@@ -216,16 +217,75 @@
   figcaption b{ font-style:normal; color:var(--ink-soft); font-weight:600; }
   figcaption .credit{ color:var(--faint); letter-spacing:.03em; }
 
-  /* 첫 면 히어로 일러스트 */
-  .hero{ margin:16px 0 0; background:#fff; border:1px solid var(--rule); }
-  .hero svg{ width:100%; height:auto; display:block; }
-  .hero .cap{
-    display:flex; justify-content:space-between; gap:10px 18px; flex-wrap:wrap;
-    font-size:11.5px; color:var(--muted); padding:9px 16px; border-top:1px solid var(--rule);
+  /* 첫 면 히어로 — 전폭(full-bleed) 큐레이션 */
+  .hero-band{
+    width:100vw;
+    max-width:100vw;
+    margin:10px calc(50% - 50vw) 0;
+    position:relative;
+    background:#141210;
+    overflow:hidden;
   }
-  .hero .cap .t{ font-style:italic; color:var(--ink-soft); }
-  .hero .cap .t b{ font-style:normal; font-family:var(--display); font-weight:700; color:var(--ink); }
-  .hero .cap .by{ letter-spacing:.04em; text-transform:uppercase; font-size:10.5px; }
+  .hero-band .carousel{ position:relative; }
+  .hero-band .viewport{ width:100%; overflow:hidden; }
+  .hero-band .track{ display:flex; width:100%; transition:transform .45s cubic-bezier(.4,0,.2,1); will-change:transform; }
+  .hero-band .slide{ flex:0 0 100%; min-width:100%; width:100%; position:relative; }
+  .hero-band .art-stage{
+    width:100%;
+    height:clamp(340px,72vh,780px);
+    position:relative;
+    overflow:hidden;
+    background:#141210;
+  }
+  .hero-band .art-stage img{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center center;
+    display:block;
+  }
+  .hero-band .slide-cap{
+    position:absolute; left:0; right:0; bottom:0; z-index:2;
+    padding:72px 28px 22px;
+    background:linear-gradient(to top, rgba(10,8,6,.88) 0%, rgba(10,8,6,.45) 42%, transparent 100%);
+    display:flex; flex-wrap:wrap; gap:4px 14px; align-items:baseline;
+  }
+  .hero-band .slide-cap .t{ font-style:italic; font-weight:600; font-size:clamp(16px,2.8vw,22px); color:#fff; font-family:var(--display); }
+  .hero-band .slide-cap .a{ font-size:13px; color:rgba(255,255,255,.78); }
+  .hero-band .slide-cap .k{ margin-left:auto; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+  .hero-band .cbar{
+    position:absolute; top:50%; left:0; right:0; z-index:3;
+    transform:translateY(-50%);
+    display:flex; justify-content:space-between; align-items:center;
+    padding:0 10px; pointer-events:none;
+  }
+  .hero-band .cbtn{
+    pointer-events:auto;
+    width:44px; height:44px; border-radius:50%;
+    border:1px solid rgba(255,255,255,.35);
+    background:rgba(10,8,6,.45); backdrop-filter:blur(6px);
+    color:#fff; font-size:22px; line-height:1; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .hero-band .cbtn:hover{ background:rgba(138,28,28,.85); border-color:rgba(255,255,255,.6); }
+  .hero-band .bars-wrap{
+    position:absolute; bottom:14px; left:50%; transform:translateX(-50%); z-index:4;
+    display:flex; gap:8px; align-items:center;
+  }
+  .hero-band .bars .bar{
+    width:28px; height:2px; background:rgba(255,255,255,.35); border:0; padding:0; cursor:pointer;
+    transition:background .2s, height .2s;
+  }
+  .hero-band .bars .bar[aria-current="true"]{ background:#fff; height:3px; }
+  .hero-band .hero-meta{
+    display:flex; justify-content:space-between; gap:12px 20px; flex-wrap:wrap;
+    padding:12px 28px 14px;
+    font-size:11px; color:rgba(255,255,255,.55);
+    border-top:1px solid rgba(255,255,255,.08);
+    background:#141210;
+  }
+  .hero-band .hero-meta .t{ font-style:italic; color:rgba(255,255,255,.72); }
+  .hero-band .hero-meta .t b{ font-style:normal; font-family:var(--display); font-weight:700; color:#fff; }
+  .hero-band .hero-meta .by{ letter-spacing:.06em; text-transform:uppercase; font-size:10px; }
 
   /* SVG 공통 팔레트 (2색 에디토리얼) */
   svg .kf{fill:var(--ink)} svg .rf{fill:var(--accent)} svg .pf{fill:var(--paper-2)}
@@ -238,29 +298,6 @@
   svg .lab{font-family:var(--serif);fill:var(--ink-soft)}
   svg .labr{font-family:var(--serif);fill:var(--accent);font-weight:600}
   svg .labm{font-family:var(--serif);fill:var(--muted)}
-
-  /* 오늘의 큐레이션 — 슬라이더 (퍼블릭 도메인 원작) */
-  .carousel{ position:relative; }
-  .viewport{ overflow:hidden; }
-  .track{ display:flex; transition:transform .42s cubic-bezier(.4,0,.2,1); touch-action:pan-y; }
-  .slide{ flex:0 0 100%; }
-  .art-stage{ background:var(--paper-2); display:flex; align-items:center; justify-content:center;
-    height:clamp(280px,56vh,560px); }
-  .art-stage img{ max-width:100%; max-height:100%; object-fit:contain; display:block; }
-  /* 캡션: 이미지 위가 아닌 아래 */
-  .slide-cap{ display:flex; flex-wrap:wrap; gap:2px 12px; align-items:baseline; padding:11px 4px 0; }
-  .slide-cap .t{ font-style:italic; font-weight:600; font-size:14px; color:var(--ink); }
-  .slide-cap .a{ font-size:12.5px; color:var(--muted); }
-  .slide-cap .k{ margin-left:auto; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint); }
-  /* 컨트롤 바: 이미지 아래 */
-  .cbar{ display:flex; align-items:center; justify-content:center; gap:16px; padding:14px 0 2px; }
-  .cbtn{ width:36px; height:36px; border-radius:50%; border:1px solid var(--rule); background:#fff;
-    color:var(--ink); font-size:20px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; }
-  .cbtn:hover{ color:var(--accent); border-color:var(--accent); }
-  /* 페이지네이션: 얇은 선 */
-  .bars{ display:flex; gap:8px; align-items:center; }
-  .bars .bar{ width:26px; height:2px; background:var(--rule); border:0; padding:0; cursor:pointer; transition:background .2s; }
-  .bars .bar[aria-current="true"]{ background:var(--accent); height:3px; }
 
   /* 오늘의 농담 */
   .jokes{ display:grid; grid-template-columns:1fr; gap:14px; }
@@ -300,23 +337,23 @@
 
   <div id="edition">
 
-  <!-- ===== 첫 면 히어로 — 오늘의 큐레이션 슬라이더 ===== -->
-  <div class="hero">
+  <!-- ===== 첫 면 히어로 — 오늘의 큐레이션 (전폭) ===== -->
+  <section class="hero-band" id="hero" aria-label="오늘의 큐레이션">
     <div class="carousel">
       <div class="viewport">
         <div class="track" id="track"><!-- 슬라이드 (JS) --></div>
       </div>
       <div class="cbar">
         <button class="cbtn prev" id="cprev" type="button" aria-label="이전 작품">‹</button>
-        <div class="bars" id="dots"></div>
         <button class="cbtn next" id="cnext" type="button" aria-label="다음 작품">›</button>
       </div>
+      <div class="bars-wrap"><div class="bars" id="dots"></div></div>
     </div>
-    <div class="cap">
-      <span class="t"><b>오늘의 큐레이션</b> — 회화·사진·판화·일러스트에서 매일 5점(사진·일러스트 포함), 퍼블릭 도메인 원작</span>
-      <span class="by">THE METROPOLITAN MUSEUM OF ART · OPEN ACCESS (CC0)</span>
+    <div class="hero-meta">
+      <span class="t"><b>오늘의 큐레이션</b> — The Met Open Access · 회화·판화·사진·일러스트</span>
+      <span class="by">THE METROPOLITAN MUSEUM OF ART · CC0</span>
     </div>
-  </div>
+  </section>
 
   <!-- ===== EDITORIAL / 오늘의 원칙 (매일 순환) ===== -->
   <div class="lead" id="principle"><!-- JS --></div>
@@ -792,11 +829,13 @@
     if(!track||!dots) return;
     let s='', d='';
     works.forEach((w,i)=>{
+      const alt=nesc(w.t+' — '+w.a);
+      const eager=i===0?' fetchpriority="high" loading="eager"':' loading="lazy"';
       s+='<div class="slide"><div class="art-stage">'
-        +'<img alt="'+w.t+' — '+w.a+'" src="'+w.img+'"></div>'
-        +'<div class="slide-cap"><span class="t">'+w.t+'</span>'
-        +'<span class="a">'+w.a+' · '+w.y+'</span>'
-        +'<span class="k">'+w.k+' · The Met · CC0</span></div></div>';
+        +'<img alt="'+alt+'" src="'+w.img+'" decoding="async" referrerpolicy="no-referrer"'+eager+'></div>'
+        +'<div class="slide-cap"><span class="t">'+nesc(w.t)+'</span>'
+        +'<span class="a">'+nesc(w.a)+' · '+nesc(w.y)+'</span>'
+        +'<span class="k">'+nesc(w.k)+' · The Met · CC0</span></div></div>';
       d+='<button class="bar" type="button" data-i="'+i+'" aria-label="'+(i+1)+'번 작품"></button>';
     });
     track.innerHTML=s; dots.innerHTML=d;
@@ -806,16 +845,19 @@
     if(!track) return;
     const n=track.children.length; if(!n) return;
     let idx=0;
-    const go=k=>{ idx=(k%n+n)%n; track.style.transform='translateX(-'+(idx*100)+'%)';
-      [...dots.children].forEach((b,i)=>b.setAttribute('aria-current', i===idx)); };
+    const go=k=>{ idx=(k%n+n)%n; track.style.transform='translate3d(-'+(idx*100)+'%,0,0)';
+      [...dots.children].forEach((b,i)=>b.setAttribute('aria-current', i===idx?'true':'false')); };
     const p=document.getElementById('cprev'), nx=document.getElementById('cnext');
     if(p) p.onclick=()=>go(idx-1);
     if(nx) nx.onclick=()=>go(idx+1);
     [...dots.children].forEach((b,i)=>b.onclick=()=>go(i));
     let x0=null; const vp=track.parentElement;
-    vp.ontouchstart=e=>{ x0=e.touches[0].clientX; };
-    vp.ontouchend=e=>{ if(x0===null) return; const dx=e.changedTouches[0].clientX-x0;
-      if(Math.abs(dx)>40){ go(dx<0?idx+1:idx-1); } x0=null; };
+    if(vp){
+      vp.style.touchAction='pan-y';
+      vp.ontouchstart=e=>{ x0=e.touches[0].clientX; };
+      vp.ontouchend=e=>{ if(x0===null) return; const dx=e.changedTouches[0].clientX-x0;
+        if(Math.abs(dx)>40){ go(dx<0?idx+1:idx-1); } x0=null; };
+    }
     go(0);
   }
   buildSlides(pickDaily(epochDay));
@@ -856,7 +898,7 @@
   }
 
   // ----- 발행본 보관 (localStorage) -----
-  const STORE='uxbrew_archive_v1';
+  const STORE='uxbrew_archive_v2';
   const liveHTML=edition.innerHTML;            // 오늘(라이브) 지면
   let archive={};
   try{archive=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
@@ -889,6 +931,9 @@
     const rec=archive[k]; if(!rec) return;
     viewingKey=k;
     edition.innerHTML=rec.html;
+    if(k===todayKey){
+      buildSlides(pickDaily(epochDay));
+    }
     initCarousel();
     const d=dateFromKey(k);
     earBtn.textContent=fmtShort(d)+(k===todayKey?'':' · 보관본')+' ▾';
