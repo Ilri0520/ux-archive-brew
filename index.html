@@ -740,7 +740,7 @@
   const epochDay=Math.floor(now.getTime()/86400000);
 
   // ----- 매일 순환 콘텐츠 (오늘의 원칙 · 지식 섹션) -----
-  function pickDaily(pool,n,offset){const L=pool.length,out=[];for(let i=0;i<n;i++)out.push(pool[(epochDay+offset+i)%L]);return out;}
+  function pickRotation(pool,n,offset){const L=pool.length,out=[];for(let i=0;i<n;i++)out.push(pool[(epochDay+offset+i)%L]);return out;}
   function artHtml(a){return '<article><span class="tag">'+nesc(a.tag)+'</span><h4>'+nesc(a.h4)+'</h4><p>'+a.p+'</p>'+(a.src?'<p class="src"><a href="'+nesc(a.src.u)+'" target="_blank" rel="noopener">'+nesc(a.src.t)+'</a></p>':'')+'</article>';}
 
   const PRINCIPLES=[
@@ -811,30 +811,31 @@
   const pBox=document.getElementById('principle');
   if(pBox){const p=PRINCIPLES[epochDay%PRINCIPLES.length];pBox.innerHTML='<span class="kick">오늘의 원칙 · Editorial</span><h2>'+nesc(p.h2)+'</h2><p>'+nesc(p.p)+'</p>';}
   const cBox=document.getElementById('creds-articles');
-  if(cBox)cBox.innerHTML=pickDaily(CREDS_POOL,3,0).map(artHtml).join('');
+  if(cBox)cBox.innerHTML=pickRotation(CREDS_POOL,3,0).map(artHtml).join('');
   const mBox=document.getElementById('mind-articles');
-  if(mBox)mBox.innerHTML=pickDaily(MIND_POOL,4,5).map(artHtml).join('');
+  if(mBox)mBox.innerHTML=pickRotation(MIND_POOL,4,5).map(artHtml).join('');
   const ptBox=document.getElementById('patent-articles');
-  if(ptBox)ptBox.innerHTML=pickDaily(PATENT_POOL,3,9).map(artHtml).join('');
+  if(ptBox)ptBox.innerHTML=pickRotation(PATENT_POOL,3,9).map(artHtml).join('');
 
-  // 매일 5점: 사진 1 + 일러스트 1 + 회화·판화 3 (날짜별 순환)
-  function pickDaily(e){
+  // 매일 10점: 사진 2 + 일러스트 2 + 회화·판화 6 (날짜별 순환)
+  function pickHeroWorks(day){
     const at=v=>POOL.filter(w=>w.k===v);
     const photo=at("사진"), illo=at("일러스트");
     const rest=POOL.filter(w=>w.k!=="사진"&&w.k!=="일러스트");
-    const pick=[ photo[e%photo.length], illo[e%illo.length] ];
-    const start=((e*3)%rest.length+rest.length)%rest.length;
-    for(let i=0;i<3;i++) pick.push(rest[(start+i)%rest.length]);
-    const rot=e%5;                                   // 사진·일러스트가 매번 맨 앞이 아니도록 순서 회전
+    const pick=photo.concat(illo);
+    const start=((day*3)%rest.length+rest.length)%rest.length;
+    for(let i=0;i<6;i++) pick.push(rest[(start+i)%rest.length]);
+    const rot=day%pick.length;
     return pick.slice(rot).concat(pick.slice(0,rot));
   }
   function initHero(){
-    const works=pickDaily(epochDay);
+    const works=pickHeroWorks(epochDay);
     const frame=document.getElementById('hero-frame');
     const dots=document.getElementById('dots');
     const prev=document.getElementById('cprev');
     const next=document.getElementById('cnext');
     if(!frame||!dots||!works.length) return;
+    works.forEach(w=>{ const p=new Image(); p.src=w.img; });
     let idx=0;
     const cap=w=>'<div class="slide-cap"><span class="t">'+nesc(w.t)+'</span>'
       +'<span class="a">'+nesc(w.a)+' · '+nesc(w.y)+'</span>'
@@ -842,7 +843,7 @@
     const show=i=>{
       idx=(i%works.length+works.length)%works.length;
       const w=works[idx];
-      frame.innerHTML='<img alt="'+nesc(w.t+' — '+w.a)+'" src="'+w.img+'" referrerpolicy="no-referrer" decoding="async" fetchpriority="high">'+cap(w);
+      frame.innerHTML='<img alt="'+nesc(w.t+' — '+w.a)+'" src="'+w.img+'" referrerpolicy="no-referrer" decoding="async" fetchpriority="'+(idx===0?'high':'auto')+'">'+cap(w);
       [...dots.children].forEach((b,j)=>b.setAttribute('aria-current', j===idx?'true':'false'));
     };
     dots.innerHTML=works.map((_,i)=>'<button class="bar" type="button" aria-label="'+(i+1)+'번 작품"></button>').join('');
