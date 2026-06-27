@@ -1,0 +1,45 @@
+---
+description: UX Archive Brew SVG·도식 다이어그램 스타일 원칙
+globs: index.html
+alwaysApply: false
+---
+
+# 도식 · 다이어그램 스타일
+
+`index.html`에 SVG 다이어그램을 추가·수정할 때 아래 팔레트와 클래스만 사용한다.
+
+## 원칙
+
+1. **면(도형)** — 연한 톤으로 살짝만 채운다. 진한 검정 면 금지.
+2. **선** — **2px**, **그레이** (`--diag-line`, `#9a9488`). 얇은 1px·검정 선 금지.
+3. **강조** — **빨강** (`--accent`, `#8a1c1c`). 핵심 1~2요소만.
+4. **화살표** — 선 `rl` + 머리 `rf`(삼각형 fill).
+5. **인라인 stroke-width** — 사용하지 않는다. CSS 클래스로만.
+
+## CSS 변수
+
+- `--diag-fill` `#f0eeea` — 기본 면
+- `--diag-line` `#9a9488` — 기본 선
+
+## 클래스 (index.html `<style>` 참고)
+
+| 클래스 | 용도 |
+|--------|------|
+| `pf` | 기본 면 (연한 채움). 박스는 `pf kl` |
+| `rf` | 강조 면 (빨강 fill) |
+| `re` | 강조 박스 (연한 빨강 fill + 빨강 stroke) |
+| `kl` / `ml` | 그레이 선 2px |
+| `rl` | 빨강 선 2px (화살표 축) |
+| `lab` | 본문 라벨 |
+| `labr` | 강조 라벨 (빨강) |
+| `labm` | 보조 라벨 (muted) |
+| `big` / `big rf` | 큰 수치 (강조 시 `rf` 추가) |
+
+## 예시
+
+```xml
+<rect x="10" y="10" width="80" height="40" rx="6" class="pf kl"/>
+<line x1="90" y1="30" x2="110" y2="30" class="rl"/>
+<polygon points="110,30 104,26 104,34" class="rf"/>
+<rect x="112" y="10" width="80" height="40" rx="6" class="re"/>
+```
