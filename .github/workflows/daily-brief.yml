@@ -1,0 +1,34 @@
+name: Daily Brief Update
+
+# 매일 새벽 7시(KST = UTC 22:00)에 뉴스를 새로 생성하고 커밋한다.
+# GitHub Actions cron은 UTC 기준이며, 부하에 따라 몇 분 지연될 수 있다.
+on:
+  schedule:
+    - cron: '0 22 * * *'      # 07:00 Asia/Seoul
+  workflow_dispatch: {}        # 수동 실행(Run workflow) 버튼도 제공
+
+permissions:
+  contents: write              # news.json 커밋/푸시 권한
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Collect fresh news (news.json)
+        run: node scripts/update-news.mjs
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name  "uxbrew-bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add news.json
+          git commit -m "Daily news refresh ($(date -u +%Y-%m-%d))" || { echo "No changes"; exit 0; }
+          git push

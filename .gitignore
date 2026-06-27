@@ -1,0 +1,10 @@
+﻿# OS / editor
+.DS_Store
+Thumbs.db
+
+# Local archives (not needed on site)
+daily-briefing-*.html
+daily-brew-*.html
+UX-Brew-Briefing-*.html
+morning-brief.html
+cloud-setup/

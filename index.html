@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The UX Archive Brew · 조간</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ffffff;
+    --paper-2:#f6f4ef;
+    --ink:#1b1813;
+    --ink-soft:#332e26;
+    --muted:#6a6256;
+    --faint:#8c8475;
+    --rule:#cabfa9;
+    --rule-strong:#2a251d;
+    --accent:#8a1c1c;
+    --maxw:1080px;
+    --serif:"Noto Serif KR",Georgia,"Times New Roman","Nanum Myeongjo","AppleMyungjo",Batang,"바탕",serif;
+    --display:"Playfair Display","Noto Serif KR",Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--serif);
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    padding:env(safe-area-inset-top) 0 56px;
+  }
+  .sheet{max-width:var(--maxw); margin:0 auto; padding:0 22px}
+
+  /* ---------- Masthead ---------- */
+  .masthead{padding:18px 0 0; text-align:left}
+  .top-rule{border-top:1px solid var(--rule-strong); margin:0}
+  .ear{
+    display:flex; justify-content:flex-end; align-items:baseline;
+    font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted);
+    padding:6px 0; border-bottom:none;
+  }
+  .ear .r{text-align:right}
+  .title{
+    font-family:var(--display); font-weight:900; color:var(--accent);
+    font-size:clamp(15px,2.8vw,21px); line-height:1.02; letter-spacing:-.01em;
+    margin:2px 0 2px;
+  }
+  .title .the{font-size:.62em; letter-spacing:.14em; font-weight:700;
+    text-transform:uppercase; margin-right:.35em; color:var(--ink-soft)}
+  .byline{
+    font-style:italic; color:var(--muted); font-size:12px; margin:0 0 12px;
+  }
+
+  /* ---------- Index nav ---------- */
+  nav.index{
+    position:fixed; top:0; left:0; right:0; z-index:60;
+    display:flex; flex-wrap:wrap; justify-content:center; gap:0;
+    padding:9px 0; background:#fff;
+    border-bottom:2px solid var(--rule-strong); box-shadow:0 2px 10px rgba(0,0,0,.06);
+    font-size:12.5px; letter-spacing:.08em; text-transform:uppercase;
+    transform:translateY(-105%); transition:transform .28s ease; will-change:transform;
+  }
+  nav.index.show{transform:translateY(0)}
+  nav.index .brand{
+    font-family:var(--display); font-weight:700; text-transform:none; letter-spacing:0;
+    color:var(--ink); padding:2px 16px 2px 0; margin-right:2px; border-right:1px solid var(--rule);
+  }
+  nav.index a{
+    color:var(--ink-soft); text-decoration:none; padding:2px 14px; font-weight:600;
+    border-right:1px solid var(--rule);
+  }
+  nav.index a:last-child{border-right:0}
+  nav.index a:hover{color:var(--accent)}
+
+  /* date dropdown (publication archive) */
+  .ear-date-wrap{position:relative; text-align:right}
+  .ear-date-btn{
+    font:inherit; font-size:11px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--muted); background:none; border:0; padding:0; cursor:pointer;
+  }
+  .ear-date-btn:hover{color:var(--accent)}
+  .ear-menu{
+    position:absolute; top:calc(100% + 6px); right:0; z-index:80; min-width:184px;
+    background:#fff; border:1px solid var(--rule-strong); box-shadow:0 6px 22px rgba(0,0,0,.14);
+    text-align:left; padding:4px 0;
+  }
+  .ear-menu .hd{
+    font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--faint);
+    padding:7px 14px 5px; border-bottom:1px solid var(--rule);
+  }
+  .ear-menu button{
+    display:flex; justify-content:space-between; align-items:center; gap:10px; width:100%;
+    font-family:var(--serif); font-size:13px; color:var(--ink-soft); background:none; border:0;
+    padding:8px 14px; cursor:pointer; text-align:left; letter-spacing:0; text-transform:none;
+  }
+  .ear-menu button:hover{background:var(--paper-2); color:var(--accent)}
+  .ear-menu button .on{font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent)}
+  .ear-menu button[aria-current="true"]{font-weight:700; color:var(--ink)}
+  .viewing-past{outline:2px dashed var(--rule); outline-offset:6px}
+
+  /* ---------- Lead / editorial ---------- */
+  .lead{
+    border:1px solid var(--rule-strong); background:var(--paper-2);
+    padding:18px 22px; margin:20px 0 8px;
+    display:grid; grid-template-columns:1fr; gap:4px;
+  }
+  .lead .kick{font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--accent); font-weight:700}
+  .lead h2{font-family:var(--display); font-weight:900; font-size:clamp(22px,4.4vw,30px); margin:4px 0 6px; line-height:1.1}
+  .lead p{margin:0; font-size:15.5px; color:var(--ink-soft)}
+  .lead p::first-letter{
+    font-family:var(--display); font-weight:900; float:left; font-size:3.3em;
+    line-height:.78; padding:6px 10px 0 0; color:var(--ink);
+  }
+
+  /* ---------- Sections ---------- */
+  section{margin:30px 0 0}
+  .sec-head{
+    display:flex; align-items:center; gap:12px; margin-bottom:10px;
+    border-top:2px solid var(--rule-strong); padding-top:8px;
+  }
+  .sec-head h3{
+    font-family:var(--display); font-weight:700; font-size:clamp(17px,3.4vw,22px);
+    margin:0; letter-spacing:.01em;
+  }
+  .sec-head .meta{margin-left:auto; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
+  .sec-head .meta b{color:var(--accent); font-weight:700}
+
+  /* multi-column newspaper flow */
+  .cols{
+    column-gap:26px; column-rule:1px solid var(--rule);
+  }
+  @media(min-width:620px){ .cols{column-count:2} }
+  @media(min-width:920px){ .cols{column-count:3} }
+
+  article{
+    break-inside:avoid; -webkit-column-break-inside:avoid; page-break-inside:avoid;
+    padding:0 0 16px; margin-bottom:16px; border-bottom:1px solid var(--rule);
+  }
+  article:last-child{border-bottom:0}
+  .tag{
+    font-size:10.5px; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--accent); font-weight:700; display:block; margin-bottom:3px;
+  }
+  article h4{
+    font-family:var(--display); font-weight:700; line-height:1.18;
+    font-size:18px; margin:0 0 6px; letter-spacing:-.005em;
+  }
+  article p{margin:0 0 8px; font-size:14px; color:var(--ink-soft); text-align:justify; hyphens:auto}
+  article .src{font-size:11.5px; color:var(--muted); font-style:italic}
+  article .src a{color:var(--muted); text-decoration:none; border-bottom:1px dotted var(--faint)}
+  article .src a:hover{color:var(--accent); border-color:var(--accent)}
+  article .src::before{content:"▪ "; color:var(--accent); font-style:normal}
+
+  /* lead article in a section spans + bigger */
+  article.feature{column-span:all; -webkit-column-span:all; border-bottom:2px solid var(--rule-strong); padding-bottom:14px; margin-bottom:18px}
+  article.feature h4{font-size:clamp(20px,3.6vw,26px)}
+  article.feature p{font-size:15px; columns:2; column-gap:26px}
+  @media(max-width:619px){ article.feature p{columns:1} }
+
+  footer{
+    margin-top:40px; border-top:3px double var(--rule-strong); padding-top:14px;
+    text-align:center; font-size:12px; color:var(--muted); font-style:italic;
+  }
+  footer .pubmark{font-family:var(--display); font-weight:700; font-style:normal; letter-spacing:.04em; color:var(--ink)}
+
+  /* ============================================================
+     v2 — 우측 정렬 · 면(背景)으로 구분 · 괘선 최소화
+     ============================================================ */
+
+  /* 마스트헤드: 두꺼운 괘선 제거, 얇은 한 줄만 */
+  .ear{ border-bottom:none; }
+  .dateline{ border:none; border-top:1px solid var(--rule); padding:9px 0 0; }
+
+  /* 섹션을 '면'으로 구분 — 배경 패널 + 흰 여백, 선 없음 */
+  section{
+    background:var(--paper-2); border:0;
+    padding:24px 24px 12px; margin:18px 0 0;
+  }
+  .lead{
+    border:0; background:var(--paper-2);
+    padding:22px 24px; margin:18px 0 0;
+  }
+  /* 섹션 헤더: 위 괘선 제거 */
+  .sec-head{
+    border-top:0; padding-top:0;
+    align-items:baseline; margin-bottom:14px;
+  }
+
+  /* 기사 사이 괘선 제거 — 여백으로만 구분 */
+  .cols{ column-rule:none; }
+  article{ border-bottom:0; padding-bottom:0; margin-bottom:18px; }
+  article.feature{ border-bottom:0; padding-bottom:0; margin-bottom:20px; }
+  article.feature p{ columns:auto; column-gap:0; }
+  article p{ text-align:left; }   /* justify 해제 */
+
+  /* 자격 노트: 2단 그리드(면 분리) */
+  .creds-cols{ display:grid; gap:18px 26px; }
+  @media(min-width:620px){ .creds-cols{ grid-template-columns:1fr 1fr; } }
+  #creds article{ margin-bottom:0; }
+
+  /* 푸터: 얇은 한 줄 */
+  footer{ border-top:1px solid var(--rule); }
+
+  /* 고정 내비: 얇게 */
+  nav.index{ border-bottom:1px solid var(--rule-strong); }
+
+  /* ============================================================
+     도형 · 시각자료 (figures / illustrations)
+     ============================================================ */
+  figure.fig{ margin:4px 0 16px; }
+  figure.fig svg{ width:100%; height:auto; display:block; }
+  figcaption{ font-size:11px; color:var(--muted); font-style:italic; padding:7px 2px 0; line-height:1.45; }
+  figcaption b{ font-style:normal; color:var(--ink-soft); font-weight:600; }
+  figcaption .credit{ color:var(--faint); letter-spacing:.03em; }
+
+  /* 첫 면 히어로 일러스트 */
+  .hero{ margin:16px 0 0; background:#fff; border:1px solid var(--rule); }
+  .hero svg{ width:100%; height:auto; display:block; }
+  .hero .cap{
+    display:flex; justify-content:space-between; gap:10px 18px; flex-wrap:wrap;
+    font-size:11.5px; color:var(--muted); padding:9px 16px; border-top:1px solid var(--rule);
+  }
+  .hero .cap .t{ font-style:italic; color:var(--ink-soft); }
+  .hero .cap .t b{ font-style:normal; font-family:var(--display); font-weight:700; color:var(--ink); }
+  .hero .cap .by{ letter-spacing:.04em; text-transform:uppercase; font-size:10.5px; }
+
+  /* SVG 공통 팔레트 (2색 에디토리얼) */
+  svg .kf{fill:var(--ink)} svg .rf{fill:var(--accent)} svg .pf{fill:var(--paper-2)}
+  svg .wf{fill:#fff} svg .mf{fill:var(--muted)} svg .none{fill:none}
+  svg .kl{fill:none;stroke:var(--ink);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  svg .rl{fill:none;stroke:var(--accent);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  svg .ml{fill:none;stroke:var(--rule);stroke-width:1}
+  svg .tl{stroke-width:1.2}
+  svg .big{font-family:var(--display);font-weight:900;fill:var(--ink)}
+  svg .lab{font-family:var(--serif);fill:var(--ink-soft)}
+  svg .labr{font-family:var(--serif);fill:var(--accent);font-weight:600}
+  svg .labm{font-family:var(--serif);fill:var(--muted)}
+
+  /* 오늘의 큐레이션 — 슬라이더 (퍼블릭 도메인 원작) */
+  .carousel{ position:relative; }
+  .viewport{ overflow:hidden; }
+  .track{ display:flex; transition:transform .42s cubic-bezier(.4,0,.2,1); touch-action:pan-y; }
+  .slide{ flex:0 0 100%; }
+  .art-stage{ background:var(--paper-2); display:flex; align-items:center; justify-content:center;
+    height:clamp(280px,56vh,560px); }
+  .art-stage img{ max-width:100%; max-height:100%; object-fit:contain; display:block; }
+  /* 캡션: 이미지 위가 아닌 아래 */
+  .slide-cap{ display:flex; flex-wrap:wrap; gap:2px 12px; align-items:baseline; padding:11px 4px 0; }
+  .slide-cap .t{ font-style:italic; font-weight:600; font-size:14px; color:var(--ink); }
+  .slide-cap .a{ font-size:12.5px; color:var(--muted); }
+  .slide-cap .k{ margin-left:auto; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--faint); }
+  /* 컨트롤 바: 이미지 아래 */
+  .cbar{ display:flex; align-items:center; justify-content:center; gap:16px; padding:14px 0 2px; }
+  .cbtn{ width:36px; height:36px; border-radius:50%; border:1px solid var(--rule); background:#fff;
+    color:var(--ink); font-size:20px; line-height:1; cursor:pointer; display:flex; align-items:center; justify-content:center; }
+  .cbtn:hover{ color:var(--accent); border-color:var(--accent); }
+  /* 페이지네이션: 얇은 선 */
+  .bars{ display:flex; gap:8px; align-items:center; }
+  .bars .bar{ width:26px; height:2px; background:var(--rule); border:0; padding:0; cursor:pointer; transition:background .2s; }
+  .bars .bar[aria-current="true"]{ background:var(--accent); height:3px; }
+
+  /* 오늘의 농담 */
+  .jokes{ display:grid; grid-template-columns:1fr; gap:14px; }
+  @media(min-width:620px){ .jokes{ grid-template-columns:1fr 1fr; } }
+  .joke{ background:#fff; border:1px solid var(--rule); padding:16px 18px; }
+  .joke .q{ margin:0 0 9px; font-size:15px; font-weight:600; color:var(--ink); line-height:1.45; }
+  .joke .q::before{ content:"Q. "; color:var(--accent); }
+  .joke .a{ margin:0; font-size:14.5px; font-style:italic; color:var(--ink-soft); line-height:1.5; }
+  .joke .a::before{ content:"A. "; font-style:normal; color:var(--accent); font-weight:700; }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <!-- ===== MASTHEAD ===== -->
+  <header class="masthead">
+    <div class="ear">
+      <span class="r ear-date-wrap">
+        <button id="ear-date" class="ear-date-btn" aria-haspopup="true" aria-expanded="false">— · — ▾</button>
+        <div id="ear-menu" class="ear-menu" role="menu" hidden></div>
+      </span>
+    </div>
+    <h1 class="title"><span class="the">The</span>UX Archive Brew</h1>
+    <p class="byline">Curated daily · 매일 아침의 동향</p>
+    <nav class="index" id="topnav">
+      <span class="brand">UX Archive Brew</span>
+      <a href="#creds">사용성</a>
+      <a href="#ux">UX·디자인</a>
+      <a href="#health">AI 헬스케어</a>
+      <a href="#samd">SaMD 규제</a>
+      <a href="#it">IT 산업</a>
+      <a href="#mind">디자인 원칙</a>
+      <a href="#joke">농담</a>
+      <a href="#patent">특허</a>
+    </nav>
+  </header>
+
+  <div id="edition">
+
+  <!-- ===== 첫 면 히어로 — 오늘의 큐레이션 슬라이더 ===== -->
+  <div class="hero">
+    <div class="carousel">
+      <div class="viewport">
+        <div class="track" id="track"><!-- 슬라이드 (JS) --></div>
+      </div>
+      <div class="cbar">
+        <button class="cbtn prev" id="cprev" type="button" aria-label="이전 작품">‹</button>
+        <div class="bars" id="dots"></div>
+        <button class="cbtn next" id="cnext" type="button" aria-label="다음 작품">›</button>
+      </div>
+    </div>
+    <div class="cap">
+      <span class="t"><b>오늘의 큐레이션</b> — 회화·사진·판화·일러스트에서 매일 5점(사진·일러스트 포함), 퍼블릭 도메인 원작</span>
+      <span class="by">THE METROPOLITAN MUSEUM OF ART · OPEN ACCESS (CC0)</span>
+    </div>
+  </div>
+
+  <!-- ===== EDITORIAL / 오늘의 원칙 ===== -->
+  <div class="lead">
+    <span class="kick">오늘의 원칙 · Editorial</span>
+    <h2>Miller's Law — 작업기억은 7±2개</h2>
+    <p>사람이 한 번에 머릿속에 담는 정보는 약 7±2개에 불과하다. 선택지·단계·메뉴를 의미 있는 덩어리(chunk)로 묶고 불필요한 옵션을 덜어내면 인지 부하가 내려간다. 2026년 한 연구는 AI 적응형 인터페이스가 정보 밀도가 높은 상황에서 의사결정 시간과 체감 작업량을 정적 인터페이스보다 유의미하게 줄였다고 보고한다 — 결국 좋은 설계란, 화면이 아니라 사람의 인지 한계에서 출발한다.</p>
+    <figure class="fig">
+      <svg viewBox="0 0 620 118" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="작업기억 7±2 청크 다이어그램">
+        <g>
+          <rect x="82" y="26" width="40" height="40" rx="6" class="ml" fill="none" stroke-dasharray="4 5"/>
+          <rect x="134" y="26" width="40" height="40" rx="6" class="kf"/>
+          <rect x="186" y="26" width="40" height="40" rx="6" class="kf"/>
+          <rect x="238" y="26" width="40" height="40" rx="6" class="kf"/>
+          <rect x="290" y="26" width="40" height="40" rx="6" class="rf"/>
+          <rect x="342" y="26" width="40" height="40" rx="6" class="kf"/>
+          <rect x="394" y="26" width="40" height="40" rx="6" class="kf"/>
+          <rect x="446" y="26" width="40" height="40" rx="6" class="kf"/>
+          <rect x="498" y="26" width="40" height="40" rx="6" class="ml" fill="none" stroke-dasharray="4 5"/>
+        </g>
+        <path d="M134,80 v6 h352 v-6" class="ml"/>
+        <line x1="310" y1="86" x2="310" y2="94" class="ml"/>
+        <text x="310" y="110" text-anchor="middle" font-size="13" class="lab">작업기억 용량 · 7 ± 2 청크</text>
+      </svg>
+      <figcaption><b>그림 1.</b> 핵심 7개(±2)만 또렷이 남고 그 바깥은 흐려진다 — 옵션·단계를 청크로 묶어 부하를 분산. <span class="credit">— 도표 CLAUDE</span></figcaption>
+    </figure>
+  </div>
+
+  <!-- ===== 사용성 공학 · 의료기기 인간공학 ===== -->
+  <section id="creds" class="creds">
+    <div class="sec-head"><h3>사용성 공학 · 의료기기 인간공학</h3><span class="meta">핵심 지식</span></div>
+    <figure class="fig">
+      <svg viewBox="0 0 620 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="IEC 62366 사용성 공학 프로세스">
+        <text x="16" y="22" font-size="11" class="labr">IEC 62366 사용성 공학 프로세스 · 위험 기반</text>
+        <rect x="16" y="42" width="96" height="52" rx="7" class="kl wf"/>
+        <text x="64" y="66" text-anchor="middle" font-size="11" class="lab">사용 명세</text>
+        <text x="64" y="82" text-anchor="middle" font-size="9" class="labm">use spec</text>
+        <line x1="114" y1="68" x2="138" y2="68" class="rl" style="stroke-width:2"/><polygon points="140,68 130,63 130,73" class="rf"/>
+        <rect x="140" y="42" width="96" height="52" rx="7" class="kl wf"/>
+        <text x="188" y="66" text-anchor="middle" font-size="11" class="lab">UI 설계</text>
+        <text x="188" y="82" text-anchor="middle" font-size="9" class="labm">interface</text>
+        <line x1="238" y1="68" x2="262" y2="68" class="rl" style="stroke-width:2"/><polygon points="264,68 254,63 254,73" class="rf"/>
+        <rect x="264" y="42" width="96" height="52" rx="7" class="kl wf"/>
+        <text x="312" y="66" text-anchor="middle" font-size="11" class="lab">형성평가</text>
+        <text x="312" y="82" text-anchor="middle" font-size="9" class="labm">formative</text>
+        <line x1="362" y1="68" x2="386" y2="68" class="rl" style="stroke-width:2"/><polygon points="388,68 378,63 378,73" class="rf"/>
+        <rect x="388" y="42" width="96" height="52" rx="7" class="kl wf"/>
+        <text x="436" y="66" text-anchor="middle" font-size="11" class="lab">총괄평가</text>
+        <text x="436" y="82" text-anchor="middle" font-size="9" class="labm">HF 검증</text>
+        <line x1="486" y1="68" x2="510" y2="68" class="rl" style="stroke-width:2"/><polygon points="512,68 502,63 502,73" class="rf"/>
+        <rect x="512" y="42" width="96" height="52" rx="7" class="rl"/>
+        <text x="560" y="66" text-anchor="middle" font-size="11" class="labr">잔여 위험</text>
+        <text x="560" y="82" text-anchor="middle" font-size="9" class="labm">수용 입증</text>
+        <text x="312" y="124" text-anchor="middle" font-size="10" class="labm">임상 과업 중심 설계 → 사용 관련 위험을 증거로 통제</text>
+      </svg>
+      <figcaption><b>그림 7.</b> IEC 62366은 임상 과업 → UI 설계 → 형성·총괄평가로 잔여 사용위험의 수용가능성을 입증하는 위험 기반 프로세스. <span class="credit">— 도표 CLAUDE</span></figcaption>
+    </figure>
+    <div class="cols">
+      <article>
+        <span class="tag">표준 · IEC 62366-1</span>
+        <h4>사용성 공학, 위험 기반으로</h4>
+        <p>IEC 62366-1은 의료기기에 사용성 공학을 적용하는 국제표준이다. 사용자가 실제 수행하는 임상 과업을 중심으로 인터페이스를 설계하고, <b>잔여 사용 관련 위험이 수용 가능함</b>을 증거로 입증한다. FDA도 ANSI/AAMI/IEC 62366-1:2015+AMD1:2020을 합의표준으로 인정한다.</p>
+        <p class="src"><a href="https://www.jamasoftware.com/requirements-management-guide/medical-devices/iec-62366/" target="_blank" rel="noopener">Jama · IEC 62366</a></p>
+      </article>
+      <article>
+        <span class="tag">FDA ↔ IEC 용어</span>
+        <h4>같은 활동, 다른 이름</h4>
+        <p>두 체계는 같은 일을 다른 용어로 부른다. FDA의 <b>‘핵심 과업(critical tasks)’</b>은 IEC의 <b>‘위해 관련 사용 시나리오’</b>, FDA의 <b>‘HF 검증시험’</b>은 IEC의 <b>‘총괄평가(summative)’</b>에 해당한다. 단 FDA 검증은 미국 거주 참가자를 요구하고, IEC는 거주 요건은 없으나 현지 언어 시험이 필요할 수 있다.</p>
+        <p class="src"><a href="https://meddeviceguide.com/blog/human-factors-testing-medical-devices-guide" target="_blank" rel="noopener">MedDeviceGuide · HF Testing</a></p>
+      </article>
+      <article>
+        <span class="tag">2026 · QMSR</span>
+        <h4>ISO 13485와의 정합</h4>
+        <p>2026년 2월 2일 발효된 <b>QMSR</b>이 ISO 13485:2016을 21 CFR Part 820에 참조로 편입했다. 이로써 IEC 62366-1 적합성이 ISO 13485 7조를 통해 FDA의 인간공학 기대와 정렬된다 — SaMD·디지털헬스에서도 사용성과 사용 위험 관리가 핵심 축이 된다.</p>
+        <p class="src"><a href="https://mdxcro.com/fda-human-factors-guidance-2026/" target="_blank" rel="noopener">MDX · FDA HF Guidance 2026</a></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== UX ===== -->
+  <section id="ux">
+    <div class="sec-head"><h3>UX · 디자인 트렌드</h3><span class="meta"><b>5</b> 건 · 면 A</span></div>
+    <div class="newswrap" id="news-ux">
+    <article class="feature">
+      <span class="tag">머리기사 · UX 2026 · 6월</span>
+      <h4>에이전트를 ‘감독’하는 설계로 — 2026 UX의 빈 칸은 ‘언제 멈추고 사람에게 넘길까’</h4>
+      <figure class="fig">
+        <svg viewBox="0 0 620 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="자동조종에서 코파일럿으로의 전환 다이어그램">
+          <circle cx="120" cy="64" r="42" class="kl"/>
+          <circle cx="120" cy="64" r="42" class="ml" fill="none" stroke-dasharray="4 5"/>
+          <text x="120" y="60" text-anchor="middle" font-size="14" class="labm">AI</text>
+          <text x="120" y="78" text-anchor="middle" font-size="11" class="labm">자동조종</text>
+          <line x1="92" y1="36" x2="148" y2="92" class="rl" style="stroke-width:2.4"/>
+          <text x="120" y="132" text-anchor="middle" font-size="11" class="labm">올노잉 오토파일럿</text>
+          <line x1="186" y1="64" x2="300" y2="64" class="rl" style="stroke-width:2.4"/>
+          <polygon points="300,64 288,58 288,70" class="rf"/>
+          <text x="243" y="50" text-anchor="middle" font-size="11" class="labr">SHIFT</text>
+          <circle cx="392" cy="64" r="40" class="kl"/>
+          <circle cx="452" cy="64" r="40" class="rl"/>
+          <text x="368" y="68" text-anchor="middle" font-size="11" class="lab">사람</text>
+          <text x="476" y="68" text-anchor="middle" font-size="11" class="labr">AI</text>
+          <text x="422" y="132" text-anchor="middle" font-size="11" class="lab">사려 깊은 코파일럿 · 협업</text>
+        </svg>
+        <figcaption><b>그림 2.</b> 인간 맥락을 존중하는 ‘코파일럿’ 모델 — 존재하되 선택적이고, 통제권은 사용자에게. <span class="credit">— 도표 CLAUDE</span></figcaption>
+      </figure>
+      <p>2026년 6월, UX의 무게중심이 ‘에이전트를 어떻게 감독할 것인가’로 옮겨갔다. 프로덕션 에이전트 스택에서 평가 하니스·트레이싱·프롬프트 엔지니어링에는 막대한 투자가 이뤄졌지만, 정작 ‘에이전트가 언제 멈추고 사람에게 물어야 하는가’를 결정하는 계층은 거의 비어 있다는 진단이다(6월 7일). 해법으로 떠오른 건 ‘통제된 자율성(controlled autonomy)’ — 에이전트가 정해진 경계 안에서 독립적으로 일하되, 일상적 사례는 자동 처리하고 예외만 사람에게 넘긴다. 잘 만든 에이전트 UI는 추론 과정을 드러내는 투명성 계층, 다단계 작업을 되돌리는 오버라이드 컨트롤, 출력마다의 신뢰도 표시, 그리고 실패 복구 설계를 갖춘다. 여러 전문 에이전트를 조율하는 인터페이스에서는 맥락을 잃지 않는 ‘핸드오프(handoff)’와 협업 대시보드가 새 과제로 떠올랐다. 접근성은 여전히 ‘기능’이 아니라 ‘인프라’로 — 시맨틱 구조와 명확한 위계는 스크린리더 사용자와 기계 에이전트 모두를 위한 공통 기반이다.</p>
+      <p class="src"><a href="https://www.digitalapplied.com/blog/human-in-the-loop-escalation-design-ai-agents-2026" target="_blank" rel="noopener">Digital Applied · HITL Escalation (6/7)</a> · <a href="https://fuselabcreative.com/ui-design-for-ai-agents/" target="_blank" rel="noopener">Fuse Lab · Agent UX 2026</a></p>
+    </article>
+    <div class="cols">
+      <article>
+        <span class="tag">에스컬레이션 설계</span>
+        <h4>에이전트가 ‘멈출 때’를 설계하라</h4>
+        <p>6월 7일 분석은 인간 개입 에스컬레이션을 ‘프로덕션 에이전트 스택의 빈 계층’으로 지목한다. 평가·트레이싱엔 투자가 몰렸지만, 에이전트가 언제 멈추고 사람에게 물을지를 정하는 설계는 거의 비어 있다.</p>
+        <p class="src"><a href="https://www.digitalapplied.com/blog/human-in-the-loop-escalation-design-ai-agents-2026" target="_blank" rel="noopener">Digital Applied · HITL Escalation</a></p>
+      </article>
+      <article>
+        <span class="tag">통제된 자율성</span>
+        <h4>전부 검토 대신 ‘예외만 사람이’</h4>
+        <p>목표는 ‘통제된 자율성’ — 에이전트는 경계 안에서 독립적으로 일하고, 일상적 사례는 자동 처리하며, 판단이 가치를 더하는 예외만 사람이 맡는다. 모든 출력을 사람이 검토하는 모델은 더 이상 유효하지 않다.</p>
+        <p class="src"><a href="https://fuselabcreative.com/ui-design-for-ai-agents/" target="_blank" rel="noopener">Fuse Lab · Agent UX 2026</a></p>
+      </article>
+      <article>
+        <span class="tag">접근성</span>
+        <h4>53%가 ‘AI 접근성 도구’ 주목</h4>
+        <p>2026 조사에서 53%가 AI 기반 접근성 도구의 큰 영향을 예상한다. 시력·운동·인지·기기·환경의 차이를 전제로 고대비·키보드 내비·모션 감소·쉬운 언어를 처음부터 시스템에 내장 — 접근성은 사후 점검이 아니라 인프라다.</p>
+        <p class="src"><a href="https://skyryedesign.com/design/ux-ui/ui-ux-design-trends-2026/" target="_blank" rel="noopener">Skyrye · UX/UI Trends 2026</a></p>
+      </article>
+      <article>
+        <span class="tag">트렌드</span>
+        <h4>차분한 인터페이스·투명한 AI</h4>
+        <p>2026년의 무드는 과장된 3D·하이퍼폴리시를 지나 ‘의도와 craft’로. 차분한 UI, 추론을 드러내는 투명성, 시각적 과장의 종말이 키워드.</p>
+        <p class="src"><a href="https://elements.envato.com/learn/ux-ui-design-trends" target="_blank" rel="noopener">Envato · UX/UI Trends 2026</a></p>
+      </article>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===== HEALTH ===== -->
+  <section id="health">
+    <div class="sec-head"><h3>인공지능 헬스케어</h3><span class="meta"><b>4</b> 건 · 면 B</span></div>
+    <div class="newswrap" id="news-health">
+    <article class="feature">
+      <span class="tag">머리기사 · 카디올로지 AI · 6월 23일</span>
+      <h4>심전도 한 장으로 ‘숨은 심장병’을 — EchoNext, 다질환 심장 AI 첫 FDA 허가… 의사 정확도를 앞섰다</h4>
+      <figure class="fig">
+        <svg viewBox="0 0 620 124" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI 헬스케어 핵심 수치">
+          <g text-anchor="middle">
+            <text x="103" y="58" font-size="32" class="big" fill="var(--accent)">77%</text>
+            <text x="103" y="82" font-size="11" class="labm">EchoNext 구조심질환 검출</text>
+            <text x="310" y="58" font-size="32" class="big">64%</text>
+            <text x="310" y="82" font-size="11" class="labm">심장전문의 정확도</text>
+            <text x="515" y="58" font-size="32" class="big">1,451</text>
+            <text x="515" y="82" font-size="11" class="labm">FDA 허가 AI 의료기기</text>
+          </g>
+          <line x1="206" y1="34" x2="206" y2="90" class="ml"/>
+          <line x1="413" y1="34" x2="413" y2="90" class="ml"/>
+          <g class="rf"><rect x="286" y="104" width="8" height="10"/><rect x="298" y="100" width="8" height="14"/><rect x="310" y="95" width="8" height="19"/><rect x="322" y="89" width="8" height="25"/></g>
+        </svg>
+        <figcaption><b>그림 3.</b> 70만+ 심전도-심초음파 쌍으로 학습한 EchoNext가 구조적 심질환을 심장전문의(64%)보다 높은 77%로 검출. <span class="credit">— 도표 CLAUDE</span></figcaption>
+      </figure>
+      <p>6월 23일, 뉴욕-프레스비테리언·컬럼비아 연구진이 설립한 Pathway Labs가 표준 12유도 심전도(ECG)를 읽어 고위험 구조적 심질환을 가려내는 AI ‘EchoNext’의 세계 첫 다질환(multicondition) FDA 허가를 발표하고 정식 출시했다. 좌·우심부전, 판막질환, 침윤성 심근병증을 시사하는 중증 비대, 폐고혈압 등 ‘증상이 나타나기 전에는 잘 잡히지 않는’ 6개 적응증을 다룬다. 70만 건 넘는 심전도-심초음파 쌍으로 학습했고, 머리 맞댄 비교에서 구조적 심질환을 77% 검출해 심장전문의(64%)를 앞섰다. 회사는 미국 임상의 절반 이상이 쓰는 OpenEvidence 플랫폼과 손잡아 진료 현장 접근성을 넓혔고, AlleyCorp·Breyer Capital이 주도한 850만 달러 시드를 유치했다. 하루 전인 6월 22일 Nature Medicine에는 EchoNext가 놓칠 뻔한 심부전을 찾아내 ‘AI 검출로 이어진 세계 첫 심장이식’ 사례가 보고됐다.</p>
+      <p class="src"><a href="https://www.businesswire.com/news/home/20260623150207/en/Pathway-Labs-Announces-Worlds-First-FDA-Clearance-for-Multicondition-AI-in-Cardiology-and-Partnership-with-OpenEvidence" target="_blank" rel="noopener">Business Wire · Pathway Labs (6/23)</a> · <a href="https://www.medicaleconomics.com/view/fda-cleared-ai-tool-flags-hidden-heart-disease-from-a-standard-ecg" target="_blank" rel="noopener">Medical Economics · EchoNext</a></p>
+    </article>
+    <div class="cols">
+      <article>
+        <span class="tag">ARPA-H · 에이전틱</span>
+        <h4>‘24시간 전문진료’ 환자 대면 AI 선정</h4>
+        <p>ARPA-H의 ADVOCATE 프로그램이 6월 중 혁신팀을 선정한다. 목표는 FDA 인가를 받는 첫 에이전틱(agentic) AI — 심혈관질환 환자를 위한 24시간 전문진료 보조 에이전트를 만든다. 1년 뒤 경쟁 다운셀렉션으로 유망 기술을 추린다.</p>
+        <p class="src"><a href="https://bipartisanpolicy.org/issue-brief/fda-oversight-understanding-the-regulation-of-health-ai-tools/" target="_blank" rel="noopener">Bipartisan Policy · ARPA-H ADVOCATE</a></p>
+      </article>
+      <article>
+        <span class="tag">FDA · 1월 6일</span>
+        <h4>저위험 AI 헬스SW, 규제 완화</h4>
+        <p>FDA가 1월 6일 가이던스로 일부 디지털헬스 제품(AI SW·웨어러블) 감독을 완화. 진단 제안이나 병력 청취 같은 보조 과업을 하는 다수 생성형 AI 도구가 FDA 심사 없이 임상에 도달할 길이 열렸다.</p>
+        <p class="src"><a href="https://telehealth.org/news/fda-clarifies-oversight-of-ai-health-software-and-wearables-limiting-regulation-of-low-risk-devices/" target="_blank" rel="noopener">Telehealth.org · FDA 완화</a></p>
+      </article>
+      <article>
+        <span class="tag">집계</span>
+        <h4>FDA 허가 AI 기기 1,451건 — 76%가 영상</h4>
+        <p>FDA의 AI 탑재 의료기기 누적이 2025년 말 1,451건에 이르렀고, 그해에만 295건이 인가됐다. 전체의 76%가 방사선영상 제품으로 여전히 영상의학이 압도적 비중을 차지한다.</p>
+        <p class="src"><a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices" target="_blank" rel="noopener">FDA · AI-Enabled Devices</a></p>
+      </article>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===== SaMD ===== -->
+  <section id="samd">
+    <div class="sec-head"><h3>SaMD 규제 · 승인</h3><span class="meta"><b>6</b> 건 · 면 C</span></div>
+    <div class="newswrap" id="news-samd">
+    <article class="feature">
+      <span class="tag">머리기사 · SaMD 규제 · 6월</span>
+      <h4>FDA, ‘위험 기반 재량’으로 디지털헬스 문을 연다 — TEMPO 파일럿에 CMS ACCESS(7월 5일)가 보험을 잇는다</h4>
+      <figure class="fig">
+        <svg viewBox="0 0 620 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="SaMD 승인 증가와 2026 규제 타임라인">
+          <line x1="70" y1="140" x2="232" y2="140" class="kl tl"/>
+          <rect x="96" y="84" width="44" height="56" class="kf"/>
+          <rect x="166" y="28" width="44" height="112" class="rf"/>
+          <text x="118" y="158" text-anchor="middle" font-size="11" class="labm">2022</text>
+          <text x="188" y="158" text-anchor="middle" font-size="11" class="labr">2026</text>
+          <text x="118" y="76" text-anchor="middle" font-size="12" class="lab">~675</text>
+          <text x="188" y="20" text-anchor="middle" font-size="15" class="big" fill="var(--accent)">1,357</text>
+          <text x="151" y="174" text-anchor="middle" font-size="11" class="labm">AI 탑재 의료기기 승인</text>
+          <line x1="300" y1="72" x2="582" y2="72" class="kl tl"/>
+          <g>
+            <circle cx="332" cy="72" r="6" class="rf"/><line x1="332" y1="72" x2="332" y2="46" class="ml"/>
+            <text x="332" y="40" text-anchor="middle" font-size="11" class="labr">1월</text>
+            <text x="332" y="94" text-anchor="middle" font-size="10" class="labm">CDS·웰니스</text>
+            <text x="332" y="107" text-anchor="middle" font-size="10" class="labm">완화</text>
+            <circle cx="442" cy="72" r="6" class="kf"/><line x1="442" y1="72" x2="442" y2="46" class="ml"/>
+            <text x="442" y="40" text-anchor="middle" font-size="11" class="labr">2월</text>
+            <text x="442" y="94" text-anchor="middle" font-size="10" class="labm">사이버보안</text>
+            <text x="442" y="107" text-anchor="middle" font-size="10" class="labm">·CSA 확정</text>
+            <circle cx="552" cy="72" r="6" class="rf"/><line x1="552" y1="72" x2="552" y2="46" class="ml"/>
+            <text x="552" y="40" text-anchor="middle" font-size="11" class="labr">7월</text>
+            <text x="552" y="94" text-anchor="middle" font-size="10" class="labm">CMS ACCESS</text>
+            <text x="552" y="107" text-anchor="middle" font-size="10" class="labm">개시(7/5)</text>
+          </g>
+          <text x="441" y="150" text-anchor="middle" font-size="11" class="labm">FDA·CMS 2026 규제 타임라인</text>
+        </svg>
+        <figcaption><b>그림 4.</b> 승인 건수는 2022년의 약 두 배로, 규제는 저위험 SW 완화와 사이버보안 강화가 동시에. <span class="credit">— 도표 CLAUDE</span></figcaption>
+      </figure>
+      <p>2026년 SaMD 규제의 축이 ‘사전 심사’에서 ‘위험 기반 재량’으로 이동하고 있다. FDA의 CDRH는 만성질환 디지털헬스 기기의 환자 접근을 넓히는 TEMPO(Technology-Enabled Meaningful Patient Outcomes) 파일럿을 가동, 1월 2일부터 참여 의향서를 접수했고 3월부터 후속 요청을 보냈다. 4개 임상영역마다 약 10개사를 선정해 ‘리얼월드 근거를 모으며 책임 있게 혁신을 장려’하는 시판 후 재량 모델을 시험한다. 여기에 CMS 혁신센터의 ACCESS 모델이 7월 5일 출범해 메디케어 만성질환자에게 기술 기반 통합진료의 ‘보험 통로’를 연결한다 — 규제와 급여가 한 세트로 묶이는 구조다. 같은 흐름에서 1월 6일 임상의사결정지원(CDS)·웰니스 SW 감독 완화, 2월 사이버보안 최종 가이던스가 자리를 잡았고, EU AI법의 고위험 의무는 2026~2027년 단계 발효를 앞둔다.</p>
+      <p class="src"><a href="https://www.fda.gov/news-events/press-announcements/fda-launches-tempo-first-its-kind-digital-health-pilot-expand-access-chronic-disease-technologies" target="_blank" rel="noopener">FDA · TEMPO 파일럿</a> · <a href="https://meddeviceguide.com/blog/fda-tempo-pilot-digital-health-devices-cms-access-model-guide" target="_blank" rel="noopener">MedDeviceGuide · TEMPO·ACCESS</a></p>
+    </article>
+    <div class="cols">
+      <article>
+        <span class="tag">TEMPO</span>
+        <h4>4개 임상영역 × 약 10개사 선정</h4>
+        <p>FDA는 4개 임상 사용영역마다 약 10개 제조사를 골라 TEMPO 파일럿에 참여시킨다. 제출에는 사용 적응증, 기기 설명, 기존 인허가 이력, 필요 시 ‘집행 재량’ 요청을 담는다 — 디지털헬스 규제의 위험 기반 전환 실험.</p>
+        <p class="src"><a href="https://www.afslaw.com/perspectives/alerts/staying-tempo-five-things-digital-health-companies-know-about-the-fdas-new" target="_blank" rel="noopener">ArentFox Schiff · TEMPO 5가지</a></p>
+      </article>
+      <article>
+        <span class="tag">CMS ACCESS</span>
+        <h4>7월 5일, 보험 통로가 열린다</h4>
+        <p>CMS 혁신센터의 ACCESS 모델이 7월 5일 출범. 메디케어 만성질환자를 위한 기술 기반 통합진료를 확대해, TEMPO의 규제 재량과 급여를 한 세트로 잇는다.</p>
+        <p class="src"><a href="https://natlawreview.com/article/cms-and-fda-unveil-digital-health-pilot-chronic-conditions" target="_blank" rel="noopener">Nat. Law Review · CMS·FDA</a></p>
+      </article>
+      <article>
+        <span class="tag">CDS 분류 · 1월 6일</span>
+        <h4>저위험 CDS, 규제 면제 명확화</h4>
+        <p>FDA가 1월 6일 가이던스로 임상의사결정지원(CDS)·웰니스 SW의 면제 기준을 명확화. ‘의사가 근거를 독립적으로 검토할 수 있는가’가 핵심 축이며, 다수 보조형 생성형 AI가 심사 없이 임상에 도달할 수 있게 됐다.</p>
+        <p class="src"><a href="https://bipartisanpolicy.org/issue-brief/fda-oversight-understanding-the-regulation-of-health-ai-tools/" target="_blank" rel="noopener">Bipartisan Policy · FDA Oversight</a></p>
+      </article>
+      <article>
+        <span class="tag">EU AI Act</span>
+        <h4>고위험 의무, 2026~2027 단계 발효</h4>
+        <p>EU AI법의 고위험 의무가 2026년 8월부터 단계 발효된다. 다수 진단·임상 AI가 고위험으로 분류돼 알고리즘 투명성, 인간 개입, 데이터 거버넌스를 요구받으며 글로벌 출시에 규제 층이 더해진다.</p>
+        <p class="src"><a href="https://intuitionlabs.ai/articles/fda-ai-ml-samd-guidance-compliance" target="_blank" rel="noopener">IntuitionLabs · SaMD 2026</a></p>
+      </article>
+      <article>
+        <span class="tag">식약처(MFDS)</span>
+        <h4>RWD 기반 AI 갱신 허가제 정착</h4>
+        <p>최초 허가뿐 아니라 실제 의료현장 누적 데이터로 성능 유지 여부를 지속 평가. 기계학습 기반 의료기기(MLMD) 적용, 규정 용어 12개 정의.</p>
+        <p class="src"><a href="https://rsedu.mfds.go.kr/board.es?mid=a10404000000&bid=0002&act=view&list_no=762" target="_blank" rel="noopener">식약처 규제과학IN</a></p>
+      </article>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===== IT ===== -->
+  <section id="it">
+    <div class="sec-head"><h3>IT 산업</h3><span class="meta"><b>4</b> 건 · 면 D</span></div>
+    <div class="newswrap" id="news-it">
+    <article class="feature">
+      <span class="tag">머리기사 · 산업 지형 · 6월 26일</span>
+      <h4>‘국가가 출시 버튼을 쥐다’ — 백악관 요청에 OpenAI, GPT-5.6 공개 지연… AI 안보·게이팅 시대로</h4>
+      <figure class="fig">
+        <svg viewBox="0 0 620 152" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="6월 모델 출시와 모델에서 플랫폼·인수로의 전환">
+          <text x="44" y="26" font-size="11" class="labr">JUNE 2026 · 안보·인재 빅뱅</text>
+          <line x1="48" y1="56" x2="578" y2="56" class="kl tl"/>
+          <g text-anchor="middle">
+            <circle cx="92" cy="56" r="6" class="rf"/><text x="92" y="80" font-size="10" class="labm">GPT-5.6 지연</text>
+            <circle cx="214" cy="56" r="6" class="kf"/><text x="214" y="80" font-size="10" class="labm">Anthropic 오프라인</text>
+            <circle cx="333" cy="56" r="6" class="rf"/><text x="333" y="80" font-size="10" class="labm">구글→Anthropic</text>
+            <circle cx="452" cy="56" r="6" class="kf"/><text x="452" y="80" font-size="10" class="labm">ChatGPT &lt;50%</text>
+            <circle cx="556" cy="56" r="6" class="rf"/><text x="556" y="80" font-size="10" class="labm">SpaceX IPO</text>
+          </g>
+          <rect x="112" y="108" width="120" height="30" rx="6" class="kl"/>
+          <text x="172" y="128" text-anchor="middle" font-size="12" class="lab">모델 (Model)</text>
+          <line x1="244" y1="123" x2="360" y2="123" class="rl" style="stroke-width:2.4"/>
+          <polygon points="360,123 348,117 348,129" class="rf"/>
+          <rect x="372" y="108" width="150" height="30" rx="6" class="rl"/>
+          <text x="447" y="128" text-anchor="middle" font-size="12" class="labr">안보 · 게이팅</text>
+        </svg>
+        <figcaption><b>그림 5.</b> 6월의 무게중심은 모델 성능이 아니라 ‘안보·게이팅·인재’ — 정부 심사, 인재 이동, 시장 재편이 한꺼번에. <span class="credit">— 도표 CLAUDE</span></figcaption>
+      </figure>
+      <p>6월의 AI 산업은 ‘안보가 출시를 규율한다’는 새 국면으로 들어섰다. OpenAI는 6월 26일, 백악관 요청에 따라 차기 플래그십 GPT-5.6의 전면 공개를 늦추고 검증된 소수 파트너에게만 접근을 제한한다고 밝혔다. 샘 올트먼은 정부가 ‘고객을 한 곳씩 승인’하는 프리뷰를 거친다고 직원들에게 전했고, 정부는 출시 전 최대 30일의 사전 접근을 요구한다. 이 조치는 앞서 6월 12일 백악관이 수출통제 지시로 Anthropic에 최신 모델 Fable 5·Mythos 5를 외국인 접근 차단을 이유로 전면 오프라인하도록 한 충돌에 이은 것으로, 고도화된 사이버 역량이 국가안보 우려의 핵심이다. 인재 지형도 흔들렸다. 6월 24일 보도에 따르면 구글 제미나이의 핵심 기여자 요나스 아들러·알렉산더 프리첼이 Anthropic으로 이동한다. 시장에서는 ChatGPT의 글로벌 점유율이 사상 처음 50% 아래(46.4%)로 내려가고 제미나이(27.7%)·클로드(10.3%)가 추격하는 다극화가 뚜렷해졌다.</p>
+      <p class="src"><a href="https://www.businesstoday.in/amp/technology/artificial-intelligence/story/openais-next-flagship-ai-model-faces-launch-delay-white-house-demands-safety-checks-539349-2026-06-26" target="_blank" rel="noopener">Business Today · GPT-5.6 지연 (6/26)</a> · <a href="https://llm-stats.com/llm-updates" target="_blank" rel="noopener">LLM-Stats · June 2026</a></p>
+    </article>
+    <div class="cols">
+      <article>
+        <span class="tag">수출통제 · 6월 12일</span>
+        <h4>Anthropic, Fable 5·Mythos 5 오프라인</h4>
+        <p>백악관이 6월 12일 수출통제 지시로 Anthropic에 최신 모델 Fable 5·Mythos 5를 외국인 접근 차단을 이유로 전면 오프라인하도록 했다. 고도화된 사이버 역량이 국가안보 우려의 핵심으로 지목됐다.</p>
+        <p class="src"><a href="https://www.thenews.com.pk/latest/1407264-openai-delays-public-launch-of-gpt-56-amid-us-government-vetting" target="_blank" rel="noopener">The News · 정부 심사</a></p>
+      </article>
+      <article>
+        <span class="tag">인재 · 6월 24일</span>
+        <h4>구글, 제미나이 핵심 2인 Anthropic行</h4>
+        <p>블룸버그에 따르면 구글 제미나이의 핵심 기여자 요나스 아들러·알렉산더 프리첼이 Anthropic으로 옮긴다. 한 명은 코딩 AI, 다른 한 명은 AI 학습 과정에 합류한다 — 프런티어 인재 쟁탈전이 재점화.</p>
+        <p class="src"><a href="https://www.bloomberg.com/news/articles/2026-06-24/google-poised-to-lose-two-more-high-profile-ai-staffers-to-anthropic" target="_blank" rel="noopener">Bloomberg · 구글→Anthropic</a></p>
+      </article>
+      <article>
+        <span class="tag">시장 점유</span>
+        <h4>ChatGPT, 사상 처음 50% 아래로</h4>
+        <p>ChatGPT의 글로벌 AI 어시스턴트 점유율이 46.4%로 처음 절반 아래로 내려갔다. 제미나이가 27.7%, 클로드가 10.3%까지 올라오며 단일 지배에서 다극 경쟁으로 무게중심이 이동한다.</p>
+        <p class="src"><a href="https://llm-stats.com/ai-news" target="_blank" rel="noopener">LLM-Stats · 점유율</a></p>
+      </article>
+    </div>
+    </div>
+  </section>
+
+  <!-- ===== MIND ===== -->
+  <section id="mind">
+    <div class="sec-head"><h3>디자인 원칙 · 인간공학 · 심리</h3><span class="meta"><b>4</b> 건 · 사설</span></div>
+    <figure class="fig">
+      <svg viewBox="0 0 620 165" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="높은 인지 부하와 낮은 인지 부하 인터페이스 비교">
+        <rect x="40" y="24" width="190" height="115" rx="8" class="kl wf"/>
+        <g class="kl tl">
+          <line x1="58" y1="44" x2="210" y2="44"/><line x1="58" y1="56" x2="190" y2="56"/>
+          <line x1="58" y1="68" x2="212" y2="68"/><line x1="58" y1="80" x2="170" y2="80"/>
+          <line x1="58" y1="92" x2="205" y2="92"/><line x1="58" y1="104" x2="186" y2="104"/>
+          <line x1="58" y1="116" x2="208" y2="116"/>
+        </g>
+        <text x="135" y="158" text-anchor="middle" font-size="12" class="labm">높은 인지 부하</text>
+        <line x1="252" y1="82" x2="352" y2="82" class="rl" style="stroke-width:2.4"/>
+        <polygon points="352,82 340,76 340,88" class="rf"/>
+        <text x="302" y="68" text-anchor="middle" font-size="11" class="labr">청킹 · 정돈</text>
+        <rect x="372" y="24" width="190" height="115" rx="8" class="kl wf"/>
+        <rect x="390" y="44" width="120" height="12" rx="3" class="rf"/>
+        <line x1="390" y1="74" x2="500" y2="74" class="kl tl"/>
+        <line x1="390" y1="92" x2="468" y2="92" class="kl tl"/>
+        <rect x="390" y="110" width="62" height="16" rx="4" class="kf"/>
+        <text x="467" y="158" text-anchor="middle" font-size="12" class="labr">낮은 인지 부하</text>
+      </svg>
+      <figcaption><b>그림 6.</b> 같은 정보라도 청크와 여백으로 정돈하면 처리 비용이 내려간다. <span class="credit">— 도표 CLAUDE</span></figcaption>
+    </figure>
+    <div class="cols">
+      <article>
+        <span class="tag">인지 부하</span>
+        <h4>청킹(Chunking)으로 부하 분산</h4>
+        <p>폼의 단계, 그룹화된 메뉴처럼 콘텐츠·과업을 덩어리로 나누면 스캔과 기억이 쉬워진다. 평이한 언어와 옵션 최소화가 핵심.</p>
+        <p class="src"><a href="https://www.andacademy.com/resources/blog/ui-ux-design/cognitive-load/" target="_blank" rel="noopener">AND Academy · Cognitive Load</a></p>
+      </article>
+      <article>
+        <span class="tag">멘탈 모델</span>
+        <h4>사용자의 사고에 정보 구조를 맞춰라</h4>
+        <p>인지심리학·인간공학 통찰로 멘탈 모델에 맞춰 정보를 구조화하면 처리·과업 완수가 쉬워지고, 다양한 능력을 포용하는 인터페이스가 된다.</p>
+        <p class="src"><a href="https://startup-house.com/blog/cognitive-psychology-ux-design" target="_blank" rel="noopener">Startup House</a></p>
+      </article>
+      <article>
+        <span class="tag">AI UX 원칙</span>
+        <h4>예측가능성·정정·통제권의 가드레일</h4>
+        <p>2026년 UX 원칙은 시스템 동작을 설명하고 사용자 통제권을 보존하는 방향으로 이동. AI는 예측·정정 가능성에 더 강한 가드레일이 필요하다.</p>
+        <p class="src"><a href="https://medium.com/design-bootcamp/psychology-in-ux-design-2026-25-examples-to-improve-ui-and-the-experience-2bea4a9ad84f" target="_blank" rel="noopener">Bootcamp · Psychology in UX</a></p>
+      </article>
+      <article>
+        <span class="tag">근거</span>
+        <h4>AI 적응형 인터페이스의 효과</h4>
+        <p>2026년 연구에 따르면 AI 적응형 인터페이스는 정보 밀도가 높은 상황에서 정적 인터페이스보다 의사결정 시간과 체감 작업량을 유의미하게 줄였다.</p>
+        <p class="src"><a href="https://ixdf.org/literature/topics/cognition" target="_blank" rel="noopener">IxDF · Cognition (2026)</a></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== 오늘의 농담 (쉬어가기) ===== -->
+  <section id="joke">
+    <div class="sec-head"><h3>오늘의 농담 · 쉬어가기</h3><span class="meta">☕ 한 입</span></div>
+    <div class="jokes" id="jokes"><!-- 매일 2편 (JS) --></div>
+  </section>
+
+  <!-- ===== 지식재산 · 특허 핵심 지식 ===== -->
+  <section id="patent">
+    <div class="sec-head"><h3>지식재산 · 특허 핵심 지식</h3><span class="meta">개념 정리</span></div>
+    <figure class="fig">
+      <svg viewBox="0 0 620 168" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="미국 §101 특허 적격성 Alice/Mayo 2단계 흐름">
+        <text x="10" y="22" font-size="11" class="labr">미국 §101 특허 적격성 · Alice/Mayo 2단계</text>
+        <rect x="10" y="54" width="92" height="48" rx="7" class="kl wf"/>
+        <text x="56" y="82" text-anchor="middle" font-size="11" class="lab">청구항</text>
+        <line x1="104" y1="78" x2="126" y2="78" class="rl" style="stroke-width:2"/><polygon points="128,78 118,73 118,83" class="rf"/>
+        <rect x="128" y="54" width="168" height="48" rx="7" class="kl wf"/>
+        <text x="212" y="76" text-anchor="middle" font-size="11" class="lab">STEP 2A</text>
+        <text x="212" y="92" text-anchor="middle" font-size="9.5" class="labm">추상적 아이디어인가?</text>
+        <text x="309" y="70" text-anchor="middle" font-size="8.5" class="labr">예</text>
+        <line x1="298" y1="78" x2="320" y2="78" class="rl" style="stroke-width:2"/><polygon points="322,78 312,73 312,83" class="rf"/>
+        <rect x="322" y="54" width="168" height="48" rx="7" class="kl wf"/>
+        <text x="406" y="76" text-anchor="middle" font-size="11" class="lab">STEP 2B</text>
+        <text x="406" y="92" text-anchor="middle" font-size="9.5" class="labm">‘의미 있는 추가요소’?</text>
+        <text x="503" y="70" text-anchor="middle" font-size="8.5" class="labr">예</text>
+        <line x1="492" y1="78" x2="514" y2="78" class="rl" style="stroke-width:2"/><polygon points="516,78 506,73 506,83" class="rf"/>
+        <rect x="516" y="54" width="92" height="48" rx="7" class="rl"/>
+        <text x="562" y="82" text-anchor="middle" font-size="11" class="labr">특허 적격</text>
+        <text x="212" y="128" text-anchor="middle" font-size="9" class="labm">2A 아니오 → 즉시 적격</text>
+        <text x="406" y="128" text-anchor="middle" font-size="9" class="labm">2B 아니오 → 부적격</text>
+      </svg>
+      <figcaption><b>그림 8.</b> 미국은 Alice/Mayo 2단계로 적격성을 판단한다 — 추상적 아이디어라도 ‘의미 있는 추가요소(기술적 개선)’가 있으면 적격. <span class="credit">— 도표 CLAUDE</span></figcaption>
+    </figure>
+    <div class="cols">
+      <article>
+        <span class="tag">개념 · IP의 종류</span>
+        <h4>특허·상표·디자인·저작권·영업비밀</h4>
+        <p>지식재산은 크게 <b>산업재산권</b>(특허·실용신안·상표·디자인)과 <b>저작권</b>, 그리고 <b>영업비밀</b>로 나뉜다. 특허는 ‘기술적 사상의 창작(발명)’, 실용신안은 물품의 구조·형상 고안, 상표는 식별표지, 디자인은 물품의 외관을 보호한다. 저작권은 창작과 동시에 발생(무방식주의)하고, 영업비밀은 공개하지 않고 비밀로 관리해 보호한다.</p>
+        <p class="src"><a href="https://www.wipo.int/en/web/about-ip" target="_blank" rel="noopener">WIPO · What is IP</a></p>
+      </article>
+      <article>
+        <span class="tag">개념 · 특허의 원리</span>
+        <h4>신규성·진보성, 그리고 청구항</h4>
+        <p>특허는 <b>신규성 · 진보성(비자명성) · 산업상 이용가능성</b>을 갖춰야 한다. 권리범위는 명세서가 아니라 <b>청구항(claims)</b>이 정한다. 대부분의 나라가 <b>선출원주의(first-to-file)</b>이며, 출원은 원칙적으로 출원일로부터 18개월 후 공개된다. 여러 나라 동시 보호는 <b>PCT</b> 국제출원으로 출발한다.</p>
+        <p class="src"><a href="https://www.wipo.int/en/web/patents" target="_blank" rel="noopener">WIPO · Patents</a></p>
+      </article>
+      <article>
+        <span class="tag">현행 · 미국 §101 (2025)</span>
+        <h4>SW·AI 발명의 적격성, 다시 열리다</h4>
+        <p>미국은 Alice/Mayo 2단계로 추상적 아이디어 여부를 본다. <b>2025년 8월 4일 USPTO 메모</b>는 심사관이 AI·SW 출원을 §101만으로 거절하지 않도록 방향을 틀었다 — 신경망 학습·실시간 데이터 분석은 ‘정신적 과정’이 아니며, 컴퓨팅 <b>성능·메모리·보안·아키텍처 개선</b>이면 적격 가능성이 높아진다. 다만 범용 ML을 통상적 인프라에 얹은 데이터분석·스케줄링은 여전히 추상적 아이디어로 거절될 수 있다. SaMD·디지털헬스 발명에 직접 영향.</p>
+        <p class="src"><a href="https://natlawreview.com/article/uspto-guidance-provides-new-practical-pathways-ai-and-software-eligibility" target="_blank" rel="noopener">Nat. Law Review · USPTO 2025</a> · <a href="https://www.afslaw.com/perspectives/alerts/uspto-aims-boost-patent-eligibility-ai-and-ml-inventions" target="_blank" rel="noopener">ArentFox Schiff</a></p>
+      </article>
+    </div>
+  </section>
+
+  </div><!-- /#edition -->
+
+  <footer>
+    <div class="pubmark">The UX Archive Brew</div>
+    매일 아침 한 잔 ☕ · 모든 기사 끝의 ▪ 출처에서 원문을 확인하세요 · 편집 · Claude
+  </footer>
+</div>
+
+<script>
+(function(){
+  const days=['일','월','화','수','목','금','토'];
+  const pad=x=>String(x).padStart(2,'0');
+  const keyOf=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  const fmtLong=d=>`${d.getFullYear()}년 ${d.getMonth()+1}월 ${d.getDate()}일 ${days[d.getDay()]}요일`;
+  const fmtShort=d=>`${d.getMonth()+1}월 ${d.getDate()}일`;
+  const dateFromKey=k=>{const[y,m,dd]=k.split('-').map(Number);return new Date(y,m-1,dd)};
+
+  const now=new Date();
+  const todayKey=keyOf(now);
+  const earBtn=document.getElementById('ear-date');
+  const earMenu=document.getElementById('ear-menu');
+  const edition=document.getElementById('edition');
+
+  earBtn.textContent=fmtShort(now)+' ▾';
+
+  // ----- 오늘의 큐레이션: 퍼블릭 도메인 원작 (매일 순환) -----
+  const MET="https://images.metmuseum.org/CRDImages/";
+  const POOL=[
+    {a:"Vincent van Gogh", t:"Wheat Field with Cypresses", y:"1889", k:"회화", img:MET+"ep/web-large/DP-42549-001.jpg"},
+    {a:"Vincent van Gogh", t:"Irises", y:"1890", k:"회화", img:MET+"ep/web-large/DP346474.jpg"},
+    {a:"Vincent van Gogh", t:"Self-Portrait with a Straw Hat", y:"1887", k:"회화", img:MET+"ep/web-large/DT1502_cropped2.jpg"},
+    {a:"Vincent van Gogh", t:"Madame Roulin and Her Baby", y:"1888", k:"회화", img:MET+"rl/web-large/DT3154.jpg"},
+    {a:"Édouard Manet", t:"Young Lady in 1866", y:"1866", k:"회화", img:MET+"ep/web-large/DP273977.jpg"},
+    {a:"Paul Cézanne", t:"Still Life with Apples and a Pot of Primroses", y:"c.1890", k:"회화", img:MET+"ep/web-large/DT47.jpg"},
+    {a:"J.-A.-D. Ingres", t:"Princesse de Broglie", y:"1851–53", k:"회화", img:MET+"rl/web-large/DP-19264-001.jpg"},
+    {a:"Hans Memling", t:"The Annunciation", y:"c.1465–70", k:"회화", img:MET+"ep/web-large/DP240360.jpg"},
+    {a:"Katsushika Hokusai", t:"Under the Wave off Kanagawa (The Great Wave)", y:"c.1830–32", k:"판화", img:MET+"as/web-large/DP130155.jpg"},
+    {a:"Katsushika Hokusai", t:"Noboto Bay, from Thirty-six Views of Mount Fuji", y:"c.1830–32", k:"판화", img:MET+"as/web-large/DP141051.jpg"},
+    {a:"Katsushika Hokusai", t:"Storm below Mount Fuji", y:"c.1830–32", k:"판화", img:MET+"as/web-large/DP140976.jpg"},
+    {a:"Carleton E. Watkins", t:"View on the Columbia, Cascades", y:"1867", k:"사진", img:MET+"ph/web-large/DT1173.jpg"},
+    {a:"Timothy H. O’Sullivan", t:"White House Landing, Pamunkey River", y:"1864", k:"사진", img:MET+"ph/web-large/DP254756.jpg"},
+    {a:"Winslow Homer", t:"Home from the War (Harper’s Weekly)", y:"1863", k:"일러스트", img:MET+"dp/web-large/DP875224.jpg"},
+    {a:"Winslow Homer", t:"High Tide (Every Saturday)", y:"1870", k:"일러스트", img:MET+"dp/web-large/DP218933.jpg"}
+  ];
+  const epochDay=Math.floor(now.getTime()/86400000);
+  // 매일 5점: 사진 1 + 일러스트 1 + 회화·판화 3 (날짜별 순환)
+  function pickDaily(e){
+    const at=v=>POOL.filter(w=>w.k===v);
+    const photo=at("사진"), illo=at("일러스트");
+    const rest=POOL.filter(w=>w.k!=="사진"&&w.k!=="일러스트");
+    const pick=[ photo[e%photo.length], illo[e%illo.length] ];
+    const start=((e*3)%rest.length+rest.length)%rest.length;
+    for(let i=0;i<3;i++) pick.push(rest[(start+i)%rest.length]);
+    const rot=e%5;                                   // 사진·일러스트가 매번 맨 앞이 아니도록 순서 회전
+    return pick.slice(rot).concat(pick.slice(0,rot));
+  }
+  function buildSlides(works){
+    const track=document.getElementById('track'), dots=document.getElementById('dots');
+    if(!track||!dots) return;
+    let s='', d='';
+    works.forEach((w,i)=>{
+      s+='<div class="slide"><div class="art-stage">'
+        +'<img alt="'+w.t+' — '+w.a+'" src="'+w.img+'"></div>'
+        +'<div class="slide-cap"><span class="t">'+w.t+'</span>'
+        +'<span class="a">'+w.a+' · '+w.y+'</span>'
+        +'<span class="k">'+w.k+' · The Met · CC0</span></div></div>';
+      d+='<button class="bar" type="button" data-i="'+i+'" aria-label="'+(i+1)+'번 작품"></button>';
+    });
+    track.innerHTML=s; dots.innerHTML=d;
+  }
+  function initCarousel(){
+    const track=document.getElementById('track'), dots=document.getElementById('dots');
+    if(!track) return;
+    const n=track.children.length; if(!n) return;
+    let idx=0;
+    const go=k=>{ idx=(k%n+n)%n; track.style.transform='translateX(-'+(idx*100)+'%)';
+      [...dots.children].forEach((b,i)=>b.setAttribute('aria-current', i===idx)); };
+    const p=document.getElementById('cprev'), nx=document.getElementById('cnext');
+    if(p) p.onclick=()=>go(idx-1);
+    if(nx) nx.onclick=()=>go(idx+1);
+    [...dots.children].forEach((b,i)=>b.onclick=()=>go(i));
+    let x0=null; const vp=track.parentElement;
+    vp.ontouchstart=e=>{ x0=e.touches[0].clientX; };
+    vp.ontouchend=e=>{ if(x0===null) return; const dx=e.changedTouches[0].clientX-x0;
+      if(Math.abs(dx)>40){ go(dx<0?idx+1:idx-1); } x0=null; };
+    go(0);
+  }
+  buildSlides(pickDaily(epochDay));
+
+  // ----- 뉴스: news.json이 있으면 4개 섹션을 최신 헤드라인으로 교체 -----
+  function nesc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+  function nsrc(src){return (Array.isArray(src)&&src.length)?'<p class="src">'+src.map(x=>'<a href="'+nesc(x.u)+'" target="_blank" rel="noopener">'+nesc(x.t)+'</a>').join(' · ')+'</p>':'';}
+  function renderNews(data){
+    if(!data) return;
+    ['ux','health','samd','it'].forEach(id=>{
+      const sec=data[id], box=document.getElementById('news-'+id);
+      if(!sec||!box) return;
+      let h='';
+      if(sec.feature){const f=sec.feature; h+='<article class="feature"><span class="tag">'+nesc(f.tag)+'</span><h4>'+nesc(f.h4)+'</h4>'; (f.paras||[]).forEach(p=>h+='<p>'+nesc(p)+'</p>'); h+=nsrc(f.src)+'</article>';}
+      if(Array.isArray(sec.items)&&sec.items.length){ h+='<div class="cols">'; sec.items.forEach(it=>{h+='<article><span class="tag">'+nesc(it.tag)+'</span><h4>'+nesc(it.h4)+'</h4><p>'+nesc(it.para||'')+'</p>'+nsrc(it.src)+'</article>';}); h+='</div>'; }
+      if(h) box.innerHTML=h;
+    });
+  }
+  fetch('news.json',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(renderNews).catch(()=>{});
+
+  // ----- 오늘의 농담 (매일 2편 순환) -----
+  const JOKES=[
+    {q:"UX 디자이너가 가장 무서워하는 유령은?", a:"눌러도 아무 일 없는 ‘고스트 버튼’."},
+    {q:"메뉴가 12개인 식당이 인기 없는 이유는?", a:"손님의 작업기억이 7±2에서 과부하 나서."},
+    {q:"변리사가 고백을 자꾸 미루는 이유는?", a:"누가 먼저 ‘선출원’할까 봐."},
+    {q:"폰트가 헬스장에 등록한 이유는?", a:"조금 더 ‘볼드’해지고 싶어서."},
+    {q:"디자인 시스템 커플이 헤어진 이유는?", a:"컴포넌트는 많은데 ‘일관성’이 없어서."},
+    {q:"사용자가 ‘완전 직관적이네요!’라고 말하면?", a:"설명서를 안 읽었다는 뜻."},
+    {q:"다크 모드의 숨은 장점은?", a:"버그도 어두워서 잘 안 보임."},
+    {q:"AI에게 ‘짧게 답해줘’라고 했더니?", a:"서론부터 세 문단을 시작했다."}
+  ];
+  const jbox=document.getElementById('jokes');
+  if(jbox){
+    const n=JOKES.length, ja=epochDay%n, jb=(epochDay+Math.floor(n/2))%n;
+    let jh='';
+    [ja,jb].forEach(k=>{ const j=JOKES[k];
+      jh+='<div class="joke"><p class="q">'+j.q+'</p><p class="a">'+j.a+'</p></div>'; });
+    jbox.innerHTML=jh;
+  }
+
+  // ----- 발행본 보관 (localStorage) -----
+  const STORE='uxbrew_archive_v1';
+  const liveHTML=edition.innerHTML;            // 오늘(라이브) 지면
+  let archive={};
+  try{archive=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+  archive[todayKey]={label:fmtLong(now), html:liveHTML};
+  try{localStorage.setItem(STORE,JSON.stringify(archive))}catch(e){}
+
+  initCarousel();                              // 슬라이더 작동 연결
+
+  let viewingKey=todayKey;
+
+  function renderMenu(){
+    const keys=Object.keys(archive).sort().reverse();
+    let html='<div class="hd">지난 발행본 · '+keys.length+'호</div>';
+    keys.forEach(k=>{
+      const d=dateFromKey(k);
+      const isToday=k===todayKey;
+      const cur=k===viewingKey;
+      html+='<button data-k="'+k+'" aria-current="'+cur+'">'
+          + '<span>'+fmtLong(d)+(isToday?' · 오늘':'')+'</span>'
+          + (cur?'<span class="on">보는 중</span>':'')
+          + '</button>';
+    });
+    earMenu.innerHTML=html;
+    earMenu.querySelectorAll('button').forEach(b=>{
+      b.addEventListener('click',()=>{ loadEdition(b.dataset.k); closeMenu(); });
+    });
+  }
+
+  function loadEdition(k){
+    const rec=archive[k]; if(!rec) return;
+    viewingKey=k;
+    edition.innerHTML=rec.html;
+    initCarousel();
+    const d=dateFromKey(k);
+    earBtn.textContent=fmtShort(d)+(k===todayKey?'':' · 보관본')+' ▾';
+    edition.classList.toggle('viewing-past', k!==todayKey);
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  function openMenu(){ renderMenu(); earMenu.hidden=false; earBtn.setAttribute('aria-expanded','true'); }
+  function closeMenu(){ earMenu.hidden=true; earBtn.setAttribute('aria-expanded','false'); }
+  earBtn.addEventListener('click',e=>{ e.stopPropagation(); earMenu.hidden?openMenu():closeMenu(); });
+  document.addEventListener('click',e=>{ if(!earMenu.contains(e.target)&&e.target!==earBtn) closeMenu(); });
+
+  // ----- 상단 내비: 스크롤 올리면 나타남 -----
+  const nav=document.getElementById('topnav');
+  let lastY=window.scrollY;
+  function onScroll(){
+    const y=window.scrollY;
+    if(y<=140){ nav.classList.remove('show'); }
+    else if(y<lastY-4){ nav.classList.add('show'); }
+    else if(y>lastY+4){ nav.classList.remove('show'); }
+    lastY=y;
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+
+  nav.querySelectorAll('a').forEach(a=>{
+    a.addEventListener('click',e=>{
+      const t=document.querySelector(a.getAttribute('href'));
+      if(t){ e.preventDefault(); window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-56,behavior:'smooth'}); }
+    });
+  });
+})();
+</script>
+</body>
+</html>
