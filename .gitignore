@@ -8,3 +8,6 @@ daily-brew-*.html
 UX-Brew-Briefing-*.html
 morning-brief.html
 cloud-setup/
+
+# Local Netlify folder
+.netlify
