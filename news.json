@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T00:53:49.748Z",
+  "updated": "2026-06-28T00:55:46.641Z",
   "ux": {
     "feature": {
       "tag": "머리기사 · 전자신문 · 4일 전",
@@ -165,16 +165,16 @@
         ]
       },
       {
-        "tag": "파이낸셜뉴스 · 어제",
-        "h4": "식약처, AI 디지털의료기기 변경관리 제도 구체화...가이드라인 첫 마련",
+        "tag": "ebn.co.kr · 4일 전",
+        "h4": "[K의료기기 성장의 역설③] 허가는 받았는데 못 판다…혁신기기 막는 '급여의 벽'",
         "paras": [
-          "<p><strong class=\"num\">파이낸셜뉴스</strong>가 <strong class=\"num\">어제</strong> 보도한 '식약처, AI 디지털의료기기 변경관리 제도 구체화...가이드라인 첫 마련' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">ebn.co.kr</strong>가 <strong class=\"num\">4일 전</strong> 보도한 '[K의료기기 성장의 역설③] 허가는 받았는데 못 판다…혁신기기 막는 '급여의 벽'' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFB5NU5IUnIxYmh4Ym1WT0IxaTBrSkZBd3ZCdnZkM0I3TjFKMW9wNnRXSU1IcGZ1VUVDY21DQzdxcTM1cEkyYm1lbXl0Vk42ay10d2tISkJ2RFFEQQ?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5Nb2s1UzJaS2xqQjdxZVRqWEN1N0c4UDZRX2pEWnRZNHByUUhtOVJnOVVHMXJYemRqWm14TWZTZEcxMmxSZmx6elA0YzhBa01yeFFRNVl0dkNuNG5YNDdVZzZwbkZSb2ND?oc=5"
           }
         ]
       }
@@ -182,59 +182,59 @@
   },
   "it": {
     "feature": {
-      "tag": "머리기사 · 다나와 자동차 · 3일 전",
-      "h4": "[모빌리티 인사이트] '자동차를 멈추는 AI' 메모리 반도체 부족 경고등",
+      "tag": "머리기사 · 조선일보 · 2일 전",
+      "h4": "오픈AI, 자체 AI 반도체 공개… 올해 말부터 데이터센터 배치",
       "paras": [
-        "<p><strong class=\"num\">다나와 자동차</strong>가 <strong class=\"num\">3일 전</strong> 보도한 '[모빌리티 인사이트] '자동차를 멈추는 AI' 메모리 반도체 부족 경고등' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+        "<p><strong class=\"num\">조선일보</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '오픈AI, 자체 AI 반도체 공개… 올해 말부터 데이터센터 배치' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
         "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
       ],
       "src": [
         {
           "t": "원문 보기",
-          "u": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPMENnRkVUdkNBRHlud1RCUVJWazZWOTRZUlhCYW1JNHZKSEdUdFhUOXJ0T3pQT1lQa0k2MUZUQlhVTTNVY3BsdU5KOE1ZU2ZLTlV2VEJEZVpQUGR2aHZXc2hrVFAyUWJIXzE0Z2wxSENJOUZ5VndvNGdBVTNWNUVHTTM1Z05odw?oc=5"
+          "u": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPcWZ6MkpGaGZneGpVdnVEdDMycEU3Si12WGQxX0k5WEJyM3VNaFZKVVRkZHJvMUcwU2ZsYWkzV1pvcjZqN3dhR1M3alBwb3AwUFI4c1pBcXR0NXQ2bW45ZUZvcDJRSUZDZEhqV3ptaDNoZmJfVkI4UHVxUjVvZEYxaWhLcw?oc=5"
         }
       ]
     },
     "items": [
       {
-        "tag": "les24heures.fr · 5일 전",
-        "h4": "한국 여자 축구 일정 기억 기술과 비밀 풀기: 분석, 평가 및 최적화",
+        "tag": "v.daum.net · 2일 전",
+        "h4": "오픈AI도 자체 칩… 메모리 시장 ‘쑥쑥’",
         "paras": [
-          "<p><strong class=\"num\">les24heures.fr</strong>가 <strong class=\"num\">5일 전</strong> 보도한 '한국 여자 축구 일정 기억 기술과 비밀 풀기: 분석, 평가 및 최적화' 소식이다. IT 산업 분야에서 업계 관심이 모이고 있다.</p>",
-          "<p class=\"insight\">IT·AI 산업은 모델 성능 경쟁과 동시에 인프라·안보·공급망 제약이 출시 전략을 규율한다.</p>"
+          "<p><strong class=\"num\">v.daum.net</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '오픈AI도 자체 칩… 메모리 시장 ‘쑥쑥’' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA2c2U5WHZ6OTZub3BXcWkwbTVvVUxDa3Vkbl9nYzRyTk9xT2tGUVV1cmxLam1HOGdXeGRGR2NFRi05bVZnOGJDQ1BuZWlnT0txMWc?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE0wTF95b21ub2V1Q3hSNnBvdjBZQS1RaVgySng3VlBpNEtzUzhJbWxKUllscURwelJNbnN1cUVyUXJDTDRHdjRSbE9PVkxCYldLNXM4cQ?oc=5"
           }
         ]
       },
       {
-        "tag": "한국장애인신문 · 어제",
-        "h4": "서울시장애인일자리센터, ‘AI아티스트 양성과정’ 운영",
+        "tag": "연합뉴스 · 3일 전",
+        "h4": "오픈AI, 자체 AI칩 '할라페뇨' 공개…\"블랙웰·TPU와 대등 성능\"",
         "paras": [
-          "<p><strong class=\"num\">한국장애인신문</strong>가 <strong class=\"num\">어제</strong> 보도한 '서울시장애인일자리센터, ‘AI아티스트 양성과정’ 운영' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
-          "<p class=\"insight\">IT·AI 산업은 모델 성능 경쟁과 동시에 인프라·안보·공급망 제약이 출시 전략을 규율한다.</p>"
+          "<p><strong class=\"num\">연합뉴스</strong>가 <strong class=\"num\">3일 전</strong> 보도한 '오픈AI, 자체 AI칩 '할라페뇨' 공개…\"블랙웰·TPU와 대등 성능\"' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMidkFVX3lxTE85VTJfZkljbFpNeFNrQTc4UEtETHNTa25tNWFQNlU2MjZ4azhLRTB4a0tzVTVodHNYRmtBZkRXSElmUHB3cHdFSE5aRk16WEpDTi1kUEczZ3VoVlhMUk92SlJUT1FTbG9VMkNqblltTEt3NHFMWWfSAXhBVV95cUxNd1BPYlBlN095ei04djlUVGhTR08za2JhWEpLMEZxOGc4NVpYdkdlNUI0RTZlYTcyaG9oRFRxQ0RvdjV4UUNoV1RDVzAzWmpKajYtb3lHZzMySkd1YW8zUGEtZUJYZThxTzZqYlJZbWlWWGtGUHRUd1g?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBhTktPVkhnejVrVDZEc2dtQ1dZc3h1VURaV0UtMVp0b0k2QmF6Qi1zQ3NhZWFkdzBVbGZNZ3VBbEphU1AxQW5yQWpDQlhtZHI5aEZPZVh4RWJtMnPSAWBBVV95cUxPdmx3cmtId0YzUVdZakRKbXZDYzBuWkxGNGlTakNMN29GT29lV3dCM29zM29RbFBJV09HRXNjV2VQVjB6eERhT1BoeTNwc0luYWR2QnV6T1d3d1dVQjR3QXM?oc=5"
           }
         ]
       },
       {
-        "tag": "아이뉴스24 · 3일 전",
-        "h4": "상장 준비 중인 LG CNS 상반기 '호실적'…\"클라우드·AI 사업 기대\"",
+        "tag": "지디넷코리아 · 어제",
+        "h4": "[영상] \"AI 실수도 기업 책임\"…생성형 AI 시대, 리스크 관리가 생존 전략",
         "paras": [
-          "<p><strong class=\"num\">아이뉴스24</strong>가 <strong class=\"num\">3일 전</strong> 보도한 '상장 준비 중인 LG CNS 상반기 '호실적'…\"클라우드·AI 사업 기대\"' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
-          "<p class=\"insight\">IT·AI 산업은 모델 성능 경쟁과 동시에 인프라·안보·공급망 제약이 출시 전략을 규율한다.</p>"
+          "<p><strong class=\"num\">지디넷코리아</strong>가 <strong class=\"num\">어제</strong> 보도한 '[영상] \"AI 실수도 기업 책임\"…생성형 AI 시대, 리스크 관리가 생존 전략' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE15UmM5ck5PR3owdGVRT0xUVVFCUXp1eTBmTlRIQmZjQldwY0lBSzhLeWVPZ3NwaHdJTGZJTE16ek5aY09oQVQxanc0NVU5ZktDeUl6UFVn?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1EZU5GbWhoanptc2NnbXg1UllvMEFmbERkV1RMd2hEYWRUSWZxUm9SaDdPSzBSQWp5RmNjcV9ValhZWS1leVBWeXFJa09XV3RfaXl0MnJR?oc=5"
           }
         ]
       }
