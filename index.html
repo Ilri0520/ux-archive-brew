@@ -226,6 +226,7 @@
 
   /* 첫 면 히어로 — 전폭(full-bleed) 큐레이션 */
   .hero-band{
+    --hero-chrome:280px;
     width:100vw;
     max-width:100vw;
     margin:10px calc(50% - 50vw) 0;
@@ -237,15 +238,21 @@
   .hero-band .hero-frame{
     position:relative;
     width:100%;
-    height:clamp(340px,72vh,780px);
+    height:calc(100svh - var(--hero-chrome));
+    min-height:200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     overflow:hidden;
     background:#141210;
     flex-shrink:0;
   }
   .hero-band .hero-frame img{
-    position:absolute; inset:0;
-    width:100%; height:100%;
-    object-fit:cover;
+    width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
     object-position:center center;
     display:block;
   }
@@ -877,7 +884,19 @@
     const rot=day%uniq.length;
     return uniq.slice(rot).concat(uniq.slice(0,rot));
   }
+  function syncHeroViewport(){
+    const band=document.getElementById('hero');
+    const mast=document.querySelector('.masthead');
+    if(!band||!mast) return;
+    const ui=band.querySelector('.hero-ui');
+    const meta=band.querySelector('.hero-meta');
+    const chrome=mast.offsetHeight+(ui?.offsetHeight||0)+(meta?.offsetHeight||0)
+      +parseFloat(getComputedStyle(band).marginTop||0)+8;
+    band.style.setProperty('--hero-chrome', chrome+'px');
+  }
   function initHero(){
+    syncHeroViewport();
+    window.addEventListener('resize', syncHeroViewport, {passive:true});
     const works=pickHeroWorks(epochDay);
     const frame=document.getElementById('hero-frame');
     const capBox=document.getElementById('hero-cap');
