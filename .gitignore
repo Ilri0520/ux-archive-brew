@@ -11,3 +11,6 @@ cloud-setup/
 
 # Local Netlify folder
 .netlify
+
+# Dependencies
+node_modules/

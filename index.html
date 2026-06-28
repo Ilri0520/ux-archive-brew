@@ -78,6 +78,13 @@
   nav.index a:last-child{border-right:0}
   nav.index a:hover{color:var(--accent)}
 
+  /* 작품 섹션 아래 고정 내비 (항상 표시) */
+  nav.index.index-below{
+    position:static; transform:none; will-change:auto;
+    margin:0 0 6px; box-shadow:none;
+    border-bottom:2px solid var(--rule-strong);
+  }
+
   /* date dropdown (publication archive) */
   .ear-date-wrap{position:relative; text-align:right}
   .ear-date-btn{
@@ -148,6 +155,8 @@
     font-size:9px; margin:0 0 6px; letter-spacing:-.005em;
   }
   article p{margin:0 0 8px; font-size:14px; color:var(--ink-soft); text-align:justify; hyphens:auto}
+  article p .num, article .num{color:#1a4d8c;font-weight:700}
+  article p.insight, article .insight{color:var(--accent);font-style:normal}
   article .src{font-size:11.5px; color:var(--muted); font-style:italic}
   article .src a{color:var(--muted); text-decoration:none; border-bottom:1px dotted var(--faint)}
   article .src a:hover{color:var(--accent); border-color:var(--accent)}
@@ -224,13 +233,14 @@
     background:#141210;
     overflow:hidden;
   }
-  .hero-band .carousel{ position:relative; }
+  .hero-band .carousel{ display:flex; flex-direction:column; }
   .hero-band .hero-frame{
     position:relative;
     width:100%;
     height:clamp(340px,72vh,780px);
     overflow:hidden;
     background:#141210;
+    flex-shrink:0;
   }
   .hero-band .hero-frame img{
     position:absolute; inset:0;
@@ -239,37 +249,40 @@
     object-position:center center;
     display:block;
   }
+  .hero-band .hero-ui{
+    display:flex; align-items:center; gap:10px 14px;
+    padding:12px 16px 10px;
+    background:#141210;
+    border-top:1px solid rgba(255,255,255,.08);
+  }
+  .hero-band .hero-ui-mid{
+    flex:1; min-width:0;
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+  }
   .hero-band .slide-cap{
-    position:absolute; left:0; right:0; bottom:0; z-index:2;
-    padding:72px 28px 22px;
-    background:linear-gradient(to top, rgba(10,8,6,.88) 0%, rgba(10,8,6,.45) 42%, transparent 100%);
-    display:flex; flex-wrap:wrap; gap:4px 14px; align-items:baseline;
+    width:100%;
+    display:flex; flex-wrap:wrap; gap:4px 14px; align-items:baseline; justify-content:center;
+    text-align:center;
     pointer-events:none;
   }
   .hero-band .slide-cap .t{ font-style:italic; font-weight:600; font-size:clamp(8px,1.4vw,11px); color:#fff; font-family:var(--display); }
   .hero-band .slide-cap .a{ font-size:13px; color:rgba(255,255,255,.78); }
-  .hero-band .slide-cap .k{ margin-left:auto; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.5); }
-  .hero-band .cbar{
-    position:absolute; top:50%; left:0; right:0; z-index:3;
-    transform:translateY(-50%);
-    display:flex; justify-content:space-between; align-items:center;
-    padding:0 10px; pointer-events:none;
-  }
+  .hero-band .slide-cap .k{ font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.5); }
   .hero-band .cbtn{
-    pointer-events:auto;
-    width:44px; height:44px; border-radius:50%;
+    flex-shrink:0;
+    width:40px; height:40px; border-radius:50%;
     border:1px solid rgba(255,255,255,.35);
-    background:rgba(10,8,6,.45); backdrop-filter:blur(6px);
+    background:rgba(255,255,255,.08);
     color:#fff; font-size:22px; line-height:1; cursor:pointer;
     display:flex; align-items:center; justify-content:center;
   }
   .hero-band .cbtn:hover{ background:rgba(138,28,28,.85); border-color:rgba(255,255,255,.6); }
   .hero-band .bars-wrap{
-    position:absolute; bottom:14px; left:50%; transform:translateX(-50%); z-index:4;
-    display:flex; gap:8px; align-items:center;
+    display:flex; gap:8px; align-items:center; justify-content:center;
+    flex-wrap:wrap;
   }
   .hero-band .bars .bar{
-    width:28px; height:2px; background:rgba(255,255,255,.35); border:0; padding:0; cursor:pointer;
+    width:24px; height:2px; background:rgba(255,255,255,.35); border:0; padding:0; cursor:pointer;
     transition:background .2s, height .2s;
   }
   .hero-band .bars .bar[aria-current="true"]{ background:#fff; height:3px; }
@@ -325,7 +338,6 @@
       </span>
     </div>
     <h1 class="title"><span class="the">The</span>UX Archive Brew</h1>
-    <p class="byline">Curated daily · 매일 아침의 동향</p>
     <nav class="index" id="topnav">
       <span class="brand">UX Archive Brew</span>
       <a href="#creds">사용성</a>
@@ -342,18 +354,33 @@
   <!-- ===== 첫 면 히어로 — 오늘의 큐레이션 (전폭, edition 밖) ===== -->
   <section class="hero-band" id="hero" aria-label="오늘의 큐레이션">
     <div class="carousel">
-      <div class="hero-frame" id="hero-frame"><!-- JS --></div>
-      <div class="cbar">
+      <div class="hero-frame" id="hero-frame"><!-- JS: image only --></div>
+      <div class="hero-ui">
         <button class="cbtn prev" id="cprev" type="button" aria-label="이전 작품">‹</button>
+        <div class="hero-ui-mid">
+          <div class="bars-wrap"><div class="bars" id="dots"></div></div>
+          <div class="slide-cap" id="hero-cap"></div>
+        </div>
         <button class="cbtn next" id="cnext" type="button" aria-label="다음 작품">›</button>
       </div>
-      <div class="bars-wrap"><div class="bars" id="dots"></div></div>
     </div>
     <div class="hero-meta">
-      <span class="t"><b>오늘의 큐레이션</b> — The Met Open Access · 회화·판화·사진·일러스트</span>
+      <span class="t"><b>오늘의 큐레이션</b> — 풍경 · 빛 · 질감 · The Met Open Access</span>
       <span class="by">THE METROPOLITAN MUSEUM OF ART · CC0</span>
     </div>
   </section>
+
+  <nav class="index index-below" id="midnav" aria-label="섹션 바로가기">
+    <span class="brand">UX Archive Brew</span>
+    <a href="#creds">사용성</a>
+    <a href="#ux">UX·디자인</a>
+    <a href="#health">AI 헬스케어</a>
+    <a href="#samd">SaMD 규제</a>
+    <a href="#it">IT 산업</a>
+    <a href="#mind">디자인 원칙</a>
+    <a href="#joke">농담</a>
+    <a href="#patent">특허</a>
+  </nav>
 
   <div id="edition">
 
@@ -715,24 +742,39 @@
 
   function nesc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 
-  // ----- 오늘의 큐레이션: 퍼블릭 도메인 원작 (매일 순환) -----
+  // ----- 오늘의 큐레이션: 풍경 · 빛 · 질감 중심 (매일 10점) -----
   const MET="https://images.metmuseum.org/CRDImages/";
   const POOL=[
-    {a:"Vincent van Gogh", t:"Wheat Field with Cypresses", y:"1889", k:"회화", img:MET+"ep/web-large/DP-42549-001.jpg"},
-    {a:"Vincent van Gogh", t:"Irises", y:"1890", k:"회화", img:MET+"ep/web-large/DP346474.jpg"},
-    {a:"Vincent van Gogh", t:"Self-Portrait with a Straw Hat", y:"1887", k:"회화", img:MET+"ep/web-large/DT1502_cropped2.jpg"},
-    {a:"Vincent van Gogh", t:"Madame Roulin and Her Baby", y:"1888", k:"회화", img:MET+"rl/web-large/DT3154.jpg"},
-    {a:"Édouard Manet", t:"Young Lady in 1866", y:"1866", k:"회화", img:MET+"ep/web-large/DP273977.jpg"},
-    {a:"Paul Cézanne", t:"Still Life with Apples and a Pot of Primroses", y:"c.1890", k:"회화", img:MET+"ep/web-large/DT47.jpg"},
-    {a:"J.-A.-D. Ingres", t:"Princesse de Broglie", y:"1851–53", k:"회화", img:MET+"rl/web-large/DP-19264-001.jpg"},
-    {a:"Hans Memling", t:"The Annunciation", y:"c.1465–70", k:"회화", img:MET+"ep/web-large/DP240360.jpg"},
-    {a:"Katsushika Hokusai", t:"Under the Wave off Kanagawa (The Great Wave)", y:"c.1830–32", k:"판화", img:MET+"as/web-large/DP130155.jpg"},
-    {a:"Katsushika Hokusai", t:"Noboto Bay, from Thirty-six Views of Mount Fuji", y:"c.1830–32", k:"판화", img:MET+"as/web-large/DP141051.jpg"},
-    {a:"Katsushika Hokusai", t:"Storm below Mount Fuji", y:"c.1830–32", k:"판화", img:MET+"as/web-large/DP140976.jpg"},
-    {a:"Carleton E. Watkins", t:"View on the Columbia, Cascades", y:"1867", k:"사진", img:MET+"ph/web-large/DT1173.jpg"},
-    {a:"Timothy H. O’Sullivan", t:"White House Landing, Pamunkey River", y:"1864", k:"사진", img:MET+"ph/web-large/DP254756.jpg"},
-    {a:"Winslow Homer", t:"Home from the War (Harper’s Weekly)", y:"1863", k:"일러스트", img:MET+"dp/web-large/DP875224.jpg"},
-    {a:"Winslow Homer", t:"High Tide (Every Saturday)", y:"1870", k:"일러스트", img:MET+"dp/web-large/DP218933.jpg"}
+    {a:"Katsushika Hokusai", t:"Under the Wave off Kanagawa (The Great Wave)", y:"c.1830–32", yr:1830, k:"판화", m:"풍경,질감,빛", img:MET+"as/web-large/DP130155.jpg"},
+    {a:"Katsushika Hokusai", t:"Noboto Bay, from Thirty-six Views of Mount Fuji", y:"c.1830–32", yr:1830, k:"판화", m:"풍경,빛", img:MET+"as/web-large/DP141051.jpg"},
+    {a:"Katsushika Hokusai", t:"Storm below Mount Fuji", y:"c.1830–32", yr:1830, k:"판화", m:"풍경,빛", img:MET+"as/web-large/DP140976.jpg"},
+    {a:"Utagawa Hiroshige", t:"Evening Rain at Karasaki", y:"c.1830", yr:1830, k:"판화", m:"풍경,빛", img:MET+"as/web-large/DP141038.jpg"},
+    {a:"Utagawa Hiroshige", t:"Bay of Noboto", y:"c.1830", yr:1830, k:"판화", m:"풍경", img:MET+"as/web-large/DP141039.jpg"},
+    {a:"Utagawa Hiroshige", t:"Mount Fuji from Goten-yama", y:"c.1830", yr:1830, k:"판화", m:"풍경,빛", img:MET+"as/web-large/DP141040.jpg"},
+    {a:"Claude Monet", t:"Stack of Wheat (Thaw, Sunset)", y:"1890–91", yr:1890, k:"회화", m:"풍경,빛,질감", img:MET+"ep/web-large/DT1500.jpg"},
+    {a:"Claude Monet", t:"Rouen Cathedral, West Façade", y:"1894", yr:1894, k:"회화", m:"빛,질감", img:MET+"ep/web-large/DT1939.jpg"},
+    {a:"Claude Monet", t:"Water Lilies", y:"1919", yr:1919, k:"회화", m:"풍경,빛", img:MET+"ep/web-large/DT1953.jpg"},
+    {a:"Claude Monet", t:"Bridge over a Pond of Water Lilies", y:"1899", yr:1899, k:"회화", m:"풍경,빛", img:MET+"ep/web-large/DT1860.jpg"},
+    {a:"Vincent van Gogh", t:"Wheat Field with Cypresses", y:"1889", yr:1889, k:"회화", m:"풍경,빛,질감", img:MET+"ep/web-large/DP-42549-001.jpg"},
+    {a:"Vincent van Gogh", t:"Irises", y:"1890", yr:1890, k:"회화", m:"질감,빛", img:MET+"ep/web-large/DP346474.jpg"},
+    {a:"Vincent van Gogh", t:"The Starry Night", y:"1889", yr:1889, k:"회화", m:"풍경,빛,질감", img:MET+"ep/web-large/DT1887.jpg"},
+    {a:"Vincent van Gogh", t:"Cypresses", y:"1889", yr:1889, k:"회화", m:"풍경,질감,빛", img:MET+"ep/web-large/DT1943.jpg"},
+    {a:"Paul Cézanne", t:"Mont Sainte-Victoire", y:"1902–6", yr:1902, k:"회화", m:"풍경,질감", img:MET+"ep/web-large/DT1944.jpg"},
+    {a:"Paul Cézanne", t:"Still Life with Apples and a Pot of Primroses", y:"c.1890", yr:1890, k:"회화", m:"질감,빛", img:MET+"ep/web-large/DT47.jpg"},
+    {a:"Georges Seurat", t:"The Forest at Pontaubert", y:"1881", yr:1881, k:"회화", m:"풍경,빛", img:MET+"ep/web-large/DT2165.jpg"},
+    {a:"Georges Seurat", t:"Circus Sideshow (Parade de cirque)", y:"1887–88", yr:1888, k:"회화", m:"빛,질감", img:MET+"ep/web-large/DP375450_cropped.jpg"},
+    {a:"Paul Gauguin", t:"Ia Orana Maria (Hail Mary)", y:"1891", yr:1891, k:"회화", m:"빛,질감", img:MET+"ep/web-large/DT1025.jpg"},
+    {a:"Paul Gauguin", t:"The Siesta", y:"c. 1892–94", yr:1892, k:"회화", m:"풍경,빛", img:MET+"ep/web-large/DT1952.jpg"},
+    {a:"Henri Rousseau", t:"The Sleeping Gypsy", y:"1897", yr:1897, k:"회화", m:"풍경,빛", img:MET+"ep/web-large/DT1027.jpg"},
+    {a:"Édouard Manet", t:"Young Lady in 1866", y:"1866", yr:1866, k:"회화", m:"빛,질감", img:MET+"ep/web-large/DP273977.jpg"},
+    {a:"Edgar Degas", t:"The Rehearsal of the Ballet Onstage", y:"c. 1874", yr:1874, k:"회화", m:"빛,질감", img:MET+"ep/web-large/DT1565.jpg"},
+    {a:"Hans Memling", t:"The Annunciation", y:"c.1465–70", yr:1465, k:"회화", m:"빛,질감", img:MET+"ep/web-large/DP240360.jpg"},
+    {a:"Carleton E. Watkins", t:"View on the Columbia, Cascades", y:"1867", yr:1867, k:"사진", m:"풍경,질감", img:MET+"ph/web-large/DT1173.jpg"},
+    {a:"Carleton E. Watkins", t:"Yosemite Valley, View from Gates of the Valley", y:"1865", yr:1865, k:"사진", m:"풍경,빛,질감", img:MET+"ph/web-large/DT1172.jpg"},
+    {a:"William Henry Jackson", t:"Mount of the Holy Cross", y:"1873", yr:1873, k:"사진", m:"풍경", img:MET+"ph/web-large/DT1174.jpg"},
+    {a:"Timothy H. O'Sullivan", t:"White House Landing, Pamunkey River", y:"1864", yr:1864, k:"사진", m:"풍경,빛", img:MET+"ph/web-large/DP254756.jpg"},
+    {a:"Winslow Homer", t:"High Tide (Every Saturday)", y:"1870", yr:1870, k:"일러스트", m:"질감,풍경", img:MET+"dp/web-large/DP218933.jpg"},
+    {a:"Winslow Homer", t:"Home from the War (Harper's Weekly)", y:"1863", yr:1863, k:"일러스트", m:"질감", img:MET+"dp/web-large/DP875224.jpg"}
   ];
   const epochDay=Math.floor(now.getTime()/86400000);
 
@@ -814,33 +856,45 @@
   const ptBox=document.getElementById('patent-articles');
   if(ptBox)ptBox.innerHTML=pickRotation(PATENT_POOL,3,9).map(artHtml).join('');
 
-  // 매일 10점: 사진 2 + 일러스트 2 + 회화·판화 6 (날짜별 순환)
+  // 매일 10점: 풍경 4 + 빛 2 + 질감 1 + 사진 2 + 일러스트 1
+  function pickFrom(pool,n,day,salt){const L=pool.length;if(!L||n<=0)return[];const out=[];for(let i=0;i<n;i++)out.push(pool[(day+salt+i)%L]);return out;}
   function pickHeroWorks(day){
-    const at=v=>POOL.filter(w=>w.k===v);
-    const photo=at("사진"), illo=at("일러스트");
-    const rest=POOL.filter(w=>w.k!=="사진"&&w.k!=="일러스트");
-    const pick=photo.concat(illo);
-    const start=((day*3)%rest.length+rest.length)%rest.length;
-    for(let i=0;i<6;i++) pick.push(rest[(start+i)%rest.length]);
-    const rot=day%pick.length;
-    return pick.slice(rot).concat(pick.slice(0,rot));
+    const paint=POOL.filter(w=>(w.k==="회화"||w.k==="판화")&&w.m);
+    const photo=POOL.filter(w=>w.k==="사진");
+    const illo=POOL.filter(w=>w.k==="일러스트");
+    const pick=[
+      ...pickFrom(paint.filter(w=>w.m.includes("풍경")),4,day,0),
+      ...pickFrom(paint.filter(w=>w.m.includes("빛")),2,day,6),
+      ...pickFrom(paint.filter(w=>w.m.includes("질감")),1,day,10),
+      ...pickFrom(photo,2,day,13),
+      ...pickFrom(illo,1,day,16)
+    ];
+    const seen=new Set(), uniq=[];
+    for(const w of pick){if(!seen.has(w.img)){seen.add(w.img);uniq.push(w);}}
+    if(uniq.length<10){
+      for(const w of POOL){if(uniq.length>=10)break;if(!seen.has(w.img)){seen.add(w.img);uniq.push(w);}}
+    }
+    const rot=day%uniq.length;
+    return uniq.slice(rot).concat(uniq.slice(0,rot));
   }
   function initHero(){
     const works=pickHeroWorks(epochDay);
     const frame=document.getElementById('hero-frame');
+    const capBox=document.getElementById('hero-cap');
     const dots=document.getElementById('dots');
     const prev=document.getElementById('cprev');
     const next=document.getElementById('cnext');
-    if(!frame||!dots||!works.length) return;
+    if(!frame||!capBox||!dots||!works.length) return;
     works.forEach(w=>{ const p=new Image(); p.src=w.img; });
     let idx=0;
-    const cap=w=>'<div class="slide-cap"><span class="t">'+nesc(w.t)+'</span>'
+    const capHtml=w=>'<span class="t">'+nesc(w.t)+'</span>'
       +'<span class="a">'+nesc(w.a)+' · '+nesc(w.y)+'</span>'
-      +'<span class="k">'+nesc(w.k)+' · The Met · CC0</span></div>';
+      +'<span class="k">'+nesc(w.k)+' · The Met · CC0</span>';
     const show=i=>{
       idx=(i%works.length+works.length)%works.length;
       const w=works[idx];
-      frame.innerHTML='<img alt="'+nesc(w.t+' — '+w.a)+'" src="'+w.img+'" referrerpolicy="no-referrer" decoding="async" fetchpriority="'+(idx===0?'high':'auto')+'">'+cap(w);
+      frame.innerHTML='<img alt="'+nesc(w.t+' — '+w.a)+'" src="'+w.img+'" referrerpolicy="no-referrer" decoding="async" fetchpriority="'+(idx===0?'high':'auto')+'">';
+      capBox.innerHTML=capHtml(w);
       [...dots.children].forEach((b,j)=>b.setAttribute('aria-current', j===idx?'true':'false'));
     };
     dots.innerHTML=works.map((_,i)=>'<button class="bar" type="button" aria-label="'+(i+1)+'번 작품"></button>').join('');
@@ -860,14 +914,33 @@
 
   // ----- 뉴스: news.json이 있으면 4개 섹션을 최신 헤드라인으로 교체 -----
   function nsrc(src){return (Array.isArray(src)&&src.length)?'<p class="src">'+src.map(x=>'<a href="'+nesc(x.u)+'" target="_blank" rel="noopener">'+nesc(x.t)+'</a>').join(' · ')+'</p>':'';}
+  function parasHtml(paras){
+    if(!Array.isArray(paras)||!paras.length) return '';
+    return paras.map(p=>p.trim().startsWith('<p')?p:'<p>'+p+'</p>').join('');
+  }
   function renderNews(data){
     if(!data) return;
     ['ux','health','samd','it'].forEach(id=>{
       const sec=data[id], box=document.getElementById('news-'+id);
       if(!sec||!box) return;
       let h='';
-      if(sec.feature){const f=sec.feature; h+='<article class="feature"><span class="tag">'+nesc(f.tag)+'</span><h4>'+nesc(f.h4)+'</h4>'; (f.paras||[]).forEach(p=>h+='<p>'+nesc(p)+'</p>'); h+=nsrc(f.src)+'</article>';}
-      if(Array.isArray(sec.items)&&sec.items.length){ h+='<div class="cols">'; sec.items.forEach(it=>{h+='<article><span class="tag">'+nesc(it.tag)+'</span><h4>'+nesc(it.h4)+'</h4><p>'+nesc(it.para||'')+'</p>'+nsrc(it.src)+'</article>';}); h+='</div>'; }
+      if(sec.feature){
+        const f=sec.feature;
+        h+='<article class="feature"><span class="tag">'+nesc(f.tag)+'</span><h4>'+nesc(f.h4)+'</h4>';
+        h+=parasHtml(f.paras);
+        if(!f.paras&&f.para) h+='<p>'+f.para+'</p>';
+        h+=nsrc(f.src)+'</article>';
+      }
+      if(Array.isArray(sec.items)&&sec.items.length){
+        h+='<div class="cols">';
+        sec.items.forEach(it=>{
+          h+='<article><span class="tag">'+nesc(it.tag)+'</span><h4>'+nesc(it.h4)+'</h4>';
+          h+=parasHtml(it.paras);
+          if(!it.paras&&it.para) h+='<p>'+(it.para||'')+'</p>';
+          h+=nsrc(it.src)+'</article>';
+        });
+        h+='</div>';
+      }
       if(h) box.innerHTML=h;
     });
   }
@@ -938,8 +1011,9 @@
   earBtn.addEventListener('click',e=>{ e.stopPropagation(); earMenu.hidden?openMenu():closeMenu(); });
   document.addEventListener('click',e=>{ if(!earMenu.contains(e.target)&&e.target!==earBtn) closeMenu(); });
 
-  // ----- 상단 내비: 스크롤 올리면 나타남 -----
+  // ----- 상단 내비: 스크롤 올리면 나타남 + 작품 아래 내비 -----
   const nav=document.getElementById('topnav');
+  const midnav=document.getElementById('midnav');
   let lastY=window.scrollY;
   function onScroll(){
     const y=window.scrollY;
@@ -950,12 +1024,17 @@
   }
   window.addEventListener('scroll',onScroll,{passive:true});
 
-  nav.querySelectorAll('a').forEach(a=>{
-    a.addEventListener('click',e=>{
-      const t=document.querySelector(a.getAttribute('href'));
-      if(t){ e.preventDefault(); window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-56,behavior:'smooth'}); }
+  function bindNav(el){
+    if(!el) return;
+    el.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const t=document.querySelector(a.getAttribute('href'));
+        if(t){ e.preventDefault(); window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-56,behavior:'smooth'}); }
+      });
     });
-  });
+  }
+  bindNav(nav);
+  bindNav(midnav);
 })();
 </script>
 </body>

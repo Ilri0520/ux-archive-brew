@@ -1,0 +1,13 @@
+{
+  "name": "ux-archive-brew",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "serve . --listen 5173 --no-clipboard",
+    "preview": "npm run dev",
+    "news:update": "node scripts/update-news.mjs"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
