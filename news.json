@@ -1,60 +1,60 @@
 {
-  "updated": "2026-08-13T22:29:39.981Z",
+  "updated": "2026-08-14T22:11:19.991Z",
   "ux": {
     "feature": {
-      "tag": "머리기사 · 신아일보 · 6일 전",
-      "h4": "현대차·기아, 레드닷 17개 수상…공간·UX 디자인 경쟁력 입증",
+      "tag": "머리기사 · etnews.com · 오늘",
+      "h4": "국내 최대의 UX 축제 열린다… 피그마, LG전자, 삼성SDS, 네이버, KAIST 등 한자리에",
       "paras": [
-        "<p><strong class=\"num\">신아일보</strong>가 <strong class=\"num\">6일 전</strong> 보도한 '현대차·기아, 레드닷 17개 수상…공간·UX 디자인 경쟁력 입증' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">17개</strong>이다.</p>",
-        "<p class=\"insight\">디자인 조직과 프로세스 성숙도가 제품 경험의 상한과 출시 속도를 동시에 좌우한다.</p>"
+        "<p><strong class=\"num\">etnews.com</strong>가 <strong class=\"num\">오늘</strong> 보도한 '국내 최대의 UX 축제 열린다… 피그마, LG전자, 삼성SDS, 네이버, KAIST 등 한자리에' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
+        "<p class=\"insight\">UX·디자인 트렌드는 화면 미학보다 조직 협업 방식과 검증 루프 설계로 읽히는 경우가 많다.</p>"
       ],
       "src": [
         {
           "t": "원문 보기",
-          "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5SQkpTVFIyS3U2aHh2MTNyS3JPVTBJUGx1YXp4U3dCdmpWaUVBQzh5UlFjaXhJS0R1bGl5QUR3LU9rTE55Z1R0eE5ENHNxYldicG5Ca1pWcnZQZDN5a2JZbnBXOE0zQXBsY3FIMnkzNzA?oc=5"
+          "u": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1GTEVQTFJXRkltQWw1Q2FRQm1JNVphNjJkSW9zdGUyWUJNNlpTOThqTkVsN0gwVV9KUGZmdkdFVldjSXRLanVMdVQwc1RvUQ?oc=5"
         }
       ]
     },
     "items": [
       {
-        "tag": "Hyundai Motor Group · 6일 전",
-        "h4": "현대자동차·기아, '2026 레드 닷 어워드' 최우수상 포함 17개 수상 | 뉴스 | 현대자동차그룹",
+        "tag": "mobiinside.co.kr · 어제",
+        "h4": "[AI로보틱스 트렌드 바로읽기] LLM? RAG? — 피지컬 AI 시대를 이해하는 필수 AI 용어 가이드",
         "paras": [
-          "<p><strong class=\"num\">Hyundai Motor Group</strong>가 <strong class=\"num\">6일 전</strong> 보도한 '현대자동차·기아, '2026 레드 닷 어워드' 최우수상 포함 17개 수상 | 뉴스 | 현대자동차그룹' 소식이다. UX·디자인 분야에서 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">17개</strong>이다.</p>",
+          "<p><strong class=\"num\">mobiinside.co.kr</strong>가 <strong class=\"num\">어제</strong> 보도한 '[AI로보틱스 트렌드 바로읽기] LLM? RAG? — 피지컬 AI 시대를 이해하는 필수 AI 용어 가이드' 소식이다. UX·디자인 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">UX·디자인 트렌드는 화면 미학보다 조직 협업 방식과 검증 루프 설계로 읽히는 경우가 많다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNNHpyWTIzVVRlUFFpSzU5cDRwbUxaOFhLRHE0cXZzRnZSVllqRE1hMmUwSzNWRHZnZGZrd2h4bVZTSHZJRnF3c3I2TjlsRXdSQXI4SkVxWTFpZjh0Z3MwMmtBWVE5QjNJd01XUjlCMTIyaWJsNl9GaVJYaWYzbGFGb0JIVEc1NlFBT0ZWSFkzMWItQVdhMTdheUJ3?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMif0FVX3lxTFA1TDdnbElUZHdsaXQ2WmlsQ0tYb0lnV1hnbF9CQnhSTE41eFhXRDBza2pONktBRnJ6UGludE85R095UlRoLVA5Yks1ck4weGx0Y1JsbnVqS2lJWUlzQkQ0aUpDZ2h6N0dBQTFaR0lWaV92cTJoWWYxaGFsQktoYlE?oc=5"
           }
         ]
       },
       {
-        "tag": "전자신문 · 6일 전",
-        "h4": "현대차·기아, '레드닷 디자인 어워드' 17관왕",
+        "tag": "AI타임스 · 오늘",
+        "h4": "퍼셉트, 'UX스튜디오 서울'로 '레드닷 디자인 어워드 2026' 최고상 수상",
         "paras": [
-          "<p><strong class=\"num\">전자신문</strong>가 <strong class=\"num\">6일 전</strong> 보도한 '현대차·기아, '레드닷 디자인 어워드' 17관왕' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">AI타임스</strong>가 <strong class=\"num\">오늘</strong> 보도한 '퍼셉트, 'UX스튜디오 서울'로 '레드닷 디자인 어워드 2026' 최고상 수상' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">디자인 조직과 프로세스 성숙도가 제품 경험의 상한과 출시 속도를 동시에 좌우한다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5lM3NuV19CX1ByRlpQc2ZZTFpKME9obC1ZVmFNcXBvek50OVpJOUhlMUowLXk1R050cnJnTWV5RzVpNXluS282V3BKRGJjQQ?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1tSjRJYlJxR29XSkJubnFEdTQ2TjRadkNqWHZxQ0FaQndET040WHFRUS1OZUtRSFM5RDI1V1FlYlhWT0ZURUF3U1ZRb1FwRXZyOUhSazR3SDJTbHh0bHNGT3FrMXJHcjJ3YXc?oc=5"
           }
         ]
       },
       {
-        "tag": "m-i.kr · 6일 전",
-        "h4": "현대차·기아, 레드닷 디자인어워드 17개 수상",
+        "tag": "AI넷 · 5일 전",
+        "h4": "[\"피그마만 할 줄 알면 끝?\"…2026년 UI/UX 디자이너의 생존 조건은 '연구와 문제 해결'] 경력 수준, 학습 스타일, 그리고 구체적인 목표에 따라 최적의 선택지는 완전히 달라진다. 다음은 2026년 현재 가장 주목받는 6가지 UI/UX 교육",
         "paras": [
-          "<p><strong class=\"num\">m-i.kr</strong>가 <strong class=\"num\">6일 전</strong> 보도한 '현대차·기아, 레드닷 디자인어워드 17개 수상' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">17개</strong>이다.</p>",
-          "<p class=\"insight\">디자인 조직과 프로세스 성숙도가 제품 경험의 상한과 출시 속도를 동시에 좌우한다.</p>"
+          "<p><strong class=\"num\">AI넷</strong>가 <strong class=\"num\">5일 전</strong> 보도한 '[\"피그마만 할 줄 알면 끝?\"…2026년 UI/UX 디자이너의 생존 조건은 '연구와 문제 해결'] 경력 수준, 학습 스타일, 그리고 구체적인 목표에 따라 최적의 선택지는 완전히 달라진다. 다음은 2026년 현재 가장 주목받는 6가지 UI/UX 교육' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">2026년</strong>이다.</p>",
+          "<p class=\"insight\">UX·디자인 트렌드는 화면 미학보다 조직 협업 방식과 검증 루프 설계로 읽히는 경우가 많다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1qeVFkUndKVFVJOWRmYmg5aDJIZXFWQ0psWGp0M0lfYjdjbnNKQmhBcXc5NURpd0Z0Zkl2RjZLOVBtY0ZHakJ0U3RtTkxMU3NPZEE3YnF4a2hoYTgtUUJpaG1KcXk?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiQEFVX3lxTFBFSVVmeVlaTGZPTDc1V3FhRGdHWk1pZ3NwWUZLaDRFbVJfM2laUm5XSnNBb3pPcjNERVl1ZUNiQVI?oc=5"
           }
         ]
       }
@@ -77,10 +77,10 @@
     },
     "items": [
       {
-        "tag": "메디칼업저버 · 어제",
+        "tag": "메디칼업저버 · 2일 전",
         "h4": "[행사] 보라매병원, '헬스케어 AI 융합 연구 심포지엄' 개최",
         "paras": [
-          "<p><strong class=\"num\">메디칼업저버</strong>가 <strong class=\"num\">어제</strong> 보도한 '[행사] 보라매병원, '헬스케어 AI 융합 연구 심포지엄' 개최' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">메디칼업저버</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '[행사] 보라매병원, '헬스케어 AI 융합 연구 심포지엄' 개최' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
         ],
         "src": [
@@ -91,10 +91,10 @@
         ]
       },
       {
-        "tag": "히트뉴스 · 어제",
+        "tag": "히트뉴스 · 2일 전",
         "h4": "메디라인파트너스, KHF 2026서 AI·디지털 헬스케어 세미나 개최",
         "paras": [
-          "<p><strong class=\"num\">히트뉴스</strong>가 <strong class=\"num\">어제</strong> 보도한 '메디라인파트너스, KHF 2026서 AI·디지털 헬스케어 세미나 개최' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">히트뉴스</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '메디라인파트너스, KHF 2026서 AI·디지털 헬스케어 세미나 개최' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
         ],
         "src": [
@@ -105,10 +105,10 @@
         ]
       },
       {
-        "tag": "대한민국 정책브리핑 · 5일 전",
+        "tag": "대한민국 정책브리핑 · 6일 전",
         "h4": "동네 보건소도 대학병원급 AI 진료…AI진료지원 도구 전국 보급",
         "paras": [
-          "<p><strong class=\"num\">대한민국 정책브리핑</strong>가 <strong class=\"num\">5일 전</strong> 보도한 '동네 보건소도 대학병원급 AI 진료…AI진료지원 도구 전국 보급' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">대한민국 정책브리핑</strong>가 <strong class=\"num\">6일 전</strong> 보도한 '동네 보건소도 대학병원급 AI 진료…AI진료지원 도구 전국 보급' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
         ],
         "src": [
@@ -122,10 +122,10 @@
   },
   "samd": {
     "feature": {
-      "tag": "머리기사 · 헬스조선 · 어제",
+      "tag": "머리기사 · 헬스조선 · 2일 전",
       "h4": "포낙, AI 보청기 2종 식약처 디지털의료기기 허가 획득",
       "paras": [
-        "<p><strong class=\"num\">헬스조선</strong>가 <strong class=\"num\">어제</strong> 보도한 '포낙, AI 보청기 2종 식약처 디지털의료기기 허가 획득' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+        "<p><strong class=\"num\">헬스조선</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '포낙, AI 보청기 2종 식약처 디지털의료기기 허가 획득' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
         "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
       ],
       "src": [
@@ -137,10 +137,10 @@
     },
     "items": [
       {
-        "tag": "바이오타임즈 · 2일 전",
+        "tag": "바이오타임즈 · 3일 전",
         "h4": "포낙, AI 보청기 2종 식약처 허가…디지털의료기기 시장 공략",
         "paras": [
-          "<p><strong class=\"num\">바이오타임즈</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '포낙, AI 보청기 2종 식약처 허가…디지털의료기기 시장 공략' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">바이오타임즈</strong>가 <strong class=\"num\">3일 전</strong> 보도한 '포낙, AI 보청기 2종 식약처 허가…디지털의료기기 시장 공략' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
         ],
         "src": [
@@ -151,10 +151,10 @@
         ]
       },
       {
-        "tag": "보건신문 · 어제",
+        "tag": "보건신문 · 2일 전",
         "h4": "포낙 AI 보청기 2종, 식약처 디지털의료기기 허가 획득",
         "paras": [
-          "<p><strong class=\"num\">보건신문</strong>가 <strong class=\"num\">어제</strong> 보도한 '포낙 AI 보청기 2종, 식약처 디지털의료기기 허가 획득' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">보건신문</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '포낙 AI 보청기 2종, 식약처 디지털의료기기 허가 획득' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
         ],
         "src": [
@@ -165,16 +165,16 @@
         ]
       },
       {
-        "tag": "의학신문 · 3일 전",
-        "h4": "美 TEMPO, 디지털헬스 규제 경쟁 재편…한국도 실사용근거 대응 시급",
+        "tag": "에너지경제신문 · 2일 전",
+        "h4": "포낙 ‘오데오 인피니오 스피어·오데오 인피니오 R’, 식약처 허가 완료",
         "paras": [
-          "<p><strong class=\"num\">의학신문</strong>가 <strong class=\"num\">3일 전</strong> 보도한 '美 TEMPO, 디지털헬스 규제 경쟁 재편…한국도 실사용근거 대응 시급' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">에너지경제신문</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '포낙 ‘오데오 인피니오 스피어·오데오 인피니오 R’, 식약처 허가 완료' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTE9SUHFKOEdiazVGYUt3MmJNWVZjTkRTdjRMOERqLWRxRUFibGIzR0VkRmxVTE5od1dmM2RaMFpiQzdsZjZNZGtmSnlncmR6bFU0TWRHTXpxUVBGZlByZF9pUUFkbEV1V3dobXc?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBoanRtUUZ3RG5oeC1IOUVjZ21ZWS03YTcxUm1HckFPREJFaktrdFA2SEtad1Jmdjk4UnUxRGRWWml4LVN5QUVaY2dmdXZhVlBoaVZUWlBJS1UzaFFTUW5GZVJuWQ?oc=5"
           }
         ]
       }
@@ -182,59 +182,59 @@
   },
   "it": {
     "feature": {
-      "tag": "머리기사 · 전기신문 · 오늘",
-      "h4": "SK에코플랜트, AI 데이터센터 사업단 신설…반도체·AI 인프라 사업 본격화",
+      "tag": "머리기사 · 조선일보 · 오늘",
+      "h4": "AI 반도체 ‘2030년 호황’ 자신감…샌디스크 14% 뛰었다",
       "paras": [
-        "<p><strong class=\"num\">전기신문</strong>가 <strong class=\"num\">오늘</strong> 보도한 'SK에코플랜트, AI 데이터센터 사업단 신설…반도체·AI 인프라 사업 본격화' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+        "<p><strong class=\"num\">조선일보</strong>가 <strong class=\"num\">오늘</strong> 보도한 'AI 반도체 ‘2030년 호황’ 자신감…샌디스크 14% 뛰었다' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">14%</strong> · <strong class=\"num\">2030년</strong>이다.</p>",
         "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
       ],
       "src": [
         {
           "t": "원문 보기",
-          "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9qQ0ZSY3kxblZ0T0lMUk12c2hCVjhRYjFRM1IxSTFzZGdMRzk4UVlMNUoxeTJqaDllUXhnOU1zMFZlMm4xLXJNcnAzdzZkaENzOFAzZ0Q1am5RM2djbFlBY0NWTXlfakVFRFZuNXlQWWfSAXBBVV95cUxPakNGUmN5MW5WdE9JTFJNdnNoQlY4UWIxUTNSMUkxc2RnTEc5OFFZTDVKMXkyamg5ZVF4ZzlNczBWZTJuMS1yTXJwM3c2ZGhDczhQM2dENWpuUTNnY2xZQWNDVk15X2pFRURWbjV5UFln?oc=5"
+          "u": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOVFdlM1RVdEtqMEZjUHloZmRlaTNXVzlBUS04RGV4RFZVQzNSVlh3RHMyZk1BeHFEMzJ5ZTN0czJCUWdIMWlYd1ZEX0VCT2RMRDAxcklTeFQtZ2tYbkpfQktGdjNWOGFvVjZYTEFTZ1VqLXZ3bV9JMUU5S1I5bHlVRWxwY21qemVmVjQ0?oc=5"
         }
       ]
     },
     "items": [
       {
-        "tag": "조선일보 · 어제",
-        "h4": "\"공짜 AI가 GPU 수요 키운다\"… 엔비디아, 세계 최고 개방형 모델 도전",
+        "tag": "경향신문 · 오늘",
+        "h4": "돈 되는 AI·반도체 계열사 늘리는 대기업들",
         "paras": [
-          "<p><strong class=\"num\">조선일보</strong>가 <strong class=\"num\">어제</strong> 보도한 '\"공짜 AI가 GPU 수요 키운다\"… 엔비디아, 세계 최고 개방형 모델 도전' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">경향신문</strong>가 <strong class=\"num\">오늘</strong> 보도한 '돈 되는 AI·반도체 계열사 늘리는 대기업들' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPNkpnS2NQTVBFZnltQTRoUmhVMjlDOS02NzhEcTlMb0RxQTBGQmhSbmhacERlcEdibjJEYkxIVExEOWZMVTJSUEVWVzhYZ3MxTWtFdEtEYmdScDdHN25keFZyN0JVM3FFZjA5T3ROMVFrZkxsZTN3cEhyZm9ScFV6dGprTQ?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE03bWpFTzFHRTdib3NqTG01dVhNS3NZV2pHb2hzWTBySjBJVUtrOUlDX2xLRXpJWGdRQjVDdGZuOTYtNTBlZHlMOTFROE8zN0tJVlA3MjZ3OXhqZ9IBX0FVX3lxTE1FQzFTQktmaUxQcGFYUVBqdnRXUGdvSTJRNVk1c1BkdFNmTzkwMzU0ZWJRVmJTdjM0QjBIVjNuc09JNjZ1OXlHV18za21vdGxwRkhzcVZ1cjI4NG5Oc2FJ?oc=5"
           }
         ]
       },
       {
-        "tag": "yna.co.kr · 오늘",
-        "h4": "월가, 엔비디아 AI칩에 '시간 지나도 가치 하락 없다' 베팅",
+        "tag": "mstoday.co.kr · 오늘",
+        "h4": "AI 투자 기대에 반도체 강세…메모리 성장 전망 확대",
         "paras": [
-          "<p><strong class=\"num\">yna.co.kr</strong>가 <strong class=\"num\">오늘</strong> 보도한 '월가, 엔비디아 AI칩에 '시간 지나도 가치 하락 없다' 베팅' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">mstoday.co.kr</strong>가 <strong class=\"num\">오늘</strong> 보도한 'AI 투자 기대에 반도체 강세…메모리 성장 전망 확대' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1aQ3JfZWxIc3l1TGRlSDhhcGVGczZIQWpZM245T01iLUxmRFI3NVc5RzhoYl90WktaMnVLQmtBZ3QtTXh0NGlDOVd1Nnp1eEJ1bHptc2owSmxlV1JCU3VfY9IBYEFVX3lxTE1aQ3JfZWxIc3l1TGRlSDhhcGVGczZIQWpZM245T01iLUxmRFI3NVc5RzhoYl90WktaMnVLQmtBZ3QtTXh0NGlDOVd1Nnp1eEJ1bHptc2owSmxlV1JCU3VfYw?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5VNWRtNVRzUno3QWhVQWJTTHd1allGNmtILTE3MmdLWjJUZUhxWDBCckhMaDh2MVdqMXN5bmY4d1kzcWRwLVk1NEZNM2xPaFJXTU5UZWVNb3ZjMUx1Q2c0X3hSSEw5enZMa3JoZQ?oc=5"
           }
         ]
       },
       {
-        "tag": "쿠키뉴스 · 3일 전",
-        "h4": "반도체 다음은 전력이다…삼성 SDS·SDI·전기 총출동 [삼성 AI 투자지도②]",
+        "tag": "전기신문 · 어제",
+        "h4": "SK에코플랜트, AI 데이터센터 사업단 신설…반도체·AI 인프라 사업 본격화",
         "paras": [
-          "<p><strong class=\"num\">쿠키뉴스</strong>가 <strong class=\"num\">3일 전</strong> 보도한 '반도체 다음은 전력이다…삼성 SDS·SDI·전기 총출동 [삼성 AI 투자지도②]' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">전기신문</strong>가 <strong class=\"num\">어제</strong> 보도한 'SK에코플랜트, AI 데이터센터 사업단 신설…반도체·AI 인프라 사업 본격화' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBVVFlaVWRpVUpFU0lDWVJKM2lhUGFuaHU1d1RVTUlyMUJqampOcWhFdjJCUEdSemh5Y0IwRzExbmxTTHQ0Y0ZiU01tSktVREFmR3dHZUQzNW9yc3NVQ0lfOHVjbw?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9qQ0ZSY3kxblZ0T0lMUk12c2hCVjhRYjFRM1IxSTFzZGdMRzk4UVlMNUoxeTJqaDllUXhnOU1zMFZlMm4xLXJNcnAzdzZkaENzOFAzZ0Q1am5RM2djbFlBY0NWTXlfakVFRFZuNXlQWWfSAXBBVV95cUxPakNGUmN5MW5WdE9JTFJNdnNoQlY4UWIxUTNSMUkxc2RnTEc5OFFZTDVKMXkyamg5ZVF4ZzlNczBWZTJuMS1yTXJwM3c2ZGhDczhQM2dENWpuUTNnY2xZQWNDVk15X2pFRURWbjV5UFln?oc=5"
           }
         ]
       }
