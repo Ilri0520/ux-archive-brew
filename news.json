@@ -1,60 +1,60 @@
 {
-  "updated": "2026-08-20T22:15:08.500Z",
+  "updated": "2026-08-21T22:12:16.428Z",
   "ux": {
     "feature": {
-      "tag": "머리기사 · 전자신문 · 6일 전",
-      "h4": "국내 최대의 UX 축제 열린다… 피그마, LG전자, 삼성SDS, 네이버, KAIST 등 한자리에",
+      "tag": "머리기사 · 디지털 인사이트 DIGITAL iNSIGHT · 오늘",
+      "h4": "피그마는 왜 AI 시대에 종이 잡지를 출간했을까?",
       "paras": [
-        "<p><strong class=\"num\">전자신문</strong>가 <strong class=\"num\">6일 전</strong> 보도한 '국내 최대의 UX 축제 열린다… 피그마, LG전자, 삼성SDS, 네이버, KAIST 등 한자리에' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
+        "<p><strong class=\"num\">디지털 인사이트 DIGITAL iNSIGHT</strong>가 <strong class=\"num\">오늘</strong> 보도한 '피그마는 왜 AI 시대에 종이 잡지를 출간했을까?' 소식이다. UX·디자인 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
         "<p class=\"insight\">UX·디자인 트렌드는 화면 미학보다 조직 협업 방식과 검증 루프 설계로 읽히는 경우가 많다.</p>"
       ],
       "src": [
         {
           "t": "원문 보기",
-          "u": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1GTEVQTFJXRkltQWw1Q2FRQm1JNVphNjJkSW9zdGUyWUJNNlpTOThqTkVsN0gwVV9KUGZmdkdFVldjSXRLanVMdVQwc1RvUQ?oc=5"
+          "u": "https://news.google.com/rss/articles/CBMijwJBVV95cUxNQUFvZElXUjFkbnlCSFdmT3NuNnc2NExlWUUzZ2ZrV1U4SXgycm1GckcxaGRKekUxZ2RxeVBIaHFPaXBMZFJRQWtteWRKRUhsLTNPYzVja25IcHkzYnFmNl9sUGFfbkpYdDhBcXVMTHhmSng0SzhtLXppM3RaTllWbUI5a29WOTdLLTM4QTZUWUhyVnU3YjdlYnFJQXJvN3JyRUZIdXZINVA3YnVZSU4zeHNEOEVsb3NNVEJjUllVUlhQcXBpcVBubE1fUTVMZHlIVnQ4VmZTN2JDSDdsR29GaGV3aGtfeDhLWHRQZkctR1B3S052djhndXZmTTNVWTJKektkdGtHUVBCYWV2NmJV?oc=5"
         }
       ]
     },
     "items": [
       {
-        "tag": "AI타임스 · 6일 전",
-        "h4": "퍼셉트, 'UX스튜디오 서울'로 '레드닷 디자인 어워드 2026' 최고상 수상",
+        "tag": "뉴스1 · 오늘",
+        "h4": "삼성전자, 국제 디자인상 휩쓸었다…인간 중심 디자인 경쟁력 강화",
         "paras": [
-          "<p><strong class=\"num\">AI타임스</strong>가 <strong class=\"num\">6일 전</strong> 보도한 '퍼셉트, 'UX스튜디오 서울'로 '레드닷 디자인 어워드 2026' 최고상 수상' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">뉴스1</strong>가 <strong class=\"num\">오늘</strong> 보도한 '삼성전자, 국제 디자인상 휩쓸었다…인간 중심 디자인 경쟁력 강화' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">디자인 조직과 프로세스 성숙도가 제품 경험의 상한과 출시 속도를 동시에 좌우한다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1tSjRJYlJxR29XSkJubnFEdTQ2TjRadkNqWHZxQ0FaQndET040WHFRUS1OZUtRSFM5RDI1V1FlYlhWT0ZURUF3U1ZRb1FwRXZyOUhSazR3SDJTbHh0bHNGT3FrMXJHcjJ3YXc?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4xNnVrLWtlSkFOWUdnb0drSFNZWFIzT0d3ZWxzWm9TUlVYZmpMLUhQTmc1clFzYWY5ZU5ZWWl1Qm1uQmtBRXVzbjV4OFY5bm9nV2JneTJyV0MwZjNWdG5WbktlV2VyNENEZnfSAWpBVV95cUxOMTZ1ay1rZUpBTllHZ29Ha0hTWVhSM09Hd2Vsc1pvU1JVWGZqTC1IUE5nNXJRc2FmOWVOWVlpdUJtbkJrQUV1c241eDhWOW5vZ1diZ3kycldDMGYzVnRuVm5LZVdlcjRDRGZ3?oc=5"
           }
         ]
       },
       {
-        "tag": "에이빙 · 오늘",
-        "h4": "유투시스템, IFA 2026서 휴대용 정수 물병 '퓨리수플러스' 선봬... \"유럽 확대\" |",
+        "tag": "브런치 · 어제",
+        "h4": "Grok 4.6모델로 UX/UI 디자인하기",
         "paras": [
-          "<p><strong class=\"num\">에이빙</strong>가 <strong class=\"num\">오늘</strong> 보도한 '유투시스템, IFA 2026서 휴대용 정수 물병 '퓨리수플러스' 선봬... \"유럽 확대\" |' 소식이다. UX·디자인 분야에서 업계 관심이 모이고 있다.</p>",
-          "<p class=\"insight\">UX·디자인 트렌드는 화면 미학보다 조직 협업 방식과 검증 루프 설계로 읽히는 경우가 많다.</p>"
+          "<p><strong class=\"num\">브런치</strong>가 <strong class=\"num\">어제</strong> 보도한 'Grok 4.6모델로 UX/UI 디자인하기' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5BTzRBWHNfdGkwUTBiYXBadHg3ZkxKOXB6cnk3X2hLcW1hdzJqUlVkZkNlcTVOcmVWWDU3b1FKTHFUTzQ5X0tlV2d1VUFEWm1veVY4TFpyMk00dlVHbUZJRXpzQ3JHaElGRHFB?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBSRmNkRWVPZU5LMTdkV1p5S3ladlMwSmVyU0VaUlVXQXZfbDVoTW55cWYtOXpVWWZtQ0lqMi1UTUVqaEdJV1A2YkNVSExFdw?oc=5"
           }
         ]
       },
       {
-        "tag": "디지털 인사이트 DIGITAL iNSIGHT · 6일 전",
-        "h4": "오히려 불편해… ‘다 되는 앱’이 마주한 슈퍼앱 딜레마",
+        "tag": "신아일보 · 오늘",
+        "h4": "신한은행 '나사카', 세계 3대 디자인 어워드 'IDEA 2026' 동상",
         "paras": [
-          "<p><strong class=\"num\">디지털 인사이트 DIGITAL iNSIGHT</strong>가 <strong class=\"num\">6일 전</strong> 보도한 '오히려 불편해… ‘다 되는 앱’이 마주한 슈퍼앱 딜레마' 소식이다. UX·디자인 분야에서 업계 관심이 모이고 있다.</p>",
-          "<p class=\"insight\">UX·디자인 트렌드는 화면 미학보다 조직 협업 방식과 검증 루프 설계로 읽히는 경우가 많다.</p>"
+          "<p><strong class=\"num\">신아일보</strong>가 <strong class=\"num\">오늘</strong> 보도한 '신한은행 '나사카', 세계 3대 디자인 어워드 'IDEA 2026' 동상' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p class=\"insight\">디자인 조직과 프로세스 성숙도가 제품 경험의 상한과 출시 속도를 동시에 좌우한다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMipgJBVV95cUxNbmhQNFEtbnYyY25Vd3hrTmo4TW9fZTE3VUVzOTVFMmtDcXFUMkFYYWM1V2p4YU42TzVnRHE3UkF0a1duWkJiV3ptVGZQS1NMSkxXOEltNXcwNUVYUFFIQ0hNS1hONVdaa0tkRDIwcTMtQ1NsRldjZWVlSWRoZm5zdTJpODdDV3YzNWZiaUg0bDRKQXpDWXczUmNsZ2FIVUpKZjUzWjY1Qjl4NkZhRHFPVXgzX3h0ek1UeVloX1pBLVV1V1lFdDdEVjEyWWN6R3RMTl9MWTBkYmZGRTBIcmxCZ0NtaGcxTG1hVWVEaXNuRmFQdG1lR1d1R1RTV1lKWXlsNHppOFl1S1RTN0ttdG9zZ2J6RF9yR05QRG1zSThYdlVPRUQyMUE?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5ORmctRFpLUi0yWF9iM1IzbzVVYW5FUmg0MGR0RFozTGVDZE9lbUZXOXM2cFAxaVFKdGc1NEh3Ql9uWjJyNVd0UG8xMGw3eE5Dc1haUmt5TGZwaXljR0k5ZzdnMnpPOWtTaHpVLVpteUo?oc=5"
           }
         ]
       }
@@ -62,59 +62,59 @@
   },
   "health": {
     "feature": {
-      "tag": "머리기사 · 병원신문 · 어제",
-      "h4": "[KHF 2026] AI 헬스케어 산업 변화…병원 적용 전략",
+      "tag": "머리기사 · MEDI:GATE NEWS · 오늘",
+      "h4": "하이카디·닥터눈·딥카스·씽크부터 생성형 AI 의료기기까지…병원에 들어온 디지털 헬스케어 총출동",
       "paras": [
-        "<p><strong class=\"num\">병원신문</strong>가 <strong class=\"num\">어제</strong> 보도한 '[KHF 2026] AI 헬스케어 산업 변화…병원 적용 전략' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
-        "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
+        "<p><strong class=\"num\">MEDI:GATE NEWS</strong>가 <strong class=\"num\">오늘</strong> 보도한 '하이카디·닥터눈·딥카스·씽크부터 생성형 AI 의료기기까지…병원에 들어온 디지털 헬스케어 총출동' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+        "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
       ],
       "src": [
         {
           "t": "원문 보기",
-          "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5QQ196cTRXbUpmYWxvNmNPaVZLb3VBWDZKbWtNc3NXQUVILURGVTk1bDd2dWh0cG90OGpIcEc4dXZQSXZ0TnBiV083RHV0TVV4dmlNS25RbkhjVkZBd0hTZXo0aTNXV0ZFZUE?oc=5"
+          "u": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE54WXlfZkxtNkJPN3MzM2JFS3Y1Zlc2TGFabVg3aGtua0t2SE93UjBOZGRKblV2a0pESmlJaUF2aE94b2pFVnlBVE5oVXd4RXV4YVVvbzNtOA?oc=5"
         }
       ]
     },
     "items": [
       {
-        "tag": "더메디컬 · 어제",
-        "h4": "가상 인간이 먼저 검증하는 ‘의료로봇센터’, 정부 240억 투입",
+        "tag": "한겨레 · 오늘",
+        "h4": "“보조 수단 넘어선 디지털 헬스케어, 의료제도 개편에 적극 활용해야” [건강한겨레]",
         "paras": [
-          "<p><strong class=\"num\">더메디컬</strong>가 <strong class=\"num\">어제</strong> 보도한 '가상 인간이 먼저 검증하는 ‘의료로봇센터’, 정부 240억 투입' 소식이다. AI 헬스케어 영역에서 임상·데이터·규제 논의가 동시에 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">한겨레</strong>가 <strong class=\"num\">오늘</strong> 보도한 '“보조 수단 넘어선 디지털 헬스케어, 의료제도 개편에 적극 활용해야” [건강한겨레]' 소식이다. AI 헬스케어 영역에서 임상·데이터·규제 논의가 동시에 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTE93UWxSTnRDODEzOFVxZjZIMG9DcS05eVdqaUZCaXRlVGZRVGFQaGxXblFYRjVrbHI1VUVhU1pEN2xoUDRSUG1fNGJwaUkwUjdmRFU0eUdya3A2YWhvaGluaFZXWGFDcEZ1NkHSAW5BVV95cUxPSmtfZTAydmVENzVHRlR4d1hqZnQ2MXhkWHFpNk5WOGZkV2VvUHdYQXN2Q1RhdWRmT3ZZb1lvY2hpSFd2ZmJUT3FFOXBwUG9xbGdmMG5ERk1IeVYyYWFhSnl3TmxkUTRKNDdaTlM0Zw?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9Kb2oxOHlwUmpzYV9ULXN4OWNEVlFWOXh5V0t0WEhmRVFETnduYmVfZTJsZC0xUzVSWFVyQTNCck9VQnlrbm1IaTNwbFZYa1RHSDl2eldnSDQ1MWNoRDd6SWIyek1FYlZW?oc=5"
           }
         ]
       },
       {
-        "tag": "한국의약통신 · 2일 전",
-        "h4": "“AI-Native Hospital 시대, KHF 2026에서 미래 의료의 길을 묻다”",
+        "tag": "병원신문 · 2일 전",
+        "h4": "[KHF 2026] AI 헬스케어 산업 변화…병원 적용 전략",
         "paras": [
-          "<p><strong class=\"num\">한국의약통신</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '“AI-Native Hospital 시대, KHF 2026에서 미래 의료의 길을 묻다”' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">병원신문</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '[KHF 2026] AI 헬스케어 산업 변화…병원 적용 전략' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9JN29JWEhramVrTUNxNDRla1ZvZE1nTDkzNVY1aTZkbzFfcDZDd0ZQWWhubVpXMUtRbnFTS29SVXo0bHhpcFJzRnl6Tm4yVFNvMEZxb1lldzdaczUtZzQ1ZEJ5bnJxdlphX01n?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5QQ196cTRXbUpmYWxvNmNPaVZLb3VBWDZKbWtNc3NXQUVILURGVTk1bDd2dWh0cG90OGpIcEc4dXZQSXZ0TnBiV083RHV0TVV4dmlNS25RbkhjVkZBd0hTZXo0aTNXV0ZFZUE?oc=5"
           }
         ]
       },
       {
-        "tag": "동아일보 · 오늘",
-        "h4": "[헬스케어픽] 진단부터 처방까지···AI, 의료 현장 깊숙이 파고든다",
+        "tag": "청년의사 · 어제",
+        "h4": "개별 의료AI 넘어 ‘AI 병원’으로…닥터앤서 10년, 다음 단계는?",
         "paras": [
-          "<p><strong class=\"num\">동아일보</strong>가 <strong class=\"num\">오늘</strong> 보도한 '[헬스케어픽] 진단부터 처방까지···AI, 의료 현장 깊숙이 파고든다' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">청년의사</strong>가 <strong class=\"num\">어제</strong> 보도한 '개별 의료AI 넘어 ‘AI 병원’으로…닥터앤서 10년, 다음 단계는?' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE05Wm9wWFpyWTIxeHVGMVNpVjM3MEhQcFRmU2J3amFzVkNMWFo1d2x3VGFZWXR3Sm1SbTFtWGpfajlRTzVBRlpJWlBGTkRrY1ZmaDBhZktlQWZBdDJuMUVWcDZjQ2FIQdIBZkFVX3lxTE05Wm9wWFpyWTIxeHVGMVNpVjM3MEhQcFRmU2J3amFzVkNMWFo1d2x3VGFZWXR3Sm1SbTFtWGpfajlRTzVBRlpJWlBGTkRrY1ZmaDBhZktlQWZBdDJuMUVWcDZjQ2FIQQ?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBpTnhnempUa1RfT2dGbTVLaWtQWnYzMktiMUJIajlZZllrYkdmeHlZMlR5Wmx5emlQYjhSRUVyRWxkSTZtRmx5SmVaQmhwVm5qeEp4MzdQZjlJM1lhWDROZ01COURNTjg5SG5QYzF3VGxjT1XSAXNBVV95cUxQaU54Z3pqVGtUX09nRm01S2lrUFp2MzJLYjFCSGo5WWZZa2JHZnh5WTJUeVpseXppUGI4UkVFckVsZEk2bUZseUplWkJocFZuanhKeDM3UGY5STNZYVg0TmdNQjlETU44OUhuUGMxd1RsY09V?oc=5"
           }
         ]
       }
@@ -122,10 +122,10 @@
   },
   "samd": {
     "feature": {
-      "tag": "머리기사 · 청년의사 · 오늘",
+      "tag": "머리기사 · 청년의사 · 어제",
       "h4": "\"고정형 AI 규제론 부족\"…식약처가 구상 중인 '피지컬 AI' 규제 계획은?",
       "paras": [
-        "<p><strong class=\"num\">청년의사</strong>가 <strong class=\"num\">오늘</strong> 보도한 '\"고정형 AI 규제론 부족\"…식약처가 구상 중인 '피지컬 AI' 규제 계획은?' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+        "<p><strong class=\"num\">청년의사</strong>가 <strong class=\"num\">어제</strong> 보도한 '\"고정형 AI 규제론 부족\"…식약처가 구상 중인 '피지컬 AI' 규제 계획은?' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
         "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
       ],
       "src": [
@@ -137,10 +137,10 @@
     },
     "items": [
       {
-        "tag": "법률신문 · 오늘",
+        "tag": "법률신문 · 어제",
         "h4": "의료 AI 시대, 기업과 의료기관이 알아야 할 규제 변화",
         "paras": [
-          "<p><strong class=\"num\">법률신문</strong>가 <strong class=\"num\">오늘</strong> 보도한 '의료 AI 시대, 기업과 의료기관이 알아야 할 규제 변화' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">법률신문</strong>가 <strong class=\"num\">어제</strong> 보도한 '의료 AI 시대, 기업과 의료기관이 알아야 할 규제 변화' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
         ],
         "src": [
@@ -151,10 +151,10 @@
         ]
       },
       {
-        "tag": "메디파나뉴스 · 어제",
+        "tag": "메디파나뉴스 · 2일 전",
         "h4": "AI 디지털의료제품, 개발부터 해외 임상까지 '전주기 전략' 중요",
         "paras": [
-          "<p><strong class=\"num\">메디파나뉴스</strong>가 <strong class=\"num\">어제</strong> 보도한 'AI 디지털의료제품, 개발부터 해외 임상까지 '전주기 전략' 중요' 소식이다. SaMD 규제 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">메디파나뉴스</strong>가 <strong class=\"num\">2일 전</strong> 보도한 'AI 디지털의료제품, 개발부터 해외 임상까지 '전주기 전략' 중요' 소식이다. SaMD 규제 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
         ],
         "src": [
@@ -165,16 +165,16 @@
         ]
       },
       {
-        "tag": "한의신문 · 3일 전",
-        "h4": "의료 AI 활성화 위한 디지털의료기기 인허가 규제 합리화 > 뉴스",
+        "tag": "MEDI:GATE NEWS · 오늘",
+        "h4": "온코소프트, 국내 기업 최초 중입자치료계획시스템 ‘온코플랜’ 식약처 의료기기 허가",
         "paras": [
-          "<p><strong class=\"num\">한의신문</strong>가 <strong class=\"num\">3일 전</strong> 보도한 '의료 AI 활성화 위한 디지털의료기기 인허가 규제 합리화 > 뉴스' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">MEDI:GATE NEWS</strong>가 <strong class=\"num\">오늘</strong> 보도한 '온코소프트, 국내 기업 최초 중입자치료계획시스템 ‘온코플랜’ 식약처 의료기기 허가' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMi8wFBVV95cUxQWVgta2VSdmJTZnZvUHJ4NVdERGY1QzUyMFZXLURmU1V6M0RNa2ppRGtHeTNENWlWanBCNEpoMWU2YnVHUlJyWUZYbnYxZ3N5UnpXSUJxYUJPQWlCVEhaQlp6UmhXMmk4c1oxRkhIa1NtY1Q1YXc5Z0o4eFhFM3dlZDh3bVlQRnBaR3N6QW95ZFhIbERFdFhfOEU1Mm53c245VzRkaHBCeDMxak51S214akxMbGlxWUFPMkhIeUpkUExpNVEyS2VHaDBhbWV3VGZTQ1NXRkZVN204WGh5c0ZrX1BfaUo2MWp6UlVPMDZRRGNFbzQ?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9hWERzNFVSNVBZVWZ1UTdSN0VPcFlMbkRyYUdFektYRGRWaHBmOUk5bHdqaVdSaEpUb2F4Z0d2dmRteGZULU96elJUemxRNWt5NjdVa2lvSQ?oc=5"
           }
         ]
       }
@@ -182,10 +182,10 @@
   },
   "it": {
     "feature": {
-      "tag": "머리기사 · 지디넷코리아 · 4일 전",
+      "tag": "머리기사 · 지디넷코리아 · 5일 전",
       "h4": "[AI 고속도로] 빅테크 AI 투자 1200조원…패권 경쟁 승부처는 인프라",
       "paras": [
-        "<p><strong class=\"num\">지디넷코리아</strong>가 <strong class=\"num\">4일 전</strong> 보도한 '[AI 고속도로] 빅테크 AI 투자 1200조원…패권 경쟁 승부처는 인프라' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">1200조원</strong>이다.</p>",
+        "<p><strong class=\"num\">지디넷코리아</strong>가 <strong class=\"num\">5일 전</strong> 보도한 '[AI 고속도로] 빅테크 AI 투자 1200조원…패권 경쟁 승부처는 인프라' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">1200조원</strong>이다.</p>",
         "<p class=\"insight\">시장 재편기에는 기술 스토리보다 단위경제성·채널·규제 대응력이 더 자주 거론된다.</p>"
       ],
       "src": [
@@ -197,10 +197,10 @@
     },
     "items": [
       {
-        "tag": "인공지능신문 · 어제",
+        "tag": "인공지능신문 · 2일 전",
         "h4": "모빌린트 AI 반도체, 해군 차세대 AI 경계체계에 공급…국방 시장 본격 확대",
         "paras": [
-          "<p><strong class=\"num\">인공지능신문</strong>가 <strong class=\"num\">어제</strong> 보도한 '모빌린트 AI 반도체, 해군 차세대 AI 경계체계에 공급…국방 시장 본격 확대' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">인공지능신문</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '모빌린트 AI 반도체, 해군 차세대 AI 경계체계에 공급…국방 시장 본격 확대' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
@@ -211,30 +211,30 @@
         ]
       },
       {
-        "tag": "동아일보 · 오늘",
-        "h4": "구글, 반도체 기업 마벨과 ‘AI칩 동맹’",
-        "paras": [
-          "<p><strong class=\"num\">동아일보</strong>가 <strong class=\"num\">오늘</strong> 보도한 '구글, 반도체 기업 마벨과 ‘AI칩 동맹’' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
-          "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
-        ],
-        "src": [
-          {
-            "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE81OFhLaVdyakk4QXNzMG03S3l5MlBHMGwwc0JrWTV0XzFRUmhzMDEtcnZPaVpnT0NFdnJiSmpkVmU4MDVDX29QY3hBVHNqX0xIZUZnQkRSOXZqNU9NZHlORU9DbXpfQdIBZkFVX3lxTE81OFhLaVdyakk4QXNzMG03S3l5MlBHMGwwc0JrWTV0XzFRUmhzMDEtcnZPaVpnT0NFdnJiSmpkVmU4MDVDX29QY3hBVHNqX0xIZUZnQkRSOXZqNU9NZHlORU9DbXpfQQ?oc=5"
-          }
-        ]
-      },
-      {
-        "tag": "연합뉴스 · 어제",
+        "tag": "연합뉴스 · 2일 전",
         "h4": "구글, 반도체기업 마벨과 AI칩 동맹…최대 17조원 신주인수권",
         "paras": [
-          "<p><strong class=\"num\">연합뉴스</strong>가 <strong class=\"num\">어제</strong> 보도한 '구글, 반도체기업 마벨과 AI칩 동맹…최대 17조원 신주인수권' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">17조원</strong>이다.</p>",
+          "<p><strong class=\"num\">연합뉴스</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '구글, 반도체기업 마벨과 AI칩 동맹…최대 17조원 신주인수권' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">17조원</strong>이다.</p>",
           "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
             "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9TT3NhS1RGSFp4Q3U4XzVIcjk3THlLazljaVZ6b09OWkl4bkY3Y3hNNUxGY3RES0tTelJjNmdNR0t6eFJCc082Vzg2MndLX2hyZGhGMnBsWmlsWFXSAWBBVV95cUxOdVBBNlVMNVBBY0dLb3U5SkJOMUZtbW5xWW5kTWpnTEdaMDdYSkxHVURJbGtzZ19HTE9mSllpWTIxNk85WDZOSjlwMkxwSW90cDhXcGRYRzhwN01wcW1LX2g?oc=5"
+          }
+        ]
+      },
+      {
+        "tag": "동아일보 · 어제",
+        "h4": "구글, 반도체 기업 마벨과 ‘AI칩 동맹’",
+        "paras": [
+          "<p><strong class=\"num\">동아일보</strong>가 <strong class=\"num\">어제</strong> 보도한 '구글, 반도체 기업 마벨과 ‘AI칩 동맹’' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
+        ],
+        "src": [
+          {
+            "t": "원문 보기",
+            "u": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE81OFhLaVdyakk4QXNzMG03S3l5MlBHMGwwc0JrWTV0XzFRUmhzMDEtcnZPaVpnT0NFdnJiSmpkVmU4MDVDX29QY3hBVHNqX0xIZUZnQkRSOXZqNU9NZHlORU9DbXpfQdIBZkFVX3lxTE81OFhLaVdyakk4QXNzMG03S3l5MlBHMGwwc0JrWTV0XzFRUmhzMDEtcnZPaVpnT0NFdnJiSmpkVmU4MDVDX29QY3hBVHNqX0xIZUZnQkRSOXZqNU9NZHlORU9DbXpfQQ?oc=5"
           }
         ]
       }
