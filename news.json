@@ -1,11 +1,11 @@
 {
-  "updated": "2026-08-29T03:24:48.410Z",
+  "updated": "2026-08-29T23:40:38.408Z",
   "ux": {
     "feature": {
-      "tag": "머리기사 · 브런치 · 오늘",
+      "tag": "머리기사 · 브런치 · 어제",
       "h4": "[지구밖상담소] 프로덕트/UX 디자이너로 커리어 전환",
       "paras": [
-        "<p><strong class=\"num\">브런치</strong>가 <strong class=\"num\">오늘</strong> 보도한 '[지구밖상담소] 프로덕트/UX 디자이너로 커리어 전환' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
+        "<p><strong class=\"num\">브런치</strong>가 <strong class=\"num\">어제</strong> 보도한 '[지구밖상담소] 프로덕트/UX 디자이너로 커리어 전환' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
         "<p class=\"insight\">UX·디자인 트렌드는 화면 미학보다 조직 협업 방식과 검증 루프 설계로 읽히는 경우가 많다.</p>"
       ],
       "src": [
@@ -40,21 +40,21 @@
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1Va2h6YnJTVEoxZ2J0T29Gem1aRFFObW83Wks2WGEtWU9xNVhpdWsxaEJCbm1ZR3BTYUVhLVlCanVYU0xNQjhNNnNLNlVMbllLWmVvNFpFbmdMeThlVTlJSzNfeVk0N3czbV9nb2ROYnlGNk5L0gF0QVVfeXFMTVVraHpiclNUSjFnYnRPb0Z6bVpEUU5tbzdaSzZYYS1ZT3E1WGl1azFoQkJubVlHcFNhRWEtWUJqdVhTTE1COE02c0s2VUxuWUtaZW80WkVuZ0x5OGVVOUlLM195WTQ3dzNtX2dvZE5ieUY2Tks?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9RMkdwUUVKYklucnpNby1CNU4yd1VjbENiZllSTmhtc0t3T2NYalF3Yjg5MXpjSHRCWFVkTnUxbU1EZmZHaHVXaDhKRUFnb3NuaFB3TWhob3JabWZFbmtlYmJ2TDc1T1h2Rzc1X3RURmbSAXRBVV95cUxNVWtoemJyU1RKMWdidE9vRnptWkRRTm1vN1pLNlhhLVlPcTVYaXVrMWhCQm5tWUdwU2FFYS1ZQmp1WFNMTUI4TTZzSzZVTG5ZS1plbzRaRW5nTHk4ZVU5SUszX3lZNDd3M21fZ29kTmJ5RjZOSw?oc=5"
           }
         ]
       },
       {
-        "tag": "v.daum.net · 5일 전",
-        "h4": "고스디자인 정석준 대표.. ‘2026 칸톤페어 디자인 어워드’ 심사위원 활약",
+        "tag": "브릿지경제 · 5일 전",
+        "h4": "삼성 45개·LG 17개 수상⋯ 세계가 K-가전의 ‘공간·경험’ 디자인을 주목하는 이유",
         "paras": [
-          "<p><strong class=\"num\">v.daum.net</strong>가 <strong class=\"num\">5일 전</strong> 보도한 '고스디자인 정석준 대표.. ‘2026 칸톤페어 디자인 어워드’ 심사위원 활약' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">브릿지경제</strong>가 <strong class=\"num\">5일 전</strong> 보도한 '삼성 45개·LG 17개 수상⋯ 세계가 K-가전의 ‘공간·경험’ 디자인을 주목하는 이유' 소식이다. UX·디자인 업계에서 설계·조직·프로세스 이슈가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">45개</strong> · <strong class=\"num\">17개</strong>이다.</p>",
           "<p class=\"insight\">디자인 조직과 프로세스 성숙도가 제품 경험의 상한과 출시 속도를 동시에 좌우한다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE9ibURfTF9uYktZQkhXbGN0QTJYczhmRmRaR0tiVVpMSmNkVWU5enFmRFIxaXpyRWkwM2cyNmpvUjRKakxWWElVYVJkMA?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE9GcVE3bkFvaU9kRlBQNXI3ZWtvQndtaVZqMVhaZzRmbDJMWUhCZXNwT1VPQVk4aUowamo2MDE2UW1ObHkxY2dkQmw3MjlwakQxUmVJenJjaW10Zw?oc=5"
           }
         ]
       }
@@ -62,39 +62,25 @@
   },
   "health": {
     "feature": {
-      "tag": "머리기사 · 의학신문 · 3일 전",
-      "h4": "전남광주특별시, AI 의료·헬스케어 도시 도약 비전 선포",
+      "tag": "머리기사 · MEDI:GATE NEWS · 2일 전",
+      "h4": "\"의료AI, 기술을 넘어 현장과 비즈니스 성과로 연결되는 노하우는?\"",
       "paras": [
-        "<p><strong class=\"num\">의학신문</strong>가 <strong class=\"num\">3일 전</strong> 보도한 '전남광주특별시, AI 의료·헬스케어 도시 도약 비전 선포' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+        "<p><strong class=\"num\">MEDI:GATE NEWS</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '\"의료AI, 기술을 넘어 현장과 비즈니스 성과로 연결되는 노하우는?\"' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
         "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
       ],
       "src": [
         {
           "t": "원문 보기",
-          "u": "https://news.google.com/rss/articles/CBMiakFVX3lxTE44QkJ4ZDhRRk9ueWNHUzJTOG01N242REhnLXU1MlpLcUdENTJZUTdMaElIRGx6UExob1dBbHlrUWxDNDFVZDlENHdqX3RfY3VoTTNpSmtVNTlXYWxqNGpBLWF6ZElsTHcwVWc?oc=5"
+          "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBkMFVnbE5qTDVkeXk4VUJHVTJZUXhuZml6Sko5R2xLelJ2QURoTWtJQXpnaHRnNGtIZFp2WHJodXN6eG1qRzJkSy1ocUM0QnpDdlBwRTh3?oc=5"
         }
       ]
     },
     "items": [
       {
-        "tag": "MEDI:GATE NEWS · 5일 전",
-        "h4": "하이카디·닥터눈·딥카스·씽크부터 생성형 AI 의료기기까지…병원에 들어온 디지털 헬스케어 총출동",
-        "paras": [
-          "<p><strong class=\"num\">MEDI:GATE NEWS</strong>가 <strong class=\"num\">5일 전</strong> 보도한 '하이카디·닥터눈·딥카스·씽크부터 생성형 AI 의료기기까지…병원에 들어온 디지털 헬스케어 총출동' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
-          "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
-        ],
-        "src": [
-          {
-            "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB3TDBBcFhEQXZmS1dwbDdRZDg3U2NsV3dmYzRxNmhlYWVyYm56ZU9NMXZMU204ckN0NU9ia1FCMmNqcFBIYjRHS0hsRHo4d08wMF83UA?oc=5"
-          }
-        ]
-      },
-      {
-        "tag": "이투데이 · 어제",
+        "tag": "bravo@etoday.co.kr · 어제",
         "h4": "“약에서 AI·로봇까지” 대웅제약, 디지털 헬스케어 12개사 연합 확대",
         "paras": [
-          "<p><strong class=\"num\">이투데이</strong>가 <strong class=\"num\">어제</strong> 보도한 '“약에서 AI·로봇까지” 대웅제약, 디지털 헬스케어 12개사 연합 확대' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">12개</strong>이다.</p>",
+          "<p><strong class=\"num\">bravo@etoday.co.kr</strong>가 <strong class=\"num\">어제</strong> 보도한 '“약에서 AI·로봇까지” 대웅제약, 디지털 헬스케어 12개사 연합 확대' 소식이다. AI 헬스케어 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">12개</strong>이다.</p>",
           "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
         ],
         "src": [
@@ -117,15 +103,29 @@
             "u": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9BOEh3WGs5VkFNWnE2QjIwWmJwdTAxSHEwUGhpOElkSXhTZ0xScng4WHc0eExWUTFJUnJzMWhMODJ0Yk5JbEY1LUp5V1lEY3ppcUkxeWVEdm9nc2FEOWpPWHJJSzN2T1dF0gFsQVVfeXFMTVQ3MFBUZFdCeXF0dG5mUFhfTVJ2UDgxVzdVRnFud3p6aHBOQnRoZ3FVbHJuWWREQ3dFVzJfbGxHLW9BNC0ybXdCTTNFVlhNQXZUOU11YXRKUGE5NkVHQzhoRzZ1djBJQ0ZiamFX?oc=5"
           }
         ]
+      },
+      {
+        "tag": "데일리팜 · 어제",
+        "h4": "대웅제약 ‘대웅 얼라이언스’로 디지털 헬스케어 확장",
+        "paras": [
+          "<p><strong class=\"num\">데일리팜</strong>가 <strong class=\"num\">어제</strong> 보도한 '대웅제약 ‘대웅 얼라이언스’로 디지털 헬스케어 확장' 소식이다. AI 헬스케어 영역에서 임상·데이터·규제 논의가 동시에 업계 관심이 모이고 있다.</p>",
+          "<p class=\"insight\">헬스케어 디지털화는 기술 가능성보다 임상 유효성·데이터 거버넌스·책임 체계가 병목이 된다.</p>"
+        ],
+        "src": [
+          {
+            "t": "원문 보기",
+            "u": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBoajNSUDFnc3hOQUdkQ0Y5VHVURHFNMDVEYTVGY1Zwb0lLVTlVNTRnNThKTHY4LVNDdXBGYWZJcG1wOURmY1ZPQ3lmdFpvdVZK?oc=5"
+          }
+        ]
       }
     ]
   },
   "samd": {
     "feature": {
-      "tag": "머리기사 · 히트뉴스 · 4일 전",
+      "tag": "머리기사 · 히트뉴스 · 5일 전",
       "h4": "온코소프트, 'OncoPlan' 식약처 허가…중입자치료계획 국산화",
       "paras": [
-        "<p><strong class=\"num\">히트뉴스</strong>가 <strong class=\"num\">4일 전</strong> 보도한 '온코소프트, 'OncoPlan' 식약처 허가…중입자치료계획 국산화' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+        "<p><strong class=\"num\">히트뉴스</strong>가 <strong class=\"num\">5일 전</strong> 보도한 '온코소프트, 'OncoPlan' 식약처 허가…중입자치료계획 국산화' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
         "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
       ],
       "src": [
@@ -137,10 +137,10 @@
     },
     "items": [
       {
-        "tag": "MEDI:GATE NEWS · 2일 전",
+        "tag": "MEDI:GATE NEWS · 3일 전",
         "h4": "숨빗AI·딥노이드 '생성형 AI 의료기기' 허가…흉부 X-ray 판독 보조 어디까지 왔나",
         "paras": [
-          "<p><strong class=\"num\">MEDI:GATE NEWS</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '숨빗AI·딥노이드 '생성형 AI 의료기기' 허가…흉부 X-ray 판독 보조 어디까지 왔나' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">MEDI:GATE NEWS</strong>가 <strong class=\"num\">3일 전</strong> 보도한 '숨빗AI·딥노이드 '생성형 AI 의료기기' 허가…흉부 X-ray 판독 보조 어디까지 왔나' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
         ],
         "src": [
@@ -151,10 +151,10 @@
         ]
       },
       {
-        "tag": "스타트업엔(StartupN) · 2일 전",
+        "tag": "스타트업엔(StartupN) · 3일 전",
         "h4": "하이, 디지털의료기기 ‘리피치’ 식약처 혁신의료기기 지정…의료현장 도입 본격화",
         "paras": [
-          "<p><strong class=\"num\">스타트업엔(StartupN)</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '하이, 디지털의료기기 ‘리피치’ 식약처 혁신의료기기 지정…의료현장 도입 본격화' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">스타트업엔(StartupN)</strong>가 <strong class=\"num\">3일 전</strong> 보도한 '하이, 디지털의료기기 ‘리피치’ 식약처 혁신의료기기 지정…의료현장 도입 본격화' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
         ],
         "src": [
@@ -165,10 +165,10 @@
         ]
       },
       {
-        "tag": "데일리뉴스 · 5일 전",
+        "tag": "데일리뉴스 · 6일 전",
         "h4": "같은 질문에도 답이 달라지는 의료 AI…FDA, ‘역량평가’ 규제 틀 제안",
         "paras": [
-          "<p><strong class=\"num\">데일리뉴스</strong>가 <strong class=\"num\">5일 전</strong> 보도한 '같은 질문에도 답이 달라지는 의료 AI…FDA, ‘역량평가’ 규제 틀 제안' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">데일리뉴스</strong>가 <strong class=\"num\">6일 전</strong> 보도한 '같은 질문에도 답이 달라지는 의료 AI…FDA, ‘역량평가’ 규제 틀 제안' 소식이다. SaMD 규제 영역에서 규제 프레임과 산업 대응이 맞물리며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">규제 논의는 출시 일정보다 변경관리·추적 가능성·책임 소재를 먼저 묻는 방향으로 이동하고 있다.</p>"
         ],
         "src": [
@@ -182,25 +182,39 @@
   },
   "it": {
     "feature": {
-      "tag": "머리기사 · 지디넷코리아 · 2일 전",
-      "h4": "아마존, 엔비디아 AI칩 200만개 더 산다…생성형AI 수요 대응",
+      "tag": "머리기사 · 연합뉴스 · 6일 전",
+      "h4": "AI 서버값 '고공행진'…엔비디아, 고객사에 가격 15% 인상 예고",
       "paras": [
-        "<p><strong class=\"num\">지디넷코리아</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '아마존, 엔비디아 AI칩 200만개 더 산다…생성형AI 수요 대응' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">200만개</strong>이다.</p>",
-        "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
+        "<p><strong class=\"num\">연합뉴스</strong>가 <strong class=\"num\">6일 전</strong> 보도한 'AI 서버값 '고공행진'…엔비디아, 고객사에 가격 15% 인상 예고' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">15%</strong>이다.</p>",
+        "<p class=\"insight\">IT·AI 산업은 모델 성능 경쟁과 동시에 인프라·안보·공급망 제약이 출시 전략을 규율한다.</p>"
       ],
       "src": [
         {
           "t": "원문 보기",
-          "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9XM3pDN2V4VDFMeW84bV9oSl85bHlNUXdjVXk2MXdxdnBsM1cxUGRRb1pJVkdNRS1xYWdhVC1SVkx3RUdKYWZYZmY1Um5SV1RIUk4zQ0dR?oc=5"
+          "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9WeWJ5YXB2U2cxdDJNR3V5Wjl6TTZBT0NzUVZXTjdWRnIxNVB3VTVzRTZJbjc1amlWWWVuZ0k5X0xfSDlXdkhWZFFwNUpWUm5hLWpuby1Jak01dWPSAWBBVV95cUxQaGt6VGpEMlRmYmFROFlKWTFYcFNpNVROc2wtQW1jckFIdkFncUc2X0t1bnlKcjJUX3d1N0VRd2tNeUtPUVNGck5nR1R6aDJhSERiQ1JwbWt2WTY3SlpQTmc?oc=5"
         }
       ]
     },
     "items": [
       {
-        "tag": "인공지능신문 · 어제",
+        "tag": "지디넷코리아 · 2일 전",
+        "h4": "아마존, 엔비디아 AI칩 200만개 더 산다…생성형AI 수요 대응",
+        "paras": [
+          "<p><strong class=\"num\">지디넷코리아</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '아마존, 엔비디아 AI칩 200만개 더 산다…생성형AI 수요 대응' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">200만개</strong>이다.</p>",
+          "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
+        ],
+        "src": [
+          {
+            "t": "원문 보기",
+            "u": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9XM3pDN2V4VDFMeW84bV9oSl85bHlNUXdjVXk2MXdxdnBsM1cxUGRRb1pJVkdNRS1xYWdhVC1SVkx3RUdKYWZYZmY1Um5SV1RIUk4zQ0dR?oc=5"
+          }
+        ]
+      },
+      {
+        "tag": "인공지능신문 · 2일 전",
         "h4": "인공지능 인프라 투자 광풍: 새로운 산업혁명과 인플레이션의 시작",
         "paras": [
-          "<p><strong class=\"num\">인공지능신문</strong>가 <strong class=\"num\">어제</strong> 보도한 '인공지능 인프라 투자 광풍: 새로운 산업혁명과 인플레이션의 시작' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">인공지능신문</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '인공지능 인프라 투자 광풍: 새로운 산업혁명과 인플레이션의 시작' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
@@ -211,30 +225,16 @@
         ]
       },
       {
-        "tag": "Chosunbiz · 어제",
-        "h4": "[비즈톡톡] “엔비디아 GPU 의존만으론 안돼”… 오픈AI·앤트로픽까지 번진 ‘맞춤형 AI칩’ 경쟁 - 조선비즈",
+        "tag": "v.daum.net · 2일 전",
+        "h4": "역대급 실적 쐈다… AI 고점론 잠재운 엔비디아 삼성전자, 하이닉스도 활짝 [반도체 투자 리포트]",
         "paras": [
-          "<p><strong class=\"num\">Chosunbiz</strong>가 <strong class=\"num\">어제</strong> 보도한 '[비즈톡톡] “엔비디아 GPU 의존만으론 안돼”… 오픈AI·앤트로픽까지 번진 ‘맞춤형 AI칩’ 경쟁 - 조선비즈' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
+          "<p><strong class=\"num\">v.daum.net</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '역대급 실적 쐈다… AI 고점론 잠재운 엔비디아 삼성전자, 하이닉스도 활짝 [반도체 투자 리포트]' 소식이다. IT 산업 분야에서 AI 도입과 거버넌스 논의가 겹치며 업계 관심이 모이고 있다.</p>",
           "<p class=\"insight\">AI 관련 보도는 성능 수치만큼 배포 통제·검증 루프·현장 워크플로 적합성이 승패를 가른다.</p>"
         ],
         "src": [
           {
             "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNMmEwdmloeURnLUptWUZqTy1HWmVib0tHUHN5dHJGaE1Sek41eGp1ZFdSaC1nbzlUeUNkNGFBYzN0OU00cEVMbnRYSGV2MlJBak1RVnp1R25wSDB2cWRUeS1uWTRLRmFYOV9POTBGUHJLRE5DOU95VnpQeEUxNEJQR3V30gGWAUFVX3lxTE5XNXkzT1Y3eFU5SUNOUEpFNDJyNGZkSDBac2ZNcXNXbUdUVmFPT3RBSTl5eGsxWFZmWmd0Q2ZYNk83WjlmSncwdm9DUVl2eGs3NnM0QkItQThPeE1YUlVfSjM3YTUtaTl6Mk9RSGJEMjJQczNreUN6UzkwX19xMkFpTVRRVlFtSXVPNF9hdWNNT1k5bFBFQQ?oc=5"
-          }
-        ]
-      },
-      {
-        "tag": "연합뉴스 · 2일 전",
-        "h4": "엔비디아, 분기 매출 133조원…전년동기 대비 106% '폭풍성장'(종합)",
-        "paras": [
-          "<p><strong class=\"num\">연합뉴스</strong>가 <strong class=\"num\">2일 전</strong> 보도한 '엔비디아, 분기 매출 133조원…전년동기 대비 106% '폭풍성장'(종합)' 소식이다. IT 산업 분야에서 업계 관심이 모이고 있다. 보도에 등장하는 핵심 수치는 <strong class=\"num\">106%</strong> · <strong class=\"num\">133조원</strong>이다.</p>",
-          "<p class=\"insight\">시장 재편기에는 기술 스토리보다 단위경제성·채널·규제 대응력이 더 자주 거론된다.</p>"
-        ],
-        "src": [
-          {
-            "t": "원문 보기",
-            "u": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBRR3hkWWtRNlROeEI5UG9BanlNTVZVSmlPT0lhTTFnRlJRaWRoZHZGUXRJV2hVQzR1b3hyNGxWZm9JMVdXbXJiS0oxS2RldThScUhBb0FJay00VzjSAWBBVV95cUxOeEtkdlhwUHhkcE5NVHhURlFielFiOC1IV2hrZUZnSmQ1R3NvRm95NkUxc3hOdFhvRWtYOHBPVVRzYjhnZFlGLVlYN09YTzFYMmk1WTZsRTJXdVNWTGYzaTg?oc=5"
+            "u": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFB5c2FnRk1FRFdXVHV4dm1jNEdkNlMtMnJ6Z3RiY2lxR3VkTGx1bFhXMmNZWW53d2VUSWlZd1Rnd3hZNEVyWldZUlhBMA?oc=5"
           }
         ]
       }
